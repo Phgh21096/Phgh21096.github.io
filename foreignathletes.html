@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html dir="ltr" data-device="desktop" lang="el">
+<head>
+	<title> ΞΕΝΟΙ ΑΘΛΗΤΕΣ ΤΕΝΝΙΣ </title>
+	
+	<meta charset="UTF-8">
+	<meta name="description" content="ΞΕΝΟΙ ΑΘΛΗΤΕΣ">
+	<meta name="keywords" content="Categories">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="css/simplephpform_default.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<link rel="icon" href="../images/tennis.png" type="icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+
+body {
+  font-family: sans;
+}
+
+#menu {
+  width: 20%;
+}
+
+#menu > div {
+  background-color: #cbeef5;
+}
+
+.category_title {
+  font-weight: bold;
+  text-align: center;
+  background-color: #7297e0;
+
+  cursor: pointer;
+
+  
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.category_title:hover {
+  background-color: #72cee0;
+}	
+
+@media screen and (min-width: 701px) and (max-width: 10000px) {
+        table, th, td {
+          border-collapse: collapse;
+          border-spacing: 15px;
+          border: 1px solid black;
+        }
+		
+        th, td {
+          padding: 5px;
+          text-align: center; 
+          font-style: italic;   
+        }
+        table.centerer {
+          margin-left: auto; 
+          margin-right: auto;
+        }
+        table.dilwsi{
+          font-style: italic;  
+        }
+
+        }
+        @media screen and (min-width: 350px) and (max-width: 700px) {
+          table, th, td {
+          border-collapse: collapse;
+          border-spacing: 15px;
+          
+        }
+        th, td {
+          padding: 5px;
+          text-align: center; 
+          font-style: italic;   
+        }
+        table.centerer {
+          margin-left: auto; 
+          margin-right: auto;
+        }
+        .column {
+          width: 100%;
+		}
+        .hscroll{
+          overflow-x: auto;
+        }  
+        }
+
+@media screen and (min-width: 701px) and (max-width: 10000px){
+  
+.flexcontainer {
+  display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+   flex-flow: row wrap;
+   align-content: flex-end;
+   
+}
+.wrapper {
+	padding: 5px;
+	max-width: 960px;
+	width: 95%;
+	margin: 20px auto;
+  }
+ 
+.dropcap {
+float: left;
+font-size: 400%;
+color: #14c3cf;
+margin: -13px 7px -13px 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333; 
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+}
+
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 28px;
+  font-size: 32px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+::selection {
+background-color: #52c1c5;
+color: #f1f1f1;
+}
+
+p { text-align: center; }
+
+.figure {
+    border: 1px #cccccc solid;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+.figcaption {
+    color: black;
+    font-style: italic;
+    padding: 2px;
+    text-align: left;
+  } 
+  H1 { text-align: center } 
+  H3 { text-align: center }
+  H4 { text-align: center }
+  H5 { text-align: center }
+  
+div.parent {
+	text-align: center;
+	}
+div.toc {text-align: center;}
+ul { 
+	display: inline-block; 
+	text-align: left; 
+	}
+
+/*.image{
+  display: block;  
+  margin-left: auto;
+  margin-right: auto;
+  }*/
+  .image {
+width: 100%;
+overflow: hidden;
+}
+.image-colorize img {
+transition: transform .5s, filter 0.5s ease-in-out;
+filter: grayscale(100%);
+}
+.image-colorize:hover img {
+filter: grayscale(0);
+transform: scale(1.1);
+}
+.row {
+  display: flex;
+}
+
+#outputName, #outputValue #outputValue1 #outputValue2 #outputValue3 #outputValue4 #outputValue5 #outputValue6 #outputValue7 #outputValue8 {
+  color: blue;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+}
+table, th, td {
+              border: 1px  black;
+              border-collapse: collapse;
+              border-spacing: 15px;
+              border: 1px solid black;
+            }
+            th, td {
+              padding: 5px;
+              text-align: center; 
+              font-style: italic;   
+            }
+}
+
+@media screen and (min-width: 350px) and (max-width: 700px) {
+
+.flexcontainer {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+   flex-flow: row wrap;
+   align-content: flex-end;
+   
+}
+.wrapper {
+	padding: 5px;
+	max-width: 960px;
+	width: 100%;
+	margin: 20px auto;
+}
+.figure {
+  text-align: center;
+  font-size: 0.75em;
+  }
+ 
+p { text-align: center; }
+
+div.parent {
+	text-align: center;
+	}
+
+ul { 
+	display: inline-block; 
+	text-align: left; 
+	}
+
+.collection-filter__toolbar-controls__button {
+    border: 1px solid grey;
+    border-radius: 3px;
+    color: grey;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 12px;
+    text-transform: uppercase;
+    float: left;
+}
+
+.figcaption {
+    background-color: white;
+    color: black;
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+    font-size: 0.85em;
+  }
+H1 { text-align: center } 
+H2 { text-align: center } 
+H3 { text-align: center }
+H4 { text-align: center }
+H5 { text-align: center }
+
+H1 { font-size: x-large} 
+H2 { font-size: large  } 
+H3 { font-size: large  }
+H4 { font-size: medium }
+H5 { font-size: small  }
+  
+.image{
+  display: block;  
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  }
+  
+ .page { background-repeat: no-repeat; background-size: cover; background-position: center center; position: relative; min-width: 970px; }
+    
+.page > .content { width: 970px; height: 100%; margin: 0 auto; position: relative; }
+	
+	
+
+#page5 > div { text-align: center; }
+#page5 h2 { font-size: 42px; font-weight: 600; max-width: none; }
+#page5 a.top { position: absolute; bottom: 30px; }
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+} 
+  
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('../images/searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show1 {display: block;}
+  
+  
+.toc{
+    font-size: 0.85em;
+  }
+.row {
+  display: flex;
+ }
+ 
+ .select2-input {
+    width: 141px !important;
+}
+ 
+.column {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 5px 0;
+ }
+ table, th, td {
+              border-collapse: collapse;
+              border-spacing: 15px;
+              border: 1px solid black;
+            }
+            th, td {
+              padding: 5px;
+              text-align: center; 
+              font-style: italic;   
+            }
+	
+}
+
+#showops {
+    height: 200px;
+}
+</style>
+
+</head>
+
+
+<body>
+<div class="container">
+                <div class="row">
+                    <div class="col-12 col-xl-9 article-container__article Article Article--single">
+                        <div class="row">
+                            <div class="col-12">
+                <figure class="Article__image Article__image--main">
+                    <div class="Article__image__intrinsic">
+                        <img src="https://www.contra.gr/img/8387/7445098/895000/w460/460/tkentriki940.jpg" alt="Οι δέκα κορυφαίοι τενίστες όλων των εποχών" srcset="https://www.contra.gr/img/8387/7445098/895000/w460/460/tkentriki940.jpg 460w, 
+                                            https://www.contra.gr/img/4009/7445098/895000/w620/620/tkentriki940.jpg 620w, 
+                                            https://www.contra.gr/img/5573/7445098/895000/w940/940/tkentriki940.jpg 940w" sizes="(min-width: 1280px) 940px,
+                                           (min-resolution: 3x) 33vw,
+                                           (min-resolution: 2x) 50vw,
+                                           100vw">
+                    </div>
+
+                    </figure>
+            </div>
+        <div class="col-12 Code ">
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> 
+<script type="text/javascript" async="" src="//call.thebutterfly.eu/Snippet/WJ-13103?_=95121894384"></script><script type="text/javascript" id="bf-impact-d6c062d5-8c26-4d9b-ae44-12192cbc124c">
+    var uiCode = 'WJ-13103';
+    var bf = document.createElement('script');
+    bf.type = 'text/javascript';
+    bf.async = true;
+    bf.src = '//call.thebutterfly.eu/Snippet/' + uiCode + '?_=' + Math.floor(Math.random() * 99999999999);
+    var embedder = document.getElementById('bf-impact-d6c062d5-8c26-4d9b-ae44-12192cbc124c');
+    embedder.parentNode.insertBefore(bf, embedder);
+</script></div>
+<div class="col-12 col-xl-2 Article__meta">
+        <div class="Article__authorList ">
+                <div class="Article__author">
+                        <a class="Article__author__image" href="https://www.contra.gr/thanashs-krekoukias/" title="ΘΑΝΑΣΗΣ ΚΡΕΚΟΥΚΙΑΣ">
+                                <img src="https://www.contra.gr/img/932/6723565/902000/wsq200/200/thanasis-krekoukias.png" alt="ΘΑΝΑΣΗΣ ΚΡΕΚΟΥΚΙΑΣ" width="100" height="100">
+                            </a>
+                        <svg class="icon icon_author">
+                            <use xlink:href="https://www.contra.gr/resources/5508c9f/sprite/symbol/svg/sprite.symbol.svg#icon_author"></use>
+                        </svg>
+                        <a class="Article__author__name Article__author__name--link" href="https://www.contra.gr/thanashs-krekoukias/" title="ΘΑΝΑΣΗΣ ΚΡΕΚΟΥΚΙΑΣ">
+                                    ΘΑΝΑΣΗΣ ΚΡΕΚΟΥΚΙΑΣ</a>
+                            </div>
+                </div>
+        <time class="Article__date" datetime="2019-01-20 10:01">20 ΙΑΝ 2019</time>
+    </div>
+<div class="col-12 col-xl-8 Article__body">
+        <p>Το τένις - αντισφαίριση στα ελληνικά - είναι ένα από τα πιο δημοφιλή αθλήματα. Ξεκίνησε από την Αγγλία στο δεύτερο μισό του 19ου αιώνα και μέσα σε λίγες δεκαετίες εξαπλώθηκε σε ολόκληρη την Ευρώπη και τον υπόλοιπο κόσμο. Το 1877 διοργανώθηκε το πρώτο τουρνουά τένις στο Wimbledon της Αγγλίας. Δέκα χρόνια αργότερα (1887) είχαμε και το πρώτο τουρνουά γυναικών, στις ΗΠΑ. Στη χώρα μας το τένις εμφανίστηκε για πρώτη φορά το 1896, στους Ολυμπιακούς Αγώνες της Αθήνας. Αρχικά το άθλημα απευθυνόταν κυρίως στα ανώτερα κοινωνικά στρώματα, όμως με το πέρασμα του χρόνου το υιοθέτησαν όλες οι κοινωνικές τάξεις. Οι κανόνες του τένις έχουν παραμείνει αμετάβλητοι από το τέλος του 19ου αιώνα, αν εξαιρέσουμε την παράταση του σετ (tie-break) που εισήχθη τη δεκαετία του '90. Το 1926 διοργανώθηκε το πρώτο επαγγελματικό τουρνουά, όμως, όποιος γινόταν επαγγελματίας, δεν επιτρεπόταν να συμμετέχει στα ερασιτεχνικά πρωταθλήματα. Αυτό καταργήθηκε το 1968, όταν δημιουργήθηκε η Open Era (Εποχή των Όπεν), που επέτρεπε σε οποιονδήποτε αθλητή να πάρει μέρος σε όποιο τουρνουά ήθελε.</p>
+<div id="ros_inline_a" class="ad-wrap-config" data-google-query-id="CP62vb_XnPECFdUp4Aodm5AM1Q"> 
+  
+<div id="google_ads_iframe_/4834629/contra.gr/ros_inline_a_0__container__" style="border: 0pt none; margin: auto; text-align: center;"><iframe id="google_ads_iframe_/4834629/contra.gr/ros_inline_a_0" title="3rd party ad content" name="google_ads_iframe_/4834629/contra.gr/ros_inline_a_0" scrolling="no" marginwidth="0" marginheight="0" style="border: 0px none; vertical-align: bottom;" srcdoc="" data-google-container-id="5" width="300" height="250" frameborder="0"></iframe></div></div> 
+<p>Σήμερα το τένις παίζεται σε κάθε γωνιά της γης, ενώ είναι από τα σπορ με την υψηλότερη τηλεθέαση στον κόσμο, όπου ξεχωρίζουν τα τέσσερα μεγάλα τουρνουά (Grand Slam), δηλαδή το Αυστραλιανό Open, το Γαλλικό Open, το Wimbledon και το Open των ΗΠΑ. Το άθλημα παίζεται είτε με δυο παίκτες (single), είτε με τέσσερις (double &amp; mixed double). Υπάρχουν τρεις βασικές κατηγορίες γηπέδων: <strong>α) Τα γήπεδα με σκληρή επιφάνεια</strong>, που είναι και τα περισσότερα στον κόσμο. Σε αυτή την κατηγορία ανήκουν το Αυστραλιανό Open και το Open των ΗΠΑ. <strong>β) Τα γήπεδα με χωμάτινη επιφάνεια</strong>, που τα συναντάμε κυρίως στην Ευρώπη. Σε αυτή την κατηγορία ανήκει το Γαλλικό Open. <strong>γ) Τα γήπεδα με επιφάνεια γρασιδιού</strong>, που τα βρίσκουμε κυρίως στη Μεγάλη Βρετανία. Σε αυτή την κατηγορία ανήκει το τουρνουά του Wimbledon. Όλα τα γήπεδα του τένις χωρίζονται στη μέση με δίχτυ ύψους 91 εκατοστών. Οι μπάλες του τένις είναι ελαστικές, από λάστιχο, ντυμένες με χνουδωτό ύφασμα, με διάμετρο 85 χιλιοστά και βάρος 75-85 γραμμάρια. Το μέγεθος της ρακέτας δεν είναι καθορισμένο, αλλά το μήκος της κυμαίνεται από 45 μέχρι 60 εκατοστά. Ο κάθε αγώνας χωρίζεται σε σετ. Οι άντρες χρειάζονται τρία νικηφόρα σετ σε παιχνίδια Grand Slam και δυο νικηφόρα σετ σε όλα τα υπόλοιπα τουρνουά, ενώ οι γυναίκες χρειάζονται δυο νικηφόρα σετ. </p> 
+<figure class="Article__body__inline Article__body__inline--image Article__image"> 
+ <div class="Article__image__intrinsic" style="--image-ratio:63.57142857142857%;"> 
+  <img src="https://www.contra.gr/img/988/7445114/374000/o/140/0/12t940.png" alt="Οι δέκα κορυφαίοι τενίστες όλων των εποχών" data-srcset="https://www.contra.gr/img/99/7445114/374000/o/460/0/12t940.png 460w, 
+                                    https://www.contra.gr/img/9101/7445114/374000/o/620/0/12t940.png 620w" data-sizes="(min-width: 1280px) 620px,
+                                   (min-resolution: 3x) 33vw,
+                                   (min-resolution: 2x) 50vw,
+                                   100vw" class=" lazyloaded" sizes="(min-width: 1280px) 620px,
+                                   (min-resolution: 3x) 33vw,
+                                   (min-resolution: 2x) 50vw,
+                                   100vw" srcset="https://www.contra.gr/img/99/7445114/374000/o/460/0/12t940.png 460w, 
+                                    https://www.contra.gr/img/9101/7445114/374000/o/620/0/12t940.png 620w">  
+ </div> 
+</figure> 
+<p> <em> <strong>Αυτοί είναι οι κατά τη γνώμη μας 10 κορυφαίοι τενίστες όλων των εποχών.</strong> </em> </p> 
+<p>Στην πορεία του σχεδόν ενάμισι αιώνα ύπαρξης του αθλήματος, πολλά πράγματα έχουν εξελιχθεί. Μπορεί οι κανονισμοί - όπως γράψαμε και στην αρχή - να μην άλλαξαν (πέραν του tie break), όμως η εξέλιξη είναι εμφανής σε πολλά επίπεδα. Το ίδιο το παιχνίδι έχει παρουσιάσει σημαντική διαφοροποίηση, για παράδειγμα, το "σερβίς-βολέ" που κυριάρχησε από τη δεκαετία του '70 μέχρι τη δεκαετία του '90, επηρεάζει πλέον σε πολύ μικρότερο βαθμό το σύγχρονο τένις. Τα υλικά που χρησιμοποιούνται για την κατασκευή της ρακέτας (τόσο στο σώμα της όσο και στις χορδές), ακολουθούν τη σύγχρονη τεχνολογία, δίνοντας συνεχώς όλο και περισσότερες δυνατότητες στους παίκτες, ενώ και οι προπονήσεις ακολουθούν την επιστημονική μεθοδολογία. Κάτι αντίστοιχο βρίσκουμε και στις επιφάνειες των σκληρών γηπέδων, όπου επίσης γίνεται χρήση ειδικών υλικών, όπως η ακρυλική επιφάνεια στα γήπεδα του US Open. Όλα αυτά διαμορφώνουν τη φυσιογνωμία του αθλήματος, που συνεχώς εξελίσσεται και ανακαλύπτει καινοτόμα στοιχεία, ώστε να βελτιώνεται σε όλους τους τομείς.</p> 
+<p>Παρ' όλες όμως τις αλλαγές, η ιστορία του επαγγελματικού τένις έχει να παρουσιάσει αρκετούς πρωταγωνιστές που ο καθένας τους κυριάρχησε στη δική του εποχή στο άθλημα. Από όλους αυτούς, διαλέξαμε σήμερα δέκα παίκτες, που κατά τη γνώμη μας καθόρισαν την ίδια την πορεία του τένις, μέσα από το παίξιμό τους αλλά και τις επιτυχίες τους. Πριν προχωρήσουμε στο κείμενο, να ξεκαθαρίσουμε πρώτα ότι η επιλογή των δέκα είναι καθαρά υποκειμενική, πιθανότατα κάποιοι να έχουν τις ενστάσεις τους - μαζί με διαφορετικές επιλογές -, κάτι απόλυτα κατανοητό και σεβαστό. Στη λίστα συμπεριλάβαμε μόνο παίκτες της Open Era, από το 1968 δηλαδή και μετά, αν και οι Έμερσον, Λέιβερ και Κόνορς ξεκίνησαν την καριέρα τους ως ερασιτέχνες και πέρασαν κατόπιν στους επαγγελματίες. Η δεκάδα αποτελείται από "ιερά τέρατα" του αθλήματος, σκεφτείτε μόνο ότι όλοι μαζί μετράνε 122 τίτλους σε τουρνουά Grand Slam, 969 συνολικά τίτλους σε τουρνουά και 10.345 νίκες σε αγώνες! Πάμε τώρα στην αναλυτική παρουσίασή τους (με χρονολογική σειρά έναρξης της επαγγελματικής τους καριέρας).</p>
+<div id="ros_inline_b" class="ad-wrap-config"> 
+  
+<div id="google_ads_iframe_/4834629/contra.gr/ros_inline_b_0__container__" style="border: 0pt none; margin: auto; text-align: center;"></div></div> 
+<p> <strong>* Σημείωση συντάκτη: AO: Αυστραλιανό Όπεν, FO: Γαλλικό Όπεν, W: Γουίμπλεντον, USO: Όπεν των ΗΠΑ.</strong> </p> 
+<h3> 01. ΡΟΪ ΕΜΕΡΣΟΝ (ΑΥΣΤΡΑΛΙΑ) </h3> 
+<figure class="Article__body__inline Article__body__inline--image Article__image"> 
+ <div class="Article__image__intrinsic" style="--image-ratio:59.285714285714285%;"> 
+  <img src="https://www.contra.gr/img/8086/7445093/176000/o/140/0/106t940.png" alt="Οι δέκα κορυφαίοι τενίστες όλων των εποχών" data-srcset="https://www.contra.gr/img/8473/7445093/176000/o/460/0/106t940.png 460w, 
+                                    https://www.contra.gr/img/333/7445093/176000/o/620/0/106t940.png 620w" data-sizes="(min-width: 1280px) 620px,
+                                   (min-resolution: 3x) 33vw,
+                                   (min-resolution: 2x) 50vw,
+                                   100vw" class="lazyload">  
+ </div> 
+</figure> 
+<p> <strong>- Επαγγελματίας: 1968-1983 (ερασιτέχνης 1953-1968)</strong> </p>
+<div id="ros_inline_c" class="ad-wrap-config"> 
+  
+<div id="google_ads_iframe_/4834629/contra.gr/ROS_InlineC_0__container__" style="border: 0pt none; margin: auto; text-align: center;"></div></div> 
+<p> <strong>- Στιλ παιξίματος: Δεξιόχειρας (backhand με το ένα χέρι)</strong> </p> 
+<p> <strong>- Ρεκόρ καριέρας: 1325-380 (77.7%)</strong> </p>
+<div id="ros_inline_d" class="ad-wrap-config"> 
+  
+<div id="google_ads_iframe_/4834629/contra.gr/ROS_InlineD_0__container__" style="border: 0pt none; margin: auto; text-align: center;"></div></div> 
+<p> <strong>- Τίτλοι καριέρας: 110</strong> </p> 
+<p> <strong>- Grand Slam: 12 (6 AO, 2 FO, 2 W, 2 USO)</strong> </p> 
+<p> <strong>- Παραμονή στο Νο1: -</strong> </p> 
+<p>Ο Ρόι Στάνλεϊ Έμερσον γεννήθηκε το 1936 στο Κουίνσλαντ της Αυστραλίας, ξεκίνησε από μικρός το τένις και έγινε ερασιτέχνης το 1953, σε ηλικία 17 ετών. Υπήρξε νούμερο 1 αρκετές φορές στη δεκαετία του '60, ενώ κατέκτησε 12 τίτλους Grand Slam στο απλό και ακόμα 16 στο διπλό! Είναι ο μοναδικός τενίστας στην ιστορία που έχει πετύχει να κερδίσει και τα τέσσερα Grand Slam, τόσο στο απλό, όσο και στο διπλό, ενώ σε ό,τι αφορά το απλό, συγκαταλέγεται ανάμεσα στους μόλις οκτώ παίκτες που έχουν στη συλλογή τους και τα τέσσερα majors. Μοιράζεται με τους Τζόκοβιτς και Φέντερερ το απόλυτο ρεκόρ κατακτήσεων στο Αυστραλιανό Όπεν με έξι τίτλους, πέντε εκ των οποίων ήταν συνεχόμενοι (1963-1967).</p> 
+<p>Ο "Έμο", όπως τον φώναζαν χαϊδευτικά, ήταν γνωστός για την εξαντλητική προπόνηση στην οποία υπέβαλλε τον εαυτό του, κάτι που τον διατηρούσε πάντοτε σε εκπληκτική φυσική κατάσταση. Στο αγωνιστικό του στιλ κυριαρχούσε το "σερβίς-βολέ", όμως μπορούσε να προσαρμοστεί και σε άλλους τρόπους παιξίματος, κυρίως στις πιο αργές επιφάνειες, κάτι που τον βοήθησε να πάρει νίκες σε όλα τα μεγάλα, σημαντικά τουρνουά. Τα 12 Grand Slam που κατέκτησε, ήταν το απόλυτο ρεκόρ στους άντρες, μέχρι το 2000, όταν τον ξεπέρασε ο Πιτ Σάμπρας. Από το 1963 μέχρι και το 1967, έφτασε σε δέκα τελικούς Grand Slam και τους κέρδισε όλους, κάτι που αποτελεί ρεκόρ μέχρι σήμερα. Επίσης κατέκτησε οκτώ φορές το Davis Cup, αριθμός που και αυτός αποτελεί απόλυτο ρεκόρ στο ανδρικό τένις.</p> 
+<h3> 02. ΡΟΝΤ ΛΕΪΒΕΡ (ΑΥΣΤΡΑΛΙΑ) </h3> 
+<p> <strong> </strong></p> 
+<figure class="Article__body__inline Article__body__inline--image Article__image"> 
+ <div class="Article__image__intrinsic" style="--image-ratio:59.285714285714285%;"> 
+  <img src="https://www.contra.gr/img/4484/7445092/219000/o/140/0/105t940.png" alt="Οι δέκα κορυφαίοι τενίστες όλων των εποχών" data-srcset="https://www.contra.gr/img/6253/7445092/219000/o/460/0/105t940.png 460w, 
+                                    https://www.contra.gr/img/5059/7445092/219000/o/620/0/105t940.png 620w" data-sizes="(min-width: 1280px) 620px,
+                                   (min-resolution: 3x) 33vw,
+                                   (min-resolution: 2x) 50vw,
+                                   100vw" class="lazyload">  
+ </div> 
+</figure> 
+<p><strong> </strong> </p> 
+<p> <strong>- Επαγγελματίας: 1963-1979 (ερασιτέχνης 1956-1962)</strong> </p> 
+<p> <strong>- Στιλ παιξίματος: Αριστερόχειρας (backhand με το ένα χέρι)</strong> </p> 
+<p> <strong>- Ρεκόρ καριέρας: 1473-407 (78.35%)</strong> </p> 
+<p> <strong>- Τίτλοι καριέρας: 200</strong> </p> 
+<p> <strong>- Grand Slam: 11 (3 AO, 2 FO, 4 W, 2 USO)</strong> </p> 
+<p> <strong>- Παραμονή στο Νο1: -</strong> </p> 
+<p>Ο Ρόντνεϊ Τζορτζ Λέιβερ γεννήθηκε το 1938 στο Κουίνσλαντ της Αυστραλίας, ξεκίνησε και αυτός από μικρός το τένις και έγινε ερασιτέχνης το 1956, σε ηλικία 18 ετών, ενώ από το 1963 και μετά αγωνίστηκε ως επαγγελματίας. Τα διακόσια τουρνουά που κατέκτησε στη διάρκεια της καριέρας του, αποτελούν απόλυτο ρεκόρ μέχρι και σήμερα, ενώ είναι ο μοναδικός παίκτης στην ιστορία του ανδρικού τένις, που έχει καταφέρει να κερδίσει δέκα τουρνουά και πάνω κάθε χρόνο, επί επτά συνεχόμενα έτη (1964-1970). Ο "πύραυλος", όπως ήταν το παρατσούκλι του, κόσμησε με 11 Grand Slam τη συλλογή του και αυτό, παρά το γεγονός ότι για μια πενταετία δεν είχε δικαίωμα να παίρνει μέρος σε αυτά (από το 1963 που έγινε επαγγελματίας, μέχρι το 1968 που ξεκίνησε η εποχή των Όπεν).</p> 
+<p>Ο Λέιβερ είναι ο μοναδικός παίκτης στην ιστορία που έχει πετύχει δυο φορές το Grand Slam, δηλαδή να κατακτήσει και τα τέσσερα majors την ίδια χρονιά (1962 &amp; 1969) και ο μόνος που το έχει καταφέρει στην Open Era! Έχει ακόμα έξι Grand Slam στο διπλό και πέντε νίκες στο Davis Cup. Ήταν εκπληκτικός παίκτης σε όλες τις επιφάνειες, ένας πραγματικός all-rounder των γηπέδων του τένις. Παρά το γεγονός ότι ήταν κοντός (1.73), είχε αναπτύξει μια εξαιρετική όσο και επιθετική εφαρμογή στο "σερβίς-βολέ", ενώ θεωρήθηκε ο παίκτης με την καλύτερη τεχνική στην εποχή του. Παροιμιώδης έχει μείνει η φοβερή δύναμη που είχε στον αριστερό του καρπό, κάτι που τον βοηθούσε να εξαπολύει πολύ δυνατά και γρήγορα χτυπήματα. Τον χαρακτήριζαν οι μεγάλες ανατροπές σε παιχνίδια που κρίνονταν στα πέντε σετ.</p> 
+<h3> 03. ΤΖΙΜΙ ΚΟΝΟΡΣ (ΗΠΑ) </h3> 
+<p> <strong> </strong></p> 
+<figure class="Article__body__inline Article__body__inline--image Article__image"> 
+ <div class="Article__image__intrinsic" style="--image-ratio:59.285714285714285%;"> 
+  <img src="https://www.contra.gr/img/9625/7445091/272000/o/140/0/104t940.png" alt="Οι δέκα κορυφαίοι τενίστες όλων των εποχών" data-srcset="https://www.contra.gr/img/6934/7445091/272000/o/460/0/104t940.png 460w, 
+                                    https://www.contra.gr/img/1872/7445091/272000/o/620/0/104t940.png 620w" data-sizes="(min-width: 1280px) 620px,
+                                   (min-resolution: 3x) 33vw,
+                                   (min-resolution: 2x) 50vw,
+                                   100vw" class="lazyload">  
+ </div> 
+</figure> 
+<p><strong> </strong> </p> 
+<p> <strong>- Επαγγελματίας: 1972-1996 (ερασιτέχνης 1970-1971)</strong> </p> 
+<p> <strong>- Στιλ παιξίματος: Αριστερόχειρας (backhand με τα δυο χέρια)</strong> </p> 
+<p> <strong>- Ρεκόρ καριέρας: 1256-279 (81.8%)</strong> </p> 
+<p> <strong>- Τίτλοι καριέρας: 109</strong> </p> 
+<p> <strong>- Grand Slam: 8 (1 AO, 2 W, 5 USO)</strong> </p> 
+<p> <strong>- Παραμονή στο Νο1: 268 εβδομάδες</strong> </p> 
+<p>Ο Τζέιμς Σκοτ Κόνορς γεννήθηκε το 1952 στο Σεν Λούις του Ιλινόις των ΗΠΑ, το 1970 έγινε ερασιτέχνης και από το 1972, σε ηλικία 20 ετών συνέχισε ως επαγγελματίας. Υπήρξε μέλος της φοβερής και τρομερής γενιάς που κυριάρχησε στο παγκόσμιο τένις στο δεύτερο μισό της δεκαετίας του '70 και στο πρώτο μισό εκείνης του '80, μαζί με τενίστες όπως ο Μποργκ, ο Βίλας, ο Τζερουλάιτις, ο Λεντλ και ο Μάκενρο. Παρέμεινε στο νούμερο 1 της ATP (Association of Tennis Professionals) για 160 συνεχόμενες εβδομάδες (1974-1977), επίδοση ρεκόρ για την εποχή και συνολικά, σε όλη την καριέρα του για 268 εβδομάδες (4ος, πίσω μόνο από τους Φέντερερ, Σάμπρας και Λεντλ). Κατέκτησε 109 τίτλους, κάτι που αποτελεί ρεκόρ στην Εποχή των Όπεν (ο μόνος της Open Era με τριψήφιο αριθμό κατακτήσεων), ενώ έχει δώσει τους περισσότερους αγώνες (1535), έχοντας πετύχει και τις περισσότερες νίκες (1256). Το 1974, σε ηλικία 22 ετών, έγινε ο δεύτερος παίκτης της Εποχής των Όπεν (μετά τον Ροντ Λέιβερ) που κατέκτησε τρία Grand Slam την ίδια χρονιά, ενώ συνολικά έφτασε τα οκτώ majors στην καριέρα του (συν δυο ακόμα στο διπλό).</p> 
+<p>Το αγωνιστικό στιλ του Κόνορς, μακριά από το σύνηθες "σερβίς-βολέ" της εποχής, χαρακτηρίστηκε από μεγάλη ποικιλία κινήσεων. Ο Τζίμι εξέλιξε και τελειοποίησε το μακρινό "flat backhand" (πολύ δυνατό χτύπημα χωρίς φάλτσα), ενώ ήταν ο κορυφαίος της γενιάς του στις επιστροφές των αντίπαλων σερβίς. Τον διέκρινε αποφασιστικότητα και μαχητικότητα, δεν το έβαζε ποτέ κάτω, δεν παραδινόταν σε κανένα παιχνίδι, είχε μέσα του το πνεύμα του νικητή. Υπήρξε αρκετές φορές εριστικός με τους αντιπάλους του καθώς και με τους διαιτητές. Το κοινό μοιραζόταν ανάμεσα στον θαυμασμό του για το παίξιμο του Κόνορς και στην οργή του για τις αντιδράσεις του, αλλά ο Αμερικανός ήξερε πολύ καλά πώς να εκμεταλλεύεται κάθε αντίδραση των θεατών προς όφελός του. Όταν ολοκλήρωσε την αγωνιστική του δράση, ασχολήθηκε με την προπονητική (Άντι Ρόντικ, Μαρία Σαραπόβα, Εζενί Μπουσάρ κλπ).</p> 
+<h3> 04. ΜΠΓΙΟΡΝ ΜΠΟΡΓΚ (ΣΟΥΗΔΙΑ) </h3> 
+<p> <strong> </strong></p> 
+<figure class="Article__body__inline Article__body__inline--image Article__image"> 
+ <div class="Article__image__intrinsic" style="--image-ratio:59.285714285714285%;"> 
+  <img src="https://www.contra.gr/img/5301/7445089/385000/o/140/0/102t940.png" alt="Οι δέκα κορυφαίοι τενίστες όλων των εποχών" data-srcset="https://www.contra.gr/img/1860/7445089/385000/o/460/0/102t940.png 460w, 
+                                    https://www.contra.gr/img/3054/7445089/385000/o/620/0/102t940.png 620w" data-sizes="(min-width: 1280px) 620px,
+                                   (min-resolution: 3x) 33vw,
+                                   (min-resolution: 2x) 50vw,
+                                   100vw" class="lazyload">  
+ </div> 
+</figure> 
+<p><strong> </strong> </p> 
+<p> <strong>- Επαγγελματίας: 1973-1983 (ερασιτέχνης 1971-1972)</strong> </p> 
+<p> <strong>- Στιλ παιξίματος: Δεξιόχειρας (backhand με τα δυο χέρια)</strong> </p> 
+<p> <strong>- Ρεκόρ καριέρας: 639-130 (83.1%)</strong> </p> 
+<p> <strong>- Τίτλοι καριέρας: 64</strong> </p> 
+<p> <strong>- Grand Slam: 11 (6 FO, 5 W)</strong> </p> 
+<p> <strong>- Παραμονή στο Νο1: 109 εβδομάδες</strong> </p> 
+<p>Ο Μπγιόρν Ρούνε Μποργκ γεννήθηκε το 1956 στη Στοκχόλμη της Σουηδίας, ξεχώρισε από μικρός παίζοντας τένις και το 1973, σε ηλικία 17 ετών, έγινε επαγγελματίας. Έναν χρόνο αργότερα κατέκτησε το πρώτο του Grand Slam στο Ρολάν Γκαρός (ο μικρότερος σε ηλικία που το πετύχαινε μέχρι τότε). Μέσα σε μόλις μια δεκαετία επαγγελματικής καριέρας, κόσμησε με 11 majors τη συλλογή του, έξι Γαλλικά Όπεν και πέντε Γουίμπλεντον! Είναι ο μοναδικός τενίστας της Εποχής των Όπεν που έχει καταφέρει να κατακτήσει το Wimbledon πέντε σερί χρονιές. Στο συγκεκριμένο τουρνουά κατέχει ακόμα δυο ρεκόρ, το υψηλότερο ποσοστό νικών (51-4, 92.7%) και το μεγαλύτερο σερί νικών με 41 κερδισμένα παιχνίδια! Είναι επίσης ο μοναδικός τενίστας που πέτυχε τρεις φορές - και μάλιστα συνεχόμενες - στην καριέρα του το περίφημο "Channel Slam", δηλαδή το νταμπλ σε Ρολάν Γκαρός και Γουίμπλεντον την ίδια χρονιά (1978-1980)! Για να καταλάβετε τί ακριβώς σημαίνει αυτό, να πούμε ότι από τότε μέχρι σήμερα, μόνο ο Ναδάλ (2008 &amp; 2010) και ο Φέντερερ (2009), το έχουν πετύχει. Ένα ακόμα ρεκόρ που κατέχει ο Μποργκ, είναι ότι έχει κατακτήσει το Grand Slam με τα λιγότερα χαμένα games στην ιστορία (το Ρολάν Γκαρός του 1978, όπου έχασε συνολικά σε ολόκληρο το τουρνουά μόλις 32 games). Επίσης, έχει κατακτήσει τρία majors χωρίς να χάσει ούτε ένα σετ, ρεκόρ που μοιράζεται με τους Sears, Trabert και Nadal. Ο Μποργκ υπήρξε ο πρώτος σούπερ σταρ του αθλήματος και επίσης ο πρώτος που ξεπέρασε το ένα εκατομμύριο δολάρια σε κέρδη μέσα σε μια μόνο σεζόν (1979).</p> 
+<p>Το αγωνιστικό του στιλ ξεχώριζε για την ποικιλία των χτυπημάτων και τη φοβερή του κίνηση με τα πόδια. Απέναντι στους μεγάλους αντιπάλους του, εφάρμοζε σχεδόν πάντα το "σερβίς-βολέ" στο πρώτο σερβίς και τα πολύ δυνατά groundstrokes (χτυπήματα από τη βασική γραμμή) στο δεύτερο. Τα συνεχόμενα backhand με topspin με τα δυο χέρια, ήταν σήμα κατατεθέν του, ενώ πρόκειται ίσως για τον μοναδικό τενίστα της ιστορίας που μπορούσε να αποδώσει άριστα τόσο στο χώμα όσο και στο γρασίδι. Παροιμιώδης ήταν η ψυχραιμία του απέναντι σε οποιαδήποτε δύσκολη κατάσταση, εξ ου και το παρατσούκλι "Ice-Borg" (από το iceberg, δηλαδή παγόβουνο). Πάντα άψογα προετοιμασμένος ψυχικά και σωματικά, με μια απίστευτη αντοχή, είναι ο τενίστας με το υψηλότερο ποσοστό νικών σε ματς πέντε σετ στην ιστορία του αθλήματος (24-3, 89%). Θεωρείται ο θεμελιωτής του σύγχρονου τρόπου παιχνιδιού και ο πιο επιδραστικός παίκτης της Open Era. Ο Ρουμάνος Ίλιε Ναστάσε, είχε πει κάποτε για τον Μποργκ, "όλοι εμείς παίζουμε τένις, εκείνος παίζει κάτι άλλο". Όμως η τεράστια δημοφιλία του και το γεγονός ότι βρισκόταν συνεχώς στο επίκεντρο της προσοχής, μέσα και έξω από τα κορτ, τον εξουθένωσαν τόσο πολύ ψυχολογικά, ώστε αποφάσισε να σταματήσει την αγωνιστική δράση το 1983, σε ηλικία μόλις 26 ετών! Ο ίδιος είχε εξηγήσει την αποχώρησή του λέγοντας: "Είχα χάσει την εσωτερική λάμψη, από τότε ήταν μάταιο να συνεχίσω". Το 1991 έκανε μια σύντομη επανεμφάνιση, όμως μετά από συνεχόμενες ήττες σε διάφορα τουρνουά, αποσύρθηκε οριστικά.</p> 
+<h3> 05. ΤΖΟΝ ΜΑΚΕΝΡΟ (ΗΠΑ) </h3> 
+<p> <strong> </strong></p> 
+<figure class="Article__body__inline Article__body__inline--image Article__image"> 
+ <div class="Article__image__intrinsic" style="--image-ratio:59.285714285714285%;"> 
+  <img src="https://www.contra.gr/img/570/7445090/330000/o/140/0/103t940.png" alt="Οι δέκα κορυφαίοι τενίστες όλων των εποχών" data-srcset="https://www.contra.gr/img/167/7445090/330000/o/460/0/103t940.png 460w, 
+                                    https://www.contra.gr/img/8973/7445090/330000/o/620/0/103t940.png 620w" data-sizes="(min-width: 1280px) 620px,
+                                   (min-resolution: 3x) 33vw,
+                                   (min-resolution: 2x) 50vw,
+                                   100vw" class="lazyload">  
+ </div> 
+</figure> 
+<p><strong> </strong> </p> 
+<p> <strong>- Επαγγελματίας: 1978-1994 (ερασιτέχνης 1976-1977)</strong> </p> 
+<p> <strong>- Στιλ παιξίματος: Αριστερόχειρας (backhand με το ένα χέρι)</strong> </p> 
+<p> <strong>- Ρεκόρ καριέρας: 881-198 (81.65%)</strong> </p> 
+<p> <strong>- Τίτλοι καριέρας: 77</strong> </p> 
+<p> <strong>- Grand Slam: 7 (3 W, 4 USO)</strong> </p> 
+<p> <strong>- Παραμονή στο Νο1: 170 εβδομάδες</strong> </p> 
+<p>Ο Τζον Πάτρικ Μάκενρο Τζούνιορ γεννήθηκε το 1959 στο Βίσμπαντεν της Δυτικής Γερμανίας από Αμερικανούς γονείς, οι οποίοι έναν χρόνο αργότερα εγκαταστάθηκαν στη Νέα Υόρκη. Εκεί ο μικρός Τζον ξεκίνησε το τένις, στα 17 του έγινε ερασιτέχνης και από το 1978, σε ηλικία 18 ετών, επαγγελματίας. Στη διάρκεια της καριέρας του κατέκτησε επτά majors (τρία Γουίμπλεντον και τέσσερα US Open), στα οποία πρόσθεσε ακόμα εννέα Grand Slam στο διπλό. Οι 82 νίκες και 3 ήττες του (96.5%) μέσα στο 1984, αποτελούν ρεκόρ για την Εποχή των Όπεν. Επίσης κατέκτησε πέντε φορές το Davis Cup με τις ΗΠΑ. Παρέμεινε στην κορυφή της ATP για 170 εβδομάδες (7η επίδοση). Ο Μάκενρο υπήρξε ίσως το μεγαλύτερο ταλέντο που εμφανίστηκε ποτέ στην Open Era, μεγαλύτερο ακόμα και από τον Φέντερερ. Με ένα εκπληκτικό αριστερό backhand, αλλά και μια απίστευτη ποικιλία χτυπημάτων "βολέ", ήταν ικανός να προβληματίσει οποιονδήποτε αντίπαλο.</p> 
+<p>Πρόκειται χωρις αμφιβολία για τον κορυφαίο παίκτη "σερβίς-βολέ" της ιστορίας, όμως πέρα από αυτό το χαρακτηριστικό, φημιζόταν και για την ευρηματικότητά του στα δύσκολα χτυπήματα. Φυσικά πέρασε στην ιστορία του αθλήματος, ως ο πλέον αμφιλεγόμενος τενίστας, λόγω του εκρηκτικού του ταμπεραμέντου και του πολύ δύσκολου χαρακτήρα του, κάτι που είχε σαν αποτέλεσμα τα ατελείωτα επεισόδια στη διάρκεια των αγώνων σε όλη την καριέρα του. Φράσεις όπως το περίφημο "You cannot be serious" ή το επικό "Answer my question, the question jerk!", που είχε απευθύνει κατ' επανάληψη σε διαιτητές, αποτελούν μερικές από τις πιο χαρακτηριστικές στιγμές του Μάκενρο στα κορτ, ενώ άπειρες είναι οι τιμωρίες και τα πρόστιμα που κλήθηκε να πληρώσει ύστερα από τα ξεσπάσματά του. Παρόλα αυτά, πρέπει να αναφέρουμε, ότι απέναντι στον μεγάλο του αντίπαλο, Μπγιόρν Μποργκ, δεν έχασε ποτέ την ψυχραιμία και την αυτοσυγκράτησή του. Όταν σταμάτησε την αγωνιστική δράση, ασχολήθηκε με τον σχολιασμό αγώνων τένις σε διάφορα μέσα, όπως το ESPN, το CBS, το NBC, το Eurosport και το BBC.</p> 
+<h3> 06. ΙΒΑΝ ΛΕΝΤΛ (ΤΣΕΧΟΣΛΟΒΑΚΙΑ - ΗΠΑ) </h3> 
+<p> <strong> </strong></p> 
+<figure class="Article__body__inline Article__body__inline--image Article__image"> 
+ <div class="Article__image__intrinsic" style="--image-ratio:59.285714285714285%;"> 
+  <img src="https://www.contra.gr/img/4119/7445094/096000/o/140/0/107t940.png" alt="Οι δέκα κορυφαίοι τενίστες όλων των εποχών" data-srcset="https://www.contra.gr/img/6618/7445094/096000/o/460/0/107t940.png 460w, 
+                                    https://www.contra.gr/img/1872/7445094/096000/o/620/0/107t940.png 620w" data-sizes="(min-width: 1280px) 620px,
+                                   (min-resolution: 3x) 33vw,
+                                   (min-resolution: 2x) 50vw,
+                                   100vw" class="lazyload">  
+ </div> 
+</figure> 
+<p><strong> </strong> </p> 
+<p> <strong>- Επαγγελματίας: 1978-1994</strong> </p> 
+<p> <strong>- Στιλ παιξίματος: Δεξιόχειρας (backhand με το ένα χέρι)</strong> </p> 
+<p> <strong>- Ρεκόρ καριέρας: 1068-242 (81.5%)</strong> </p> 
+<p> <strong>- Τίτλοι καριέρας: 94</strong> </p> 
+<p> <strong>- Grand Slam: 8 (2 AO, 3 FO, 3 USO)</strong> </p> 
+<p> <strong>- Παραμονή στο Νο1: 270 εβδομάδες</strong> </p> 
+<p>Ο Ιβάν Λεντλ γεννήθηκε το 1960 στην Οστράβα της Τσεχοσλοβακίας (σημερινής Τσεχίας) και ξεκίνησε από πολύ μικρός το τένις αφού και οι δυο γονείς του ήταν πρώην επαγγελματίες παίκτες. Ως τζούνιορ, κέρδισε το 1978 τόσο το Ρολάν Γκαρός όσο και το Γουίμπλεντον, όντας νούμερο ένα στην κατηγορία του. Την ίδια χρονιά πέρασε στους επαγγελματίες και το 1980 βοήθησε την Εθνική ομάδα της χώρας του να κατακτήσει το Davis Cup. Χρειάστηκε να περιμένει μέχρι το 1984 για να κερδίσει το πρώτο του Grand Slam (Ρολάν Γκαρός), όμως από εκεί και μετά, κυριάρχησε μέχρι το τέλος της δεκαετίας του '80, φτάνοντας συνολικά τα οκτώ majors. Έγινε ο πρώτος τενίστας με παρουσία σε τουλάχιστον έναν τελικό Grand Slam κάθε σεζόν, επί 11 συνεχόμενα χρόνια (ρεκόρ που ισοφάρισε αργότερα ο Σάμπρας), ενώ βρέθηκε στην κορυφή της ATP για 270 εβδομάδες (συνολικά τρίτος, πίσω μόνο από Φέντερερ και Σάμπρας). Κατέχει ακόμα δυο σημαντικά ρεκόρ, τις 11 δεύτερες θέσεις σε Grand Slam, αλλά και τους οκτώ συνεχόμενους τελικούς σε ένα major (US Open, 1982-1989).</p> 
+<p>Ο Λεντλ θεωρείται ως ο καλύτερος "μαθητής" του Μποργκ, αφού υιοθέτησε πολλά στοιχεία από το αγωνιστικό στιλ του Σουηδού. Χρησιμοποιούσε τα groundstrokes (χτυπήματα από τη βασική γραμμή), με πολύ δυνατό backhand με topspin, αλλά και εξαιρετικής ακρίβειας passing shots είτε με backhand, είτε με forehand. Παρά το ύψος του (1.88) ήταν πολύ γρήγορος μέσα στο γήπεδο και οι απίστευτα υπολογισμένες λόμπες ήταν το σήμα κατατεθέν του. Η αχίλλειος πτέρνα του ήταν το παιχνίδι στο φιλέ, κάτι που δεν του επέτρεψε να κερδίσει ποτέ το Γουίμπλεντον. Ένα ακόμα στοιχείο που τον έκανε να θυμίζει τον Μποργκ, ήταν η ολύμπια ψυχραιμία του στη διάρκεια των παιχνιδιών. Όταν ολοκλήρωσε την αγωνιστική δράση, ασχολήθηκε με την προπονητική και είναι ο "υπεύθυνος" για την πετυχημένη καριέρα του Άντι Μάρεϊ, αφού τον οδήγησε σε τρία majors, δυο χρυσά ολυμπιακά μετάλλια (2012 &amp; 2016) και στο νούμερο ένα της ATP.</p> 
+<h3> 07. ΠΙΤ ΣΑΜΠΡΑΣ (ΗΠΑ) </h3> 
+<p> <strong> </strong></p> 
+<figure class="Article__body__inline Article__body__inline--image Article__image"> 
+ <div class="Article__image__intrinsic" style="--image-ratio:60.71428571428571%;"> 
+  <img src="https://www.contra.gr/img/2647/7445088/431000/o/140/0/101t940.png" alt="Οι δέκα κορυφαίοι τενίστες όλων των εποχών" data-srcset="https://www.contra.gr/img/9206/7445088/431000/o/460/0/101t940.png 460w, 
+                                    https://www.contra.gr/img/400/7445088/431000/o/620/0/101t940.png 620w" data-sizes="(min-width: 1280px) 620px,
+                                   (min-resolution: 3x) 33vw,
+                                   (min-resolution: 2x) 50vw,
+                                   100vw" class="lazyload">  
+ </div> 
+</figure> 
+<p><strong> </strong> </p> 
+<p> <strong>- Επαγγελματίας: 1988-2002</strong> </p> 
+<p> <strong>- Στιλ παιξίματος: Δεξιόχειρας (backhand με το ένα χέρι)</strong> </p> 
+<p> <strong>- Ρεκόρ καριέρας: 762-222 (77.4%)</strong> </p> 
+<p> <strong>- Τίτλοι καριέρας: 64</strong> </p> 
+<p> <strong>- Grand Slam: 14 (2 AO, 7 W, 5 USO)</strong> </p> 
+<p> <strong>- Παραμονή στο Νο1: 286 εβδομάδες</strong> </p> 
+<p>Ο Πιτ Σάμπρας γεννήθηκε το 1971 στην Ουάσινγκτον από Έλληνες γονείς και το 1978 εγκαταστάθηκε με την οικογένειά του στην Καλιφόρνια. Από μικρός ξεκίνησε το τένις και το 1988, σε ηλικία 17 ετών, έγινε επαγγελματίας. Δυο χρόνια αργότερα, το 1990, κατέκτησε το πρώτο του US Open και έγινε ο νεώτερος στην ιστορία που το πέτυχε στη συγκεκριμένη διοργάνωση (19 ετών και 28 ημερών). Ο Σάμπρας έφτασε τα 14 majors στη διάρκεια της καριέρας του, επίδοση που τότε αποτελούσε ρεκόρ (τον ξεπέρασαν στη συνέχεια οι Φέντερερ και Ναδάλ). Κατέκτησε επτά φορές το Γουίμπλεντον (δεύτερος πίσω από τους 8 τίτλους του Φέντερερ) και πέντε το Αμερικανικό Όπεν (ρεκόρ της Open Era που μοιράζεται με τους Κόνορς και Φέντερερ). Είναι ο τενίστας με το μεγαλύτερο ποσοστό νικών στο Γουίμπλεντον στην Εποχή των Όπεν (63-7, 90%) και ο μοναδικός που βρέθηκε στο νούμερο 1 της ATP στο τέλος έξι συνεχόμενων σεζόν (1993-1998). Συμπλήρωσε 286 εβδομάδες στην κορυφή της παγκόσμιας κατάταξης, επίδοση που ξεπεράστηκε μόνο από τον Φέντερερ. Έγινε ο δεύτερος τενίστας (μετά τον Λεντλ) με παρουσία σε τουλάχιστον έναν τελικό Grand Slam κάθε σεζόν, επί 11 συνεχόμενα χρόνια.</p> 
+<p>Επίσης, έχει κερδίσει και τους επτά τελικούς στους οποίους έπαιξε στο Γουίμπλεντον, όντας πίσω μόνο σε αυτή τη λίστα από τον Ναδάλ και τους έντεκα τελικούς του Ρολάν Γκαρός. Ο Σάμπρας είχε μια μεγάλη ποικιλία στο παίξιμό του, από τους μεγαλύτερους all-court παίκτες όλων των εποχών. Διέθετε ένα από τα κορυφαία σερβίς της ιστορίας, κάτι που του έδωσε το παρατσούκλι "Pistol Pete". Με αυτά τα φοβερά σερβίς (όχι μόνο το πρώτο, αλλά και το δεύτερο), σημείωσε άπειρους άσσους ακόμα και στις πιο κρίσιμες στιγμές των παιχνιδιών. Μπορούσε να πετύχει winners τόσο με το backhand όσο και με το forehand, από οποιοδήποτε σημείο του κορτ. Έπαιζε με "σερβίς-βολέ", αλλά είχε και την ικανότητα να στέλνει φοβερά επιθετικά χτυπήματα από τη βασική γραμμή (groundstrokes). Τον χαρακτήριζε ένα μοναδικό ανταγωνιστικό ένστικτο και θεωρείται ένας από τους κορυφαίους παίκτες στην επιφάνεια του γρασιδιού. Αντίθετα, το αγωνιστικό του στιλ δεν ταίριαζε με τις αργές επιφάνειες, όπως το χώμα, γι' αυτό και δεν κατάφερε ποτέ να κατακτήσει το Ρολάν Γκαρός.</p> 
+<h3> 08. ΡΟΤΖΕΡ ΦΕΝΤΕΡΕΡ (ΕΛΒΕΤΙΑ) </h3> 
+<p> <strong> </strong></p> 
+<figure class="Article__body__inline Article__body__inline--image Article__image"> 
+ <div class="Article__image__intrinsic" style="--image-ratio:59.285714285714285%;"> 
+  <img src="https://www.contra.gr/img/4855/7445097/961000/o/140/0/110t940.png" alt="Οι δέκα κορυφαίοι τενίστες όλων των εποχών" data-srcset="https://www.contra.gr/img/1704/7445097/961000/o/460/0/110t940.png 460w, 
+                                    https://www.contra.gr/img/2898/7445097/961000/o/620/0/110t940.png 620w" data-sizes="(min-width: 1280px) 620px,
+                                   (min-resolution: 3x) 33vw,
+                                   (min-resolution: 2x) 50vw,
+                                   100vw" class="lazyload">  
+ </div> 
+</figure> 
+<p><strong> </strong> </p> 
+<p> <strong>- Επαγγελματίας: 1998-Συνεχίζει</strong> </p> 
+<p> <strong>- Στιλ παιξίματος: Δεξιόχειρας (backhand με το ένα χέρι)</strong> </p> 
+<p> <strong>- Ρεκόρ καριέρας: 1182-260 (82%)</strong> </p> 
+<p> <strong>- Τίτλοι καριέρας: 99</strong> </p> 
+<p> <strong>- Grand Slam: 20 (6 AO, 1 FO, 8 W, 5 USO)</strong> </p> 
+<p> <strong>- Παραμονή στο Νο1: 310 εβδομάδες</strong> </p> 
+<p>Ο Ρότζερ Φέντερερ γεννήθηκε το 1981 στη Βασιλεία της Ελβετίας και ως τζούνιορ, κέρδισε το 1998 το Γουίμπλεντον, όντας νούμερο ένα στην κατηγορία του. Αμέσως μετά έγινε επαγγελματίας και από το 2003, όταν κατέκτησε για πρώτη φορά το Γουίμπλεντον, ξεκίνησε την κυριαρχία του στο παγκόσμιο τένις. Ο Φέντερερ είναι ο άνθρωπος-ρεκόρ του αθλήματος! Ξεκινάμε από τα 20 majors που έχει στη συλλογή του (τα περισσότερα από όποιονδήποτε άλλο τενίστα) και συνεχίζουμε με τα 8 Γουίμπλεντον (ρεκόρ), τα 6 Αυστραλιανά Όπεν (ρεκόρ μαζί με Τζόκοβιτς &amp; Έμερσον) και τα 5 σερί US Open (ρεκόρ). Είναι ο τενίστας με τους περισσότερους τελικούς Grand Slam στην ιστορία (30), ένας από τους οκτώ που έχουν και τα τέσσερα Grand Slam στην κατοχή τους, αυτός που έχει παίξει τους περισσότερους αγώνες σε Grand Slam (396) και έχει τις περισσότερες νίκες (342), αλλά και αυτός με τη μεγαλύτερη χρονική απόσταση (15 χρόνια) ανάμεσα στο πρώτο και το πιο πρόσφατο major (2003-2018)! Είναι ο τενίστας με τη μεγαλύτερη παραμονή στην κορυφή της ATP (310 εβδομάδες), αυτός με τη μεγαλύτερη συνεχόμενη παραμονή στο νο1 (237 εβδομάδες) και ο μεγαλύτερος σε ηλικία που ανέβηκε στο νο1 της ATP (36 ετών και 320 ημερών).</p> 
+<p>Θα μπορούσαμε να πούμε ότι ο Φέντερερ είναι ο κορυφαίος τενίστας όλων των εποχών και σίγουρα ο πιο τεχνικά άρτιος, ένα πραγματικό χάρμα ιδέσθαι μέσα στα γήπεδα. Με μια απίστευτη ποικιλία κινήσεων, ο Ελβετός είναι ο τέλειος all-court παίκτης, με κυριότερα χαρακτηριστικά την ταχύτητά του στην εκτέλεση, το φαντεζί παιχνίδι του και τα άριστα χτυπήματά του. Ο Τζίμι Κόνορς έχει πει σχετικά: "Σε μια εποχή που χαρακτηρίζεται από σπεσιαλίστες, ή θα είσαι καλός στις σκληρές επιφάνειες, ή θα είσαι καλός στο χώμα, ή θα είσαι καλός στο γρασίδι, ή θα είσαι ο Ρότζερ Φέντερερ"! Ο Ελβετός παίζει κυρίως από τη βασική γραμμή, αλλά είναι εξίσου άνετος και στο φιλέ, αφού διαθέτει ένα από τα καλύτερα βολέ. Το forehand του είναι επίσης εκπληκτικό, ο Μάκενρο το έχει χαρακτηρίσει ως το καλύτερο χτύπημα στο άθλημα. Ο Φέντερερ διαθέτει αμέτρητα όπλα στη φαρέτρα του, μπορεί να αμυνθεί και να επιτεθεί όπως και όποτε θέλει, ενώ οι εμπνεύσεις του στη διάρκεια του παιχνιδιού χαρακτηρίζονται από μια μοναδική αισθητική. Το backhand με το ένα χέρι (το οποίο έγινε τέλειο, ακριβώς επειδή "αναγκάστηκε", αφού όλοι τον πίεζαν σε αυτό), μπορεί να καταλήξει στο αντίπαλο γήπεδο με αμέτρητους διαφορετικούς τρόπους και με μια απίστευτη ακρίβεια. Το slice του, το topspin, το smash, το skyhook, το εντυπωσιακό του tweener (χτύπημα ανάμεσα από τα πόδια), όλα αυτά εφαρμόζονται με ζηλευτή τελειότητα μέσα στα κορτ, κάνοντας κάθε εμφάνισή του, μια πραγματική παράσταση τένις. Μια ιδιοφυΐα του τένις, βαδίζοντας στα 38 του χρόνια, συνεχίζει να πρωταγωνιστεί και να υπηρετεί το άθλημα στο υψηλότερο επίπεδο.</p> 
+<h3> 09. ΡΑΦΑΕΛ ΝΑΔΑΛ (ΙΣΠΑΝΙΑ) </h3> 
+<p> <strong> </strong></p> 
+<figure class="Article__body__inline Article__body__inline--image Article__image"> 
+ <div class="Article__image__intrinsic" style="--image-ratio:59.285714285714285%;"> 
+  <img src="https://www.contra.gr/img/5208/7445095/053000/o/140/0/108t940.png" alt="Οι δέκα κορυφαίοι τενίστες όλων των εποχών" data-srcset="https://www.contra.gr/img/1351/7445095/053000/o/460/0/108t940.png 460w, 
+                                    https://www.contra.gr/img/7455/7445095/053000/o/620/0/108t940.png 620w" data-sizes="(min-width: 1280px) 620px,
+                                   (min-resolution: 3x) 33vw,
+                                   (min-resolution: 2x) 50vw,
+                                   100vw" class="lazyload">  
+ </div> 
+</figure> 
+<p><strong> </strong> </p> 
+<p> <strong>- Επαγγελματίας: 2001-Συνεχίζει</strong> </p> 
+<p> <strong>- Στιλ παιξίματος: Αριστερόχειρας (backhand με τα δυο χέρια)</strong> </p> 
+<p> <strong>- Ρεκόρ καριέρας: 919-189 (83%)</strong> </p> 
+<p> <strong>- Τίτλοι καριέρας: 80</strong> </p> 
+<p> <strong>- Grand Slam: 17 (1 AO, 11 FO, 2 W, 3 USO)</strong> </p> 
+<p> <strong>- Παραμονή στο Νο1: 196 εβδομάδες</strong> </p> 
+<p>Ο Ραφαέλ Ναδάλ Παρέρα γεννήθηκε το 1986 στο Μανακόρ της Μαγιόρκας, ξεκίνησε από μικρός το τένις και στα 14 χρόνια του εγκαταστάθηκε στη Βαρκελώνη για να αφοσιωθεί ολοκληρωτικά στο αγαπημένο του άθλημα. Στα 15 του έγινε επαγγελματίας, πρώτα στην κατηγορία των τζούνιορς και από το 2003 στους άνδρες. Το 2005, σε ηλικία 19 ετών, έφτασε στην κατάκτηση του πρώτου του Grand Slam, κερδίζοντας το Ρολάν Γκαρός στην πρώτη του συμμετοχή σε αυτό, όντας ο δεύτερος που πέτυχε κάτι τέτοιο μετά τον Ματς Βιλάντερ το 1982. Ο Ισπανός ξεκίνησε από εκεί μια φοβερή - όσο και μοναδική στα χρονικά του τένις - κυριαρχία στο χώμα, φτάνοντας τους έντεκα τίτλους στο Γαλλικό Όπεν, κάτι που φυσικά δεν έχει πετύχει ποτέ κανείς άλλος τενίστας σε κανένα Grand Slam! Ο Ναδάλ έχει φτάσει τα 17 συνολικά majors (δεύτερος πίσω μόνο από τον Φέντερερ), έχει κατακτήσει και τα τέσσερα μεγάλα τουρνουά και μαζί με τον Άγκασι, είναι ο μοναδικός που έχει συμπληρώσει στη διάρκεια της καριέρας του το λεγόμενο "Golden Slam", δηλαδή τα τέσσερα Grand Slam συν το χρυσό ολυμπιακό μετάλλιο (2008). Επίσης είναι ο νεώτερος τενίστας στην ιστορία που κατέκτησε και τα τέσσερα majors, σε ηλικία μόλις 24 ετών! Είναι ο μοναδικός στην ιστορία του τένις που επί δέκα συνεχόμενα χρόνια (2005-2014), κατέκτησε τουλάχιστον ένα Grand Slam, ενώ έχει βρεθεί 196 εβδομάδες στην κορυφή της ATP.</p> 
+<p>Έχει το απόλυτο ρεκόρ νικών στο Ρολάν Γκαρός (86-2, 97.7%), ενώ τρεις από τους έντεκα τίτλους του στο Γαλλικό Όπεν, τους έχει κατακτήσει χωρίς να χάσει ούτε ένα σετ (2008, 2010 &amp; 2017)! Ο Ναδάλ παίζει κυρίως πίσω από τη βασική γραμμή, βασιζόμενος σε πολύ δυνατά topspin groundstrokes, με μεγάλη αντοχή στα ράλι, φοβερή κίνηση στα πόδια (εντυπωσιακό "γλίστρημα" στο χώμα) και μια μοναδική κάλυψη όλου του γηπέδου. Αθλητικός και με άψογη φυσική κατάσταση, είναι ένας άριστος αμυντικός που όμως έχει την ικανότητα να δημιουργεί νικητήριους πόντους από (αμυντικές) θέσεις, με αποτέλεσμα να αιφνιδιάζει τους αντιπάλους του. Η τρομερή του αποφασιστικότητα και η πνευματική του ετοιμότητα (στοιχεία που τον βοήθησαν όχι μόνο να μην "καταρρεύσει" ψυχολογικά απέναντι στην ανωτερότητα του Φέντερερ όλα αυτά τα χρόνια, αλλά αντίθετα να τον κοντράρει στα ίσια), έχουν συνδυαστεί τα τελευταία χρόνια με αρκετούς τραυματισμούς, αφού το αθλητικό του παιχνίδι τον αναγκάζει να σπαταλάει πολλές δυνάμεις για να παραμείνει στο υψηλότερο επίπεδο, με αποτέλεσμα αυτή η φθορά να τον κάνει να χάνει αρκετά μεγάλα τουρνουά. Είναι όμως ένας πραγματικά γεννημένος νικητής, που σε καμία στιγμή δεν το έχει βάλει κάτω, αντίθετα, κάθε φορά επιστρέφει το ίδιο έτοιμος και ανταγωνιστικός.</p> 
+<h3> 10. ΝΟΒΑΚ ΤΖΟΚΟΒΙΤΣ (ΣΕΡΒΙΑ) </h3> 
+<figure class="Article__body__inline Article__body__inline--image Article__image"> 
+ <div class="Article__image__intrinsic" style="--image-ratio:59.285714285714285%;"> 
+  <img src="https://www.contra.gr/img/576/7445096/996000/o/140/0/109t940.png" alt="Οι δέκα κορυφαίοι τενίστες όλων των εποχών" data-srcset="https://www.contra.gr/img/7135/7445096/996000/o/460/0/109t940.png 460w, 
+                                    https://www.contra.gr/img/8329/7445096/996000/o/620/0/109t940.png 620w" data-sizes="(min-width: 1280px) 620px,
+                                   (min-resolution: 3x) 33vw,
+                                   (min-resolution: 2x) 50vw,
+                                   100vw" class="lazyload">  
+ </div> 
+</figure> 
+<p> <strong>- Επαγγελματίας: 2003-Συνεχίζει</strong> </p> 
+<p> <strong>- Στιλ παιξίματος: Δεξιόχειρας (backhand με τα δυο χέρια)</strong> </p> 
+<p> <strong>- Ρεκόρ καριέρας: 840-176 (82.7%)</strong> </p> 
+<p> <strong>- Τίτλοι καριέρας: 72</strong> </p> 
+<p> <strong>- Grand Slam: 14 (6 AO, 1 FO, 4 W, 3 USO)</strong> </p> 
+<p> <strong>- Παραμονή στο Νο1: 234 εβδομάδες</strong> </p> 
+<p>Ο Νόβακ Τζόκοβιτς γεννήθηκε το 1987 στο Βελιγράδι της Γιουγκοσλαβίας (σημερινής Σερβίας), ξεκίνησε το τένις από πολύ μικρός και έγινε επαγγελματίας το 2003, σε ηλικία 16 ετών. Το 2008 κέρδισε το πρώτο του Grand Slam στο Αυστραλιανό Όπεν, αλλά από εκεί και μετά, χρειάστηκε να περάσει μια τριετία, μέχρι να φτάσει το 2011, που αποτέλεσε τη χρονιά της καταξίωσής του, αφού σε εκείνη τη σεζόν κατέκτησε τρία majors, το Αυστραλιανό Όπεν, το Γουίμπλεντον και το US Open! Στη συνέχεια πρόσθεσε δέκα ακόμα Grand Slam στη συλλογή του, για να φτάσει συνολικά τα 14 (όσα και ο Σάμπρας, πίσω μόνο από Φέντερερ και Ναδάλ). Έχει κατακτήσει έξι Αυστραλιανά Όπεν, επίδοση ρεκόρ που μοιράζεται μαζί με τους Έμερσον και Φέντερερ, ενώ είναι ένας από τους οκτώ παίκτες που έχουν στη συλλογή τους και τα τέσσερα Grand Slam. Είναι ο μοναδικός παίκτης στην Εποχή των Όπεν, που πέτυχε το μη ημερολογιακό Grand Slam (2015-2016), έχοντας στην κατοχή του και τους τέσσερις τίτλους στα majors και μόλις ο τρίτος τενίστας (μαζί με τους Λέιβερ και Φέντερερ) που έχει παίξει σε μια σεζόν και τους τέσσερις τελικούς του Grand Slam (2015). Από πέρυσι είναι ο πρώτος και φυσικά ο μοναδικός που έχει κατακτήσει και τα εννιά τουρνουά Masters 1000, ενώ έχει αγωνιστεί στον μεγαλύτερο σε διάρκεια τελικό Grand Slam της ιστορίας, τον επικό τελικό του Αυστραλιανού Όπεν το 2012, με αντίπαλο τον Ναδάλ, τον οποίο και νίκησε 3-2 σετ σε 5 ώρες και 53 λεπτά!</p> 
+<p>Ο Νόλε, όπως τον φωνάζουν χαϊδευτικά, έχει βρεθεί συνολικά 234 εβδομάδες στην κορυφή της ATP και είναι το σημερινό νούμερο 1 στην παγκόσμια κατάταξη. Ο Τζόκοβιτς θεωρείται ένας all-court παίκτης με έμφαση στο επιθετικό παιχνίδι από τη βασική γραμμή. Τα groundstrokes του και από τις δυο πλευρές είναι επίμονα και διεισδυτικά, ενώ το backhand του είναι από τα κορυφαία στο σύγχρονο τένις. Διαθέτει εντυπωσιακή κίνηση μέσα στο γήπεδο, καλύπτει άψογα τους χώρους, παίζει εξαιρετική άμυνα και έχει την ικανότητα να δημιουργεί νικητήριους πόντους από (αμυντικές) θέσεις, αιφνιδιάζοντας τους αντιπάλους του. Θεωρείται από τους κορυφαίους returners στην ιστορία του τένις ("απάντηση" στο αντίπαλο σερβίς), σπάνια του κάνουν άσσους, αφού είναι εξόχως αποτελεσματικός στην επιστροφή είτε με backhand, είτε με forehand, εκμηδενίζοντας το πλεονέκτημα του αντίπαλου στο σερβίς. Η πνευματική του ετοιμότητα είναι δεδομένη, η αντοχή του απέναντι σε κάθε πιθανή εξέλιξη του παιχνιδιού, επίσης. Και αυτός, όπως και ο Ναδάλ, δεν υπέκυψε απέναντι στην ανωτερότητα του Φέντερερ, αντίθετα, το πείσμα του και η επιμονή του, διαμόρφωσαν έναν άκρως ανταγωνιστικό τενίστα που συνεχίζει να πρωταγωνιστεί στα κορτ.</p> 
+<p> <strong>* Ακολουθεί το poll του Contra.gr, στο οποίο μπορείτε να ψηφίσετε τον κορυφαίο κατά τη γνώμη σας τενίστα από τους 10 του κειμένου! Με την ευκαιρία, στο αντίστοιχο poll για τους <a href="https://www.contra.gr/Longread/oi-11-koryfaioi-valkanioi-poy-epaiksan-sthn-ellada.5408067.html">11 κορυφαίους Βαλκάνιους ποδοσφαιριστές που έπαιξαν στην Ελλάδα</a>, σε σύνολο 10.274 ψήφων, ο Πρέντραγκ Τζόρτζεβιτς ήρθε πρώτος με ποσοστό 59%, δεύτερος ήταν ο Βέλιμιρ Ζάετς (12%) και στην τρίτη θέση ισοβάθμησαν οι Ντούσαν Μπάγεβιτς και Τόνι Σαβέφσκι με 7% έκαστος! </strong> </p> 
+<div class="Article__body__inline Article__body__inline--embed"> 
+ <script>(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src='https://embed.playbuzz.com/sdk.js';fjs.parentNode.insertBefore(js,fjs);}(document,'script','playbuzz-sdk'));</script> 
+ <div class="exco" data-id="dd0e8f98-3037-4eb5-b249-35b22ce98399" data-show-share="false" data-game-info="false" data-show-info="false" style="display: block;" data-rendered="true"><iframe style="width: 1px; min-width: 100%; height: 984px; border: 0px none;" allowfullscreen="true" scrolling="no" data-id="dd0e8f98-3037-4eb5-b249-35b22ce98399" data-show-share="false" data-game-info="false" data-show-info="false" data-sdk-load-id="3954d3c0-908f-4a73-8425-f9c117ffd6b5" data-device="desktop"></iframe></div> 
+</div> 
+<p> <em> <strong>* Photo credits: AP Images</strong> </em> </p> 
+<p> <em> <strong>* Πηγές: atptour.com, eurosport.com, wiki</strong> </em> </p></div>
+<div class="col-12 col-md-auto Article__social">
+        <span class="Article__social__label">SHARE</span>
+        <a title="Share to Facebook" class="Article__social__icon Article__social__icon--facebook" href="#" onclick="window.open('https://www.facebook.com/dialog/share?app_id=1439930006223342&amp;href=https://www.contra.gr/longreads/oi-deka-koryfaioi-tenistes-olon-ton-epochon.7443369.html&amp;redirect_uri=https://www.contra.gr/longreads/oi-deka-koryfaioi-tenistes-olon-ton-epochon.7443369.html&amp;display=popup', '', 'height=279,width=575');return false;">
+            <svg class="icon icon_facebook">
+                <use xlink:href="https://www.contra.gr/resources/5508c9f/sprite/symbol/svg/sprite.symbol.svg#icon_facebook"></use>
+            </svg>
+        </a> 
+        <a title="Οι δέκα κορυφαίοι τενίστες όλων των εποχών" class="Article__social__icon Article__social__icon--twitter" href="#" onclick="window.open(&quot;https://twitter.com/intent/tweet?url=https://www.contra.gr/longreads/oi-deka-koryfaioi-tenistes-olon-ton-epochon.7443369.html&amp;text=Οι δέκα κορυφαίοι τενίστες όλων των εποχών&quot;, &quot;&quot;, &quot;height=279,width=575&quot;);return false;">
+            <svg class="icon icon_twitter">
+                <use xlink:href="https://www.contra.gr/resources/5508c9f/sprite/symbol/svg/sprite.symbol.svg#icon_twitter"></use>
+            </svg>
+        </a>
+        <a title="Send with Messenger" class="Article__social__icon Article__social__icon--messenger" href="#" onclick="window.open('http://www.facebook.com/dialog/send?app_id=1439930006223342&amp;link=https://www.contra.gr/longreads/oi-deka-koryfaioi-tenistes-olon-ton-epochon.7443369.html&amp;redirect_uri=https://www.contra.gr/longreads/oi-deka-koryfaioi-tenistes-olon-ton-epochon.7443369.html&amp;display=popup', '', 'height=279,width=575');return false;">
+            <svg class="icon icon_messenger">
+                <use xlink:href="https://www.contra.gr/resources/5508c9f/sprite/symbol/svg/sprite.symbol.svg#icon_messenger"></use>
+            </svg>
+        </a>
+    </div>
+<div class="col-12 col-md Article__taglist">
+            <a class="Article__tag" href="https://www.contra.gr/tenis" title="ΤΕΝΙΣ">
+                    ΤΕΝΙΣ</a>
+            <a class="Article__tag" href="https://www.contra.gr/rotzer-fenterer" title="ΡΟΤΖΕΡ ΦΕΝΤΕΡΕΡ">
+                    ΡΟΤΖΕΡ ΦΕΝΤΕΡΕΡ</a>
+            <a class="Article__tag" href="https://www.contra.gr/rafa-nadal" title="ΡΑΦΑ ΝΑΔΑΛ">
+                    ΡΑΦΑ ΝΑΔΑΛ</a>
+            <a class="Article__tag" href="https://www.contra.gr/novak-tzokovits" title="ΝΟΒΑΚ ΤΖΟΚΟΒΙΤΣ">
+                    ΝΟΒΑΚ ΤΖΟΚΟΒΙΤΣ</a>
+            </div>
+    </div>
+                    </div>
+                    <div class="col-12 col-xl-3 article-container__sidebar">
+                        <div class="row">
+                            <!-- /4834629/contra.gr/ros_300x250a -->
+    <div id="ros_300x250a" style="text-align: center;" class="ad-wrap-  col-12 col-md-12 col-xl-3  ">
+            
+        <div id="google_ads_iframe_/4834629/contra.gr/ros_300x250a_0__container__" style="border: 0pt none; margin: auto; text-align: center;"></div></div>
+
+    <section class="col-12 col-md-12 col-xl-12 Teaser Teaser--default " data-gtm="unsetid ID6723151">
+	<div class="row">
+		<div class="col-12 Teaser__header">
+				<h2 class="Teaser__title">
+					TOP STORIES</h2>
+			</div>
+		<article class="col-12 col-md-6 col-xl Article Article--teaser Teaser__article Teaser__article--col-6 Teaser__article--image-right-xl" data-position="1">
+				<a class="Article__tag " href="https://www.contra.gr/eyropaiko-protathlima" title="ΕΥΡΩΠΑΪΚΟ ΠΡΩΤΑΘΛΗΜΑ">
+							ΕΥΡΩΠΑΪΚΟ ΠΡΩΤΑΘΛΗΜΑ</a>
+					 <figure class="Article__image">
+					<a class="Article__image__intrinsic" href="https://www.contra.gr/podosfairo/oi-pappoydes-ton-rekor-se-teliki-fasi-euro.9263763.html?utm_source=Contra&amp;utm_medium=TopStories_article&amp;utm_campaign=24MediaWidget&amp;utm_term=Pos1" title="Οι 'παππούδες' των ρεκόρ σε τελική φάση Euro">
+						<img src="https://www.contra.gr/img/5936/9264058/001000/w140/140/mattheus.jpg" alt="Ο Λόταρ Ματέους στη διάρκεια του EURO '88" data-srcset="https://www.contra.gr/img/6794/9264058/001000/w200/200/mattheus.jpg 200w,
+										  https://www.contra.gr/img/5196/9264058/001000/w300/300/mattheus.jpg 300w, 
+										  https://www.contra.gr/img/6030/9264058/001000/w460/460/mattheus.jpg 460w, 
+										  https://www.contra.gr/img/6770/9264058/001000/w620/620/mattheus.jpg 620w, 
+										  https://www.contra.gr/img/8560/9264058/001000/w940/940/mattheus.jpg 940w" data-sizes="(min-resolution:3x) and (min-width:1280px) 46px,(min-resolution:3x) and (min-width:600px) 153px,(min-resolution:3x) 153px,(-webkit-min-device-pixel-ratio:3) and (min-width:1280px) 46px,(-webkit-min-device-pixel-ratio:3) and (min-width:600px) 153px,(-webkit-min-device-pixel-ratio:3) 153px,(min-resolution:2x) and (min-width:1280px) 70px,(min-resolution:2x) and (min-width:600px) 230px,(min-resolution:2x) 230px,(-webkit-min-device-pixel-ratio:2) and (min-width:1280px) 70px,(-webkit-min-device-pixel-ratio:2) and (min-width:600px) 230px,(-webkit-min-device-pixel-ratio:2) 230px,(min-resolution:1x) and (min-width:1280px) 140px,(min-resolution:1x) and (min-width:600px) 460px,(min-resolution:1x) 460px,(-webkit-min-device-pixel-ratio:1) and (min-width:1280px) 140px,(-webkit-min-device-pixel-ratio:1) and (min-width:600px) 460px,(-webkit-min-device-pixel-ratio:1) 460px,460px" class=" lazyloaded" sizes="(min-resolution:3x) and (min-width:1280px) 46px,(min-resolution:3x) and (min-width:600px) 153px,(min-resolution:3x) 153px,(-webkit-min-device-pixel-ratio:3) and (min-width:1280px) 46px,(-webkit-min-device-pixel-ratio:3) and (min-width:600px) 153px,(-webkit-min-device-pixel-ratio:3) 153px,(min-resolution:2x) and (min-width:1280px) 70px,(min-resolution:2x) and (min-width:600px) 230px,(min-resolution:2x) 230px,(-webkit-min-device-pixel-ratio:2) and (min-width:1280px) 70px,(-webkit-min-device-pixel-ratio:2) and (min-width:600px) 230px,(-webkit-min-device-pixel-ratio:2) 230px,(min-resolution:1x) and (min-width:1280px) 140px,(min-resolution:1x) and (min-width:600px) 460px,(min-resolution:1x) 460px,(-webkit-min-device-pixel-ratio:1) and (min-width:1280px) 140px,(-webkit-min-device-pixel-ratio:1) and (min-width:600px) 460px,(-webkit-min-device-pixel-ratio:1) 460px,460px" srcset="https://www.contra.gr/img/6794/9264058/001000/w200/200/mattheus.jpg 200w,
+										  https://www.contra.gr/img/5196/9264058/001000/w300/300/mattheus.jpg 300w, 
+										  https://www.contra.gr/img/6030/9264058/001000/w460/460/mattheus.jpg 460w, 
+										  https://www.contra.gr/img/6770/9264058/001000/w620/620/mattheus.jpg 620w, 
+										  https://www.contra.gr/img/8560/9264058/001000/w940/940/mattheus.jpg 940w">
+						</a>
+				</figure>
+				<div class="Article__meta">
+					<h3 class="Article__title">
+						<a class="js-clamp-3" href="https://www.contra.gr/podosfairo/oi-pappoydes-ton-rekor-se-teliki-fasi-euro.9263763.html?utm_source=Contra&amp;utm_medium=TopStories_article&amp;utm_campaign=24MediaWidget&amp;utm_term=Pos1" title="Οι 'παππούδες' των ρεκόρ σε τελική φάση Euro">Οι 'παππούδες' των ρεκόρ σε τελική φάση Euro</a>
+					</h3>
+					<div class="Article__authorList">
+							<svg class="icon icon_author">
+								<use xlink:href="https://www.contra.gr/resources/5508c9f/sprite/symbol/svg/sprite.symbol.svg#icon_author"></use>
+							</svg>
+							<p class="Article__author__name">
+											CONTRA.GR</p>
+									</div>
+					</div>
+                </article>
+		<article class="col-12 col-md-6 col-xl Article Article--teaser Teaser__article Teaser__article--col-6 Teaser__article--image-right-xl" data-position="2">
+				<a class="Article__tag " href="https://www.contra.gr/podosfairo/" title="ΠΟΔΟΣΦΑΙΡΟ">
+							ΠΟΔΟΣΦΑΙΡΟ</a>
+					 <figure class="Article__image">
+					<a class="Article__image__intrinsic" href="https://www.contra.gr/podosfairo/to-sport24-sto-euro-me-dipli-apostoli.9263214.html?utm_source=Contra&amp;utm_medium=TopStories_article&amp;utm_campaign=24MediaWidget&amp;utm_term=Pos2" title="Το SPORT24 στο EURO με διπλή αποστολή">
+						<img src="https://www.contra.gr/img/6563/9263217/025000/w140/140/euro_apostoli_1200x800_sport24.jpg" alt="Το SPORT24 στο EURO με διπλή αποστολή" data-srcset="https://www.contra.gr/img/7321/9263217/025000/w200/200/euro_apostoli_1200x800_sport24.jpg 200w,
+										  https://www.contra.gr/img/2729/9263217/025000/w300/300/euro_apostoli_1200x800_sport24.jpg 300w, 
+										  https://www.contra.gr/img/8047/9263217/025000/w460/460/euro_apostoli_1200x800_sport24.jpg 460w, 
+										  https://www.contra.gr/img/9957/9263217/025000/w620/620/euro_apostoli_1200x800_sport24.jpg 620w, 
+										  https://www.contra.gr/img/4653/9263217/025000/w940/940/euro_apostoli_1200x800_sport24.jpg 940w" data-sizes="(min-resolution:3x) and (min-width:1280px) 46px,(min-resolution:3x) and (min-width:600px) 153px,(min-resolution:3x) 153px,(-webkit-min-device-pixel-ratio:3) and (min-width:1280px) 46px,(-webkit-min-device-pixel-ratio:3) and (min-width:600px) 153px,(-webkit-min-device-pixel-ratio:3) 153px,(min-resolution:2x) and (min-width:1280px) 70px,(min-resolution:2x) and (min-width:600px) 230px,(min-resolution:2x) 230px,(-webkit-min-device-pixel-ratio:2) and (min-width:1280px) 70px,(-webkit-min-device-pixel-ratio:2) and (min-width:600px) 230px,(-webkit-min-device-pixel-ratio:2) 230px,(min-resolution:1x) and (min-width:1280px) 140px,(min-resolution:1x) and (min-width:600px) 460px,(min-resolution:1x) 460px,(-webkit-min-device-pixel-ratio:1) and (min-width:1280px) 140px,(-webkit-min-device-pixel-ratio:1) and (min-width:600px) 460px,(-webkit-min-device-pixel-ratio:1) 460px,460px" class=" lazyloaded" sizes="(min-resolution:3x) and (min-width:1280px) 46px,(min-resolution:3x) and (min-width:600px) 153px,(min-resolution:3x) 153px,(-webkit-min-device-pixel-ratio:3) and (min-width:1280px) 46px,(-webkit-min-device-pixel-ratio:3) and (min-width:600px) 153px,(-webkit-min-device-pixel-ratio:3) 153px,(min-resolution:2x) and (min-width:1280px) 70px,(min-resolution:2x) and (min-width:600px) 230px,(min-resolution:2x) 230px,(-webkit-min-device-pixel-ratio:2) and (min-width:1280px) 70px,(-webkit-min-device-pixel-ratio:2) and (min-width:600px) 230px,(-webkit-min-device-pixel-ratio:2) 230px,(min-resolution:1x) and (min-width:1280px) 140px,(min-resolution:1x) and (min-width:600px) 460px,(min-resolution:1x) 460px,(-webkit-min-device-pixel-ratio:1) and (min-width:1280px) 140px,(-webkit-min-device-pixel-ratio:1) and (min-width:600px) 460px,(-webkit-min-device-pixel-ratio:1) 460px,460px" srcset="https://www.contra.gr/img/7321/9263217/025000/w200/200/euro_apostoli_1200x800_sport24.jpg 200w,
+										  https://www.contra.gr/img/2729/9263217/025000/w300/300/euro_apostoli_1200x800_sport24.jpg 300w, 
+										  https://www.contra.gr/img/8047/9263217/025000/w460/460/euro_apostoli_1200x800_sport24.jpg 460w, 
+										  https://www.contra.gr/img/9957/9263217/025000/w620/620/euro_apostoli_1200x800_sport24.jpg 620w, 
+										  https://www.contra.gr/img/4653/9263217/025000/w940/940/euro_apostoli_1200x800_sport24.jpg 940w">
+						</a>
+				</figure>
+				<div class="Article__meta">
+					<h3 class="Article__title">
+						<a class="js-clamp-3" href="https://www.contra.gr/podosfairo/to-sport24-sto-euro-me-dipli-apostoli.9263214.html?utm_source=Contra&amp;utm_medium=TopStories_article&amp;utm_campaign=24MediaWidget&amp;utm_term=Pos2" title="Το SPORT24 στο EURO με διπλή αποστολή">Το SPORT24 στο EURO με διπλή αποστολή</a>
+					</h3>
+					<div class="Article__authorList">
+							<svg class="icon icon_author">
+								<use xlink:href="https://www.contra.gr/resources/5508c9f/sprite/symbol/svg/sprite.symbol.svg#icon_author"></use>
+							</svg>
+							<p class="Article__author__name">
+											CONTRA.GR</p>
+									</div>
+					</div>
+                </article>
+		</div>
+</section>
+
+<section class="col-12 col-md-6 col-xl-12 Teaser Teaser--default " data-gtm="unsetid ID7442910">
+	<div class="row">
+		<article class="col-12 col-md-12 col-xl Article Article--teaser Teaser__article Teaser__article--col-12 Teaser__article--image-right-xl" data-position="3">
+				<a class="Article__tag " href="https://www.contra.gr/nba" title="NBA">
+							NBA</a>
+					 <figure class="Article__image">
+					<a class="Article__image__intrinsic" href="https://www.contra.gr/basket/o-pi-tzei-taker-einai-o-bodyguard-toy-antetokoynmpo.9263121.html?utm_source=Contra&amp;utm_medium=TopStories_article&amp;utm_campaign=24MediaWidget&amp;utm_term=Pos3" title="Ο Πι Τζέι Τάκερ είναι ο bodyguard του Αντετοκούνμπο">
+						<img src="https://www.contra.gr/img/6827/9263138/744000/w140/140/pj_giannis.jpg" alt="Ο Πι Τζέι Τάκερ προσπαθεί να σκεπάσει τον Ντουράντ, ενώ παραμονεύει ο Γιάννης Αντετοκούνμπο" data-srcset="https://www.contra.gr/img/9663/9263138/744000/w200/200/pj_giannis.jpg 200w,
+										  https://www.contra.gr/img/8991/9263138/744000/w300/300/pj_giannis.jpg 300w, 
+										  https://www.contra.gr/img/583/9263138/744000/w460/460/pj_giannis.jpg 460w, 
+										  https://www.contra.gr/img/8419/9263138/744000/w620/620/pj_giannis.jpg 620w, 
+										  https://www.contra.gr/img/1467/9263138/744000/w940/940/pj_giannis.jpg 940w" data-sizes="(min-resolution:3x) and (min-width:1280px) 46px,(min-resolution:3x) and (min-width:600px) 153px,(min-resolution:3x) 153px,(-webkit-min-device-pixel-ratio:3) and (min-width:1280px) 46px,(-webkit-min-device-pixel-ratio:3) and (min-width:600px) 153px,(-webkit-min-device-pixel-ratio:3) 153px,(min-resolution:2x) and (min-width:1280px) 70px,(min-resolution:2x) and (min-width:600px) 230px,(min-resolution:2x) 230px,(-webkit-min-device-pixel-ratio:2) and (min-width:1280px) 70px,(-webkit-min-device-pixel-ratio:2) and (min-width:600px) 230px,(-webkit-min-device-pixel-ratio:2) 230px,(min-resolution:1x) and (min-width:1280px) 140px,(min-resolution:1x) and (min-width:600px) 460px,(min-resolution:1x) 460px,(-webkit-min-device-pixel-ratio:1) and (min-width:1280px) 140px,(-webkit-min-device-pixel-ratio:1) and (min-width:600px) 460px,(-webkit-min-device-pixel-ratio:1) 460px,460px" class=" lazyloaded" sizes="(min-resolution:3x) and (min-width:1280px) 46px,(min-resolution:3x) and (min-width:600px) 153px,(min-resolution:3x) 153px,(-webkit-min-device-pixel-ratio:3) and (min-width:1280px) 46px,(-webkit-min-device-pixel-ratio:3) and (min-width:600px) 153px,(-webkit-min-device-pixel-ratio:3) 153px,(min-resolution:2x) and (min-width:1280px) 70px,(min-resolution:2x) and (min-width:600px) 230px,(min-resolution:2x) 230px,(-webkit-min-device-pixel-ratio:2) and (min-width:1280px) 70px,(-webkit-min-device-pixel-ratio:2) and (min-width:600px) 230px,(-webkit-min-device-pixel-ratio:2) 230px,(min-resolution:1x) and (min-width:1280px) 140px,(min-resolution:1x) and (min-width:600px) 460px,(min-resolution:1x) 460px,(-webkit-min-device-pixel-ratio:1) and (min-width:1280px) 140px,(-webkit-min-device-pixel-ratio:1) and (min-width:600px) 460px,(-webkit-min-device-pixel-ratio:1) 460px,460px" srcset="https://www.contra.gr/img/9663/9263138/744000/w200/200/pj_giannis.jpg 200w,
+										  https://www.contra.gr/img/8991/9263138/744000/w300/300/pj_giannis.jpg 300w, 
+										  https://www.contra.gr/img/583/9263138/744000/w460/460/pj_giannis.jpg 460w, 
+										  https://www.contra.gr/img/8419/9263138/744000/w620/620/pj_giannis.jpg 620w, 
+										  https://www.contra.gr/img/1467/9263138/744000/w940/940/pj_giannis.jpg 940w">
+						</a>
+				</figure>
+				<div class="Article__meta">
+					<h3 class="Article__title">
+						<a class="js-clamp-3" href="https://www.contra.gr/basket/o-pi-tzei-taker-einai-o-bodyguard-toy-antetokoynmpo.9263121.html?utm_source=Contra&amp;utm_medium=TopStories_article&amp;utm_campaign=24MediaWidget&amp;utm_term=Pos3" title="Ο Πι Τζέι Τάκερ είναι ο bodyguard του Αντετοκούνμπο">Ο Πι Τζέι Τάκερ είναι ο bodyguard του Αντετοκούνμπο</a>
+					</h3>
+					<div class="Article__authorList">
+							<svg class="icon icon_author">
+								<use xlink:href="https://www.contra.gr/resources/5508c9f/sprite/symbol/svg/sprite.symbol.svg#icon_author"></use>
+							</svg>
+							<a class="Article__author__name Article__author__name--link" href="https://www.contra.gr/giannhs-filerhs/" title="ΓΙΑΝΝΗΣ ΦΙΛΕΡΗΣ">
+											ΓΙΑΝΝΗΣ ΦΙΛΕΡΗΣ</a>
+									</div>
+					</div>
+                </article>
+		</div>
+</section>
+
+<!-- /4834629/contra.gr/ros_300x250b -->
+    <div class=" col-12 col-md-12 col-xl-3  d-none d-xl-block"></div>
+        <div class="p-xl-absolute">
+    <div id="ros_300x250b" class="ad-wrap- sticky isEmpty" data-google-query-id="CP22vb_XnPECFdUp4Aodm5AM1Q">
+            <script>
+                googletag.cmd.push(function() { googletag.display('ros_300x250b'); });
+            </script>
+        <div id="google_ads_iframe_/4834629/contra.gr/ros_300x250b_0__container__" style="border: 0pt none; margin: auto; text-align: center; width: 0px; height: 0px;"></div></div>
+
+    </div>
+    </div>
+                    </div>
+                </div>
+            </div>
+			
+	</body>
+			
+</html>

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html dir="ltr" data-device="desktop" lang="el">
+<head>
+	<title> ΕΛΛΗΝΕΣ ΑΘΛΗΤΕΣ </title>
+	
+	<meta charset="UTF-8">
+	<meta name="description" content="ΕΛΛΗΝΕΣ ΑΘΛΗΤΕΣ">
+	<meta name="keywords" content="Categories">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="css/simplephpform_default.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<link rel="icon" href="../images/tennis.png" type="icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+
+body {
+  font-family: sans;
+}
+
+#menu {
+  width: 20%;
+}
+
+#menu > div {
+  background-color: #cbeef5;
+}
+
+.category_title {
+  font-weight: bold;
+  text-align: center;
+  background-color: #7297e0;
+
+  cursor: pointer;
+
+  
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.category_title:hover {
+  background-color: #72cee0;
+}	
+
+@media screen and (min-width: 701px) and (max-width: 10000px) {
+        table, th, td {
+          border-collapse: collapse;
+          border-spacing: 15px;
+          border: 1px solid black;
+        }
+		
+        th, td {
+          padding: 5px;
+          text-align: center; 
+          font-style: italic;   
+        }
+        table.centerer {
+          margin-left: auto; 
+          margin-right: auto;
+        }
+        table.dilwsi{
+          font-style: italic;  
+        }
+
+        }
+        @media screen and (min-width: 350px) and (max-width: 700px) {
+          table, th, td {
+          border-collapse: collapse;
+          border-spacing: 15px;
+          
+        }
+        th, td {
+          padding: 5px;
+          text-align: center; 
+          font-style: italic;   
+        }
+        table.centerer {
+          margin-left: auto; 
+          margin-right: auto;
+        }
+        .column {
+          width: 100%;
+		}
+        .hscroll{
+          overflow-x: auto;
+        }  
+        }
+
+@media screen and (min-width: 701px) and (max-width: 10000px){
+  
+.flexcontainer {
+  display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+   flex-flow: row wrap;
+   align-content: flex-end;
+   
+}
+.wrapper {
+	padding: 5px;
+	max-width: 960px;
+	width: 95%;
+	margin: 20px auto;
+  }
+ 
+.dropcap {
+float: left;
+font-size: 400%;
+color: #14c3cf;
+margin: -13px 7px -13px 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333; 
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+}
+
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 28px;
+  font-size: 32px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+::selection {
+background-color: #52c1c5;
+color: #f1f1f1;
+}
+
+p { text-align: center; }
+
+.figure {
+    border: 1px #cccccc solid;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+.figcaption {
+    color: black;
+    font-style: italic;
+    padding: 2px;
+    text-align: left;
+  } 
+  H1 { text-align: center } 
+  H3 { text-align: center }
+  H4 { text-align: center }
+  H5 { text-align: center }
+  
+div.parent {
+	text-align: center;
+	}
+div.toc {text-align: center;}
+ul { 
+	display: inline-block; 
+	text-align: left; 
+	}
+
+/*.image{
+  display: block;  
+  margin-left: auto;
+  margin-right: auto;
+  }*/
+  .image {
+width: 100%;
+overflow: hidden;
+}
+.image-colorize img {
+transition: transform .5s, filter 0.5s ease-in-out;
+filter: grayscale(100%);
+}
+.image-colorize:hover img {
+filter: grayscale(0);
+transform: scale(1.1);
+}
+.row {
+  display: flex;
+}
+
+#outputName, #outputValue #outputValue1 #outputValue2 #outputValue3 #outputValue4 #outputValue5 #outputValue6 #outputValue7 #outputValue8 {
+  color: blue;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+}
+table, th, td {
+              border: 1px  black;
+              border-collapse: collapse;
+              border-spacing: 15px;
+              border: 1px solid black;
+            }
+            th, td {
+              padding: 5px;
+              text-align: center; 
+              font-style: italic;   
+            }
+}
+
+@media screen and (min-width: 350px) and (max-width: 700px) {
+
+.flexcontainer {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+   flex-flow: row wrap;
+   align-content: flex-end;
+   
+}
+.wrapper {
+	padding: 5px;
+	max-width: 960px;
+	width: 100%;
+	margin: 20px auto;
+}
+.figure {
+  text-align: center;
+  font-size: 0.75em;
+  }
+ 
+p { text-align: center; }
+
+div.parent {
+	text-align: center;
+	}
+
+ul { 
+	display: inline-block; 
+	text-align: left; 
+	}
+
+.collection-filter__toolbar-controls__button {
+    border: 1px solid grey;
+    border-radius: 3px;
+    color: grey;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 12px;
+    text-transform: uppercase;
+    float: left;
+}
+
+.figcaption {
+    background-color: white;
+    color: black;
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+    font-size: 0.85em;
+  }
+H1 { text-align: center } 
+H2 { text-align: center } 
+H3 { text-align: center }
+H4 { text-align: center }
+H5 { text-align: center }
+
+H1 { font-size: x-large} 
+H2 { font-size: large  } 
+H3 { font-size: large  }
+H4 { font-size: medium }
+H5 { font-size: small  }
+  
+.image{
+  display: block;  
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  }
+  
+ .page { background-repeat: no-repeat; background-size: cover; background-position: center center; position: relative; min-width: 970px; }
+    
+.page > .content { width: 970px; height: 100%; margin: 0 auto; position: relative; }
+	
+	
+
+#page5 > div { text-align: center; }
+#page5 h2 { font-size: 42px; font-weight: 600; max-width: none; }
+#page5 a.top { position: absolute; bottom: 30px; }
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+} 
+  
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('../images/searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show1 {display: block;}
+  
+  
+.toc{
+    font-size: 0.85em;
+  }
+.row {
+  display: flex;
+ }
+ 
+ .select2-input {
+    width: 141px !important;
+}
+ 
+.column {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 5px 0;
+ }
+ table, th, td {
+              border-collapse: collapse;
+              border-spacing: 15px;
+              border: 1px solid black;
+            }
+            th, td {
+              padding: 5px;
+              text-align: center; 
+              font-style: italic;   
+            }
+	
+}
+
+#showops {
+    height: 200px;
+}
+</style>
+
+</head>
+
+<body>
+<div class=" column column--main">
+        <article id="article-container" class="article-single">
+    <a class="article-single__tag" href="https://www.sport24.gr/tennis/" title="ΤΕΝΙΣ">
+		<span>
+			ΤΕΝΙΣ</span>
+    </a>
+<h1 class="article-single__title">
+       Οι Έλληνες που σαρώνουν στο τένις</h1> 
+<div class="article-single__byline">
+     <!--TODO handle multiple authors--> 
+    <a href="https://www.sport24.gr/kostas-cholidis/" class="article-single__author article-single__author--featured ">
+    <figure>
+            <img alt="ΚΩΣΤΑΣ ΧΟΛΙΔΗΣ" src="https://www.sport24.gr/img/3131/8983647/461000/wsq100/100/xolidis_150x110.png" width="100" height="100"> 
+        </figure>
+    <span class="article-single__byline__fullname">ΚΩΣΤΑΣ ΧΟΛΙΔΗΣ</span>
+        <span class="article-single__byline__shortname">Κ. &nbsp; ΧΟΛΙΔΗΣ</span>
+            </a>
+    <time>14.08.2018 | 09:19</time>
+</div>
+<!--TODO date attribute-->
+       
+
+
+
+ 
+<figure class="article-single__image article-single__image--main">
+                        <img src="https://www.sport24.gr/img/2166/8826581/152000/we480/480/3.jpg" alt="Οι Έλληνες που σαρώνουν στο τένις" srcset="https://www.sport24.gr/img/2166/8826581/152000/we480/480/3.jpg 480w, 
+                                            https://www.sport24.gr/img/3716/8826581/152000/we720/720/3.jpg 720w,
+                                            https://www.sport24.gr/img/3736/8826581/152000/we960/960/3.jpg 960w,
+                                            https://www.sport24.gr/img/9408/8826581/152000/we1200/1200/3.jpg 1200w" width="480" height="320">
+              
+
+                </figure>
+         
+        <p class="article-single__lead">
+        Ο Στέφανος Τσιτσιπάς, η Μαρία Σάκκαρη και ο Στέφανος Διαμαντής βρίσκονται ανάμεσα στους καλύτερους αθλητές της Παγκόσμιας κατάταξης τένις.</p>   
+<div class="addthis_sharing_container">
+         <div class="addthis_inline_share_toolbox_p4ru" style="clear: both;" data-url="https://www.sport24.gr/tennis/oi-ellines-poy-saronoyn-sto-tenis.8637686.html" data-title="Οι Έλληνες που σαρώνουν στο τένις" data-description="Ο Στέφανος Τσιτσιπάς, η Μαρία Σάκκαρη και ο Στέφανος Διαμαντής βρίσκονται ανάμεσα στους καλύτερους αθλητές της Παγκόσμιας κατάταξης τένις."><div id="atstbx" class="at-resp-share-element at-style-responsive addthis-smartlayers addthis-animated at4-show at-mobile" aria-labelledby="at-53cac51a-7e1b-4b46-ad86-a189e37e4570" role="region"><span id="at-53cac51a-7e1b-4b46-ad86-a189e37e4570" class="at4-visually-hidden">AddThis Sharing Buttons</span><div class="at-share-btn-elements"><a role="button" tabindex="0" class="at-icon-wrapper at-share-btn at-svc-facebook" style="background-color: rgb(59, 89, 152); border-radius: 0px;"><span class="at4-visually-hidden">Share to Facebook</span><span class="at-icon-wrapper" style="line-height: 32px; height: 32px; width: 32px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-facebook-1" class="at-icon at-icon-facebook" style="fill: rgb(255, 255, 255); width: 32px; height: 32px;"><title id="at-svg-facebook-1">Facebook</title><g><path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z" fill-rule="evenodd"></path></g></svg></span></a><a role="button" tabindex="0" class="at-icon-wrapper at-share-btn at-svc-twitter" style="background-color: rgb(29, 161, 242); border-radius: 0px;"><span class="at4-visually-hidden">Share to Twitter</span><span class="at-icon-wrapper" style="line-height: 32px; height: 32px; width: 32px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-twitter-2" class="at-icon at-icon-twitter" style="fill: rgb(255, 255, 255); width: 32px; height: 32px;"><title id="at-svg-twitter-2">Twitter</title><g><path d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336" fill-rule="evenodd"></path></g></svg></span></a><a role="button" tabindex="0" class="at-icon-wrapper at-share-btn at-svc-messenger" style="background-color: rgb(0, 132, 255); border-radius: 0px;"><span class="at4-visually-hidden">Share to Messenger</span><span class="at-icon-wrapper" style="line-height: 32px; height: 32px; width: 32px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-messenger-3" class="at-icon at-icon-messenger" style="fill: rgb(255, 255, 255); width: 32px; height: 32px;"><title id="at-svg-messenger-3">Messenger</title><g><path d="M16 6C9.925 6 5 10.56 5 16.185c0 3.205 1.6 6.065 4.1 7.932V28l3.745-2.056c1 .277 2.058.426 3.155.426 6.075 0 11-4.56 11-10.185C27 10.56 22.075 6 16 6zm1.093 13.716l-2.8-2.988-5.467 2.988 6.013-6.383 2.868 2.988 5.398-2.987-6.013 6.383z" fill-rule="evenodd"></path></g></svg></span></a><a role="button" tabindex="0" class="at-icon-wrapper at-share-btn at-svc-viber" style="background-color: rgb(123, 81, 157); border-radius: 0px;"><span class="at4-visually-hidden">Share to Viber</span><span class="at-icon-wrapper" style="line-height: 32px; height: 32px; width: 32px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-viber-4" class="at-icon at-icon-viber" style="fill: rgb(255, 255, 255); width: 32px; height: 32px;"><title id="at-svg-viber-4">Viber</title><g><path d="M21.176 27c-.208-.062-.618-.13-.987-.303-6.476-3.02-11.18-7.972-13.853-15.082-.897-2.383.04-4.396 2.298-5.22.405-.147.802-.157 1.2.002.964.383 3.404 4.022 3.458 5.11.042.835-.48 1.287-1 1.67-.983.722-.988 1.638-.568 2.66.948 2.308 2.567 3.895 4.663 4.925.76.374 1.488.337 2.007-.515.925-1.518 2.06-1.445 3.3-.502.62.473 1.253.936 1.844 1.45.8.702 1.816 1.285 1.336 2.754-.5 1.527-2.226 3.066-3.7 3.05zm-4.76-20.986c4.546.166 8.46 4.677 8.406 9.543-.005.478.153 1.185-.504 1.172-.628-.015-.464-.733-.52-1.21-.603-5.167-2.786-7.606-7.52-8.394-.392-.066-.99.026-.96-.535.044-.833.754-.523 1.097-.576zm6.072 8.672c-.045.356.147.968-.385 1.056-.72.118-.58-.595-.65-1.053-.48-3.144-1.5-4.297-4.423-5.005-.43-.105-1.1-.032-.99-.75.108-.685.71-.452 1.164-.393 2.92.38 5.307 3.126 5.284 6.144zm-2.222-.573c.013.398-.026.818-.46.874-.314.04-.52-.245-.553-.597-.12-1.296-.75-2.062-1.95-2.27-.36-.063-.712-.19-.544-.715.11-.352.408-.387.712-.396 1.297-.036 2.815 1.647 2.794 3.103z" fill-rule="evenodd"></path></g></svg></span></a></div></div></div>
+    </div>
+<style>
+.article-single__lead{
+border-bottom: 0;
+padding-bottom: 0;
+}
+.article-single .addthis_sharing_container{
+padding-bottom: 12px;
+border-bottom: 1px solid #e2e4e6;
+}
+
+@media (min-width: 768px){
+.article-single .addthis_sharing_container{
+padding-bottom: 24px;
+}
+}
+
+</style><div id="ros_inline_a" class="content-thirdParty" style="width:100%;" data-google-query-id="CNndmYzXnPECFdHhuwgd1eIBOg">
+
+									<div id="google_ads_iframe_/4834629/sport24.gr/ros_inline_a_0__container__" style="border: 0pt none; margin: auto; text-align: center;"><iframe id="google_ads_iframe_/4834629/sport24.gr/ros_inline_a_0" title="3rd party ad content" name="google_ads_iframe_/4834629/sport24.gr/ros_inline_a_0" scrolling="no" marginwidth="0" marginheight="0" style="border: 0px none; vertical-align: bottom;" srcdoc="" data-google-container-id="2" data-load-complete="true" width="300" height="250" frameborder="0"></iframe></div></div><div class="article-single__body">
+        <p>Όποιος έλεγε πριν από μερικά χρόνια πως η Ελλάδα θα είχε τρεις εκπροσώπους που θα διέπρεπαν στο τένις μάλλον θα τον περνούσαν για τρελό. Κι όμως αυτή τη στιγμή έχουμε τρεις αθλητές οι οποίοι συγκαταλέγονται ανάμεσα στους κορυφαίους!</p>
+<div id="ros_inline_a" class="content-thirdParty" style="width:100%;"> 
+</div> 
+<p>Όχι, δεν κάναμε κάτι για αυτό. Αντίθετα, η εντυπωσιακή εγκατάσταση του ΟΑΚΑ παραμένει επί της ουσίας ανεκμετάλλευτη.</p> 
+<p>Ωστόσο, ο Στέφανος Τσιτσιπάς, η Μαρία Σάκκαρη και ο Στέφανος Διαμαντής είναι μέσα στο Τοπ50 των αθλητών τένις στην κατηγορία τους. Ο "Στεφ" συμπλήρωσε τα 20 του χρόνια μόλις την περασμένη Κυριακή (12/8), όμως ήδη βρίσκεται στη 15η θέση της Παγκόσμιας κατάταξης των ανδρών. Η θέση του στους τελικούς του Next Gen όπου συμμετέχουν οι οκτώ καλύτεροι αθλητές Κ21 θεωρείται δεδομένη, ενώ αν συνεχίσει έτσι δεν αποκλείεται να τον δούμε σύντομα και στο ATP Finals του Λονδίνου!</p>
+<div id="agora-inread"> 
+<div id="agora-inread-inside"></div><div id="videoad" style="padding-top:0px;border:none;position:relative;z-index:0;line-height:0;margin:0 auto;max-width:800px"></div></div> 
+<p>Από την άλλη η Μαρία Σάκκαρη είναι στο Νο 31 της Παγκόσμιας κατάταξης και με σταθερά βήματα συνεχίζει την αναρρίχηση της πετυχαίνοντας σπουδαίες νίκες όπως αυτή απέναντι στη Βένους Γουίλιαμς. Στα 23 της χρόνια η Σάκκαρη έχει ξεπεράσει ήδη τη μητέρα της και πλέον επόμενος στόχος είναι η Λένα Δανιηλίδου και το Νο14 της Παγκόσμιας κατάταξης.</p> 
+<p>Το εντυπωσιακό με τον Στέφανο Τσιτσιπά και τη Μαρία Σάκκαρη είναι πως αμφότεροι συγκαταλέγονται ανάμεσα στους καλύτερους αθλητές της νέας γενιάς του τένις. Αυτό μπορεί κανείς εύκολα να το διαπιστώσει εάν κοιτάξει επί μέρους την παγκόσμια κατάταξη τόσο στους άνδρες όσο και στις γυναίκες με βάση την ηλικία των αθλητών. Αν φτιάχναμε τώρα μία λίστα σύμφωνα με τους πόντους των αθλητών και των αθλητριών που είναι κάτω των 25 ετών, ο Στέφανος Τσιτσιπάς θα ήταν στην τρίτη θέση, ενώ η Μαρία Σάκκαρη στη 12η.</p> 
+<p>Μάλιστα, αν φτιάχναμε την παγκόσμια κατάταξη χρησιμοποιώντας ακριβώς τις ηλικίες τους, δηλαδή μέχρι 21 για τον Τσιτσιπά και μέχρι 24 για την Σάκκαρη τότε οι δύο Έλληνες αθλητές είναι ακόμα ψηλότερα στις σχετικές λίστες. Για την ακρίβεια ο "Στεφ" είναι στην κορυφή έχοντας από πίσω του τον Καναδό, Ντένις Σαποβάλοβ, ενώ η Μαρία Σάκκαρη είναι στην 9η θέση!</p>
+<!-- disabled - because of small text. also disabled from gtm --> 
+<div id="ros_inline_b" class="content-thirdParty" style="width:100%; " data-google-query-id="CLz1nIzXnPECFdHhuwgd1eIBOg"> 
+
+									<div id="google_ads_iframe_/4834629/sport24.gr/ros_inline_b_0__container__" style="border: 0pt none; margin: auto; text-align: center; width: 300px; height: 250px;"><iframe style="border: 0px none; vertical-align: bottom;" src="https://1212c011ee705f59ec7637cab1c3d54d.safeframe.googlesyndication.com/safeframe/1-0-38/html/container.html" id="google_ads_iframe_/4834629/sport24.gr/ros_inline_b_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="3" data-load-complete="true" width="300" height="250" frameborder="0"></iframe></div></div>  
+<p>Οι διακρίσεις, ωστόσο, δεν σταματούν εδώ για το ελληνικό τένις. Το Sport24.gr σας ενημερώνει συνεχώς για την πορεία του Στέφανου Διαμαντή στο τένις με αμαξίδιο. Ο 31χρονος Έλληνας πρωταθλητής έχει βάλει πλώρη για το Τοπ15 της Παγκόσμιας κατάταξης και ήδη βρίσκεται στο Τοπ 18! Ο Στέφανος Διαμαντής έχει κατακτήσει τα τελευταία τουρνουά που συμμετείχε και τώρα ετοιμάζεται για αγώνες στο Βέλγιο.</p></div>
+<section class="article-single__html">
+            </section>
+    <div class="article-single__bottom-wrapper">
+    </div>
+<div id="ros_article_end" class="content-thirdParty" style="width:100%; ">
+<div id="1409947-4" style="width: 300px; height: 250px; margin: 0px auto; display: none;"></div>
+									<script type="text/javascript">
+									var Criteo = Criteo || {};
+									Criteo.events = Criteo.events || [];
+									Criteo.events.push(function() {
+										Criteo.DisplayAcceptableAdIfAdblocked({
+											zoneid: 1409947,
+											containerid: "1409947-4"
+										});
+									});
+								</script></div><style>
+#read-more-widget {
+display: block!important;
+}
+</style>
+<section id="read-more-widget" class="teaser teaser--sidebar-list" style="margin-top: 40px;">
+<div class="teaser__title">
+ΔΙΑΒΑΣΤΕ ΑΚΟΜΑ
+</div>
+</section><div id="taboola-alternating-below-article-new" class=" trc_related_container trc_spotlight_widget tbl-feed-container tbl-feed-frame-DIVIDER  render-late-effect" data-feed-container-num="1" data-feed-main-container-id="taboola-alternating-below-article-new" data-parent-placement-name="Alternating Below Article New" data-pub-lang="el" tbl-data-mutation-observer="true"><div class=" tbl-feed-header tbl-logo-right-position"><div class="tbl-feed-header-logo"></div></div><div data-card-index="1" id="taboola-alternating-below-article-new-pl1" data-batch-num="1" tbl-feed-card="" class=" trc_related_container trc_spotlight_widget trc_elastic trc_elastic_exchange-organic-thumbs-feed-01-d-new  tbl-feed-card " data-placement-name="Alternating Below Article New | Card 1" observeid="tbl-observe-1" style="padding: 0px;"><div class="trc_rbox_container"><div><div id="trc_wrapper_98407" class="trc_rbox exchange-organic-thumbs-feed-01-d-new trc-content-sponsored " style="overflow: hidden; display: block;"><div id="trc_header_98407" class="trc_rbox_header trc_rbox_border_elm"><div class="trc_header_ext"></div><span class="trc_rbox_header_span"></span></div><div id="outer_98407" class="trc_rbox_outer"><div id="rbox-t2v" class="trc_rbox_div trc_rbox_border_elm"><div id="internal_trc_98407"><div data-item-id="~~V1~~-6738857443754255795~~UWyBUbWgij7xleIVC0QMnRstq_3BR0X5ZcO4JYP-kvf6nH0OabNJtzzP-ddPU2nvK8Bm7FKD2NW1M1BCiW1-kuMDMqg65-jJbi04eURsbtqeHe1S9jo_X4timp5pCZhQ1qPnz8TIp56FGMwGW1REdM9SQt01BC7MMCVvX2PnoBWHlDFnj7tWcKmmM9Pyw4Y0Z6XB0Nd0INQ_Of8zp_8uC99-SclKaA0Frri4tfgzbgrp8apZn67aKWhcXmR3Pc6N" data-item-title="Ο Νέρι Καστίγιο στο SPORT24: &amp;#34;Αν με έβαζαν αριστερά, ο Τζόλε δεν θα έπαιζε μέχρι τα 40 στον Ολυμπιακό και το ήξερε&amp;#34;" data-item-thumb="https://www.sport24.gr/img/2629/9265052/105000/w660/660/castillo1.jpg" data-item-syndicated="true" class="videoCube trc_spotlight_item origin-default thumbnail_top syndicatedItem inNetworkItem videoCube_1_child trc-first-recommendation trc-spotlight-first-recommendation  trc_excludable " observeid="tbl-observe-2" style="position: relative;"><a title="Ο Νέρι Καστίγιο στο SPORT24: &quot;Αν με έβαζαν αριστερά, ο Τζόλε δεν θα έπαιζε μέχρι τα 40 στον Ολυμπιακό και το ήξερε&quot;" href="https://www.sport24.gr/football/o-neri-kastigio-apokleistika-sto-sport24-an-me-evazan-aristera-o-tzole-den-tha-epaize-mechri-ta-40-ston-olympiako-kai-to-ixere.9264838.html?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Aol8veodSdwoORAQ#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Aol8veodSdwoORAQ" rel="nofollow noopener" target="_blank" class=" item-thumbnail-href "><div class="thumbBlock_holder"><span class="thumbBlock" style="background-image: url(&quot;https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_374%2Cw_560%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//www.sport24.gr/img/2629/9265052/105000/w660/660/castillo1.jpg&quot;);"><span class="thumbnail-overlay"></span><span class="branding">Sport24</span><span class="static-text top-right"></span></span><div class="videoCube_aspect"></div></div></a><a title="Ο Νέρι Καστίγιο στο SPORT24: &quot;Αν με έβαζαν αριστερά, ο Τζόλε δεν θα έπαιζε μέχρι τα 40 στον Ολυμπιακό και το ήξερε&quot;" href="https://www.sport24.gr/football/o-neri-kastigio-apokleistika-sto-sport24-an-me-evazan-aristera-o-tzole-den-tha-epaize-mechri-ta-40-ston-olympiako-kai-to-ixere.9264838.html?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Aol8veodSdwoORAQ#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Aol8veodSdwoORAQ" rel="nofollow noopener" target="_blank" class=" item-label-href "><span class="video-label-box trc-main-label "><span class="video-label video-title trc_ellipsis " style="-webkit-line-clamp: 3;">Ο Νέρι Καστίγιο στο SPORT24: "Αν με έβαζαν αριστερά, ο Τζόλε δεν θα έπαιζε μέχρι τα 40 στον Ολυμπιακό και το ήξερε"</span><span class="branding">Sport24</span></span></a><div class=" trc_user_exclude_btn " title="Remove this item"></div><div class=" trc_exclude_overlay trc_fade "></div><div class=" trc_undo_btn ">Undo</div></div><div data-item-id="~~V1~~-2128989600486419287~~UWyBUbWgij7xleIVC0QMnRstq_3BR0X5ZcO4JYP-kvf6nH0OabNJtzzP-ddPU2nvK8Bm7FKD2NW1M1BCiW1-kuMDMqg65-jJbi04eURsbtqeHe1S9jo_X4timp5pCZhQ1qPnz8TIp56FGMwGW1REdAhKXkhaKATh_LlU7_JIzq6HlDFnj7tWcKmmM9Pyw4Y0Z6XB0Nd0INQ_Of8zp_8uC99-SclKaA0Frri4tfgzbgrp8apZn67aKWhcXmR3Pc6N" data-item-title="Ο αντίπαλος του Ολυμπιακού στο Champions League: Με το νικητή του ζευγαριού Ντιναμό Τιφλίδας - Νέφτσι Μπακού οι ερυθρόλευκοι" data-item-thumb="https://www.sport24.gr/img/3581/9265128/208000/w660/660/valbuena.jpg" data-item-syndicated="true" class="videoCube trc_spotlight_item origin-default thumbnail_top syndicatedItem inNetworkItem videoCube_2_child trc_excludable " observeid="tbl-observe-3" style="position: relative;"><a title="Ο αντίπαλος του Ολυμπιακού στο Champions League: Με το νικητή του ζευγαριού Ντιναμό Τιφλίδας - Νέφτσι Μπακού οι ερυθρόλευκοι" href="https://www.sport24.gr/football/olympiakos-antipalos-champions-league.9265098.html?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Ao47ulxO-d-5kY#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Ao47ulxO-d-5kY" rel="nofollow noopener" target="_blank" class=" item-thumbnail-href "><div class="thumbBlock_holder"><span class="thumbBlock" style="background-image: url(&quot;https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_374%2Cw_560%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//www.sport24.gr/img/3581/9265128/208000/w660/660/valbuena.jpg&quot;);"><span class="thumbnail-overlay"></span><span class="branding">Sport24</span><span class="static-text top-right"></span></span><div class="videoCube_aspect"></div></div></a><a title="Ο αντίπαλος του Ολυμπιακού στο Champions League: Με το νικητή του ζευγαριού Ντιναμό Τιφλίδας - Νέφτσι Μπακού οι ερυθρόλευκοι" href="https://www.sport24.gr/football/olympiakos-antipalos-champions-league.9265098.html?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Ao47ulxO-d-5kY#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Ao47ulxO-d-5kY" rel="nofollow noopener" target="_blank" class=" item-label-href "><span class="video-label-box trc-main-label "><span class="video-label video-title trc_ellipsis " style="-webkit-line-clamp: 3;">Ο αντίπαλος του Ολυμπιακού στο Champions League: Με το νικητή του ζευγαριού Ντιναμό Τιφλίδας - Νέφτσι Μπακού οι ερυθρόλευκοι</span><span class="branding">Sport24</span></span></a><div class=" trc_user_exclude_btn " title="Remove this item"></div><div class=" trc_exclude_overlay trc_fade "></div><div class=" trc_undo_btn ">Undo</div></div></div></div></div><div class="trc_clearer"></div></div></div></div></div><div data-card-index="2" id="taboola-alternating-below-article-new-pl2" data-batch-num="1" tbl-feed-card="" class=" trc_related_container trc_spotlight_widget trc_elastic trc_elastic_exchange-organic-thumbs-feed-01-b-24-new  tbl-feed-card " data-placement-name="Alternating Below Article New | Card 2" observeid="tbl-observe-4" style="padding: 0px;"><div class="trc_rbox_container"><div><div id="trc_wrapper_4558" class="trc_rbox exchange-organic-thumbs-feed-01-b-24-new trc-content-sponsored " style="overflow: hidden; display: block;"><div id="trc_header_4558" class="trc_rbox_header trc_rbox_border_elm"><div class="trc_header_ext"></div><span class="trc_rbox_header_span"></span></div><div id="outer_4558" class="trc_rbox_outer"><div id="rbox-t2v" class="trc_rbox_div trc_rbox_border_elm"><div id="internal_trc_4558"><div data-item-id="~~V1~~4222278334540331041~~hmG51Twpoci5-6YqgyOgKRstq_3BR0X5ZcO4JYP-kvf6nH0OabNJtzzP-ddPU2nvK8Bm7FKD2NW1M1BCiW1-kuMDMqg65-jJbi04eURsbtqeHe1S9jo_X4timp5pCZhQ1qPnz8TIp56FGMwGW1REdMyCXcvyd6zXlE_LCk7nlv_biwGuh1EgiKHqy9up2TI7O99DixDEd6_XmLDmFs7DSt9-SclKaA0Frri4tfgzbgrp8apZn67aKWhcXmR3Pc6N" data-item-title="Το παρασκήνιο με τον γιο δικηγόρου που συνελήφθη για τη διάρρηξη στο γραφείο του Τσακαλώτου" data-item-thumb="https://www.news247.gr/img/3982/9264866/566000/w660/660/trypa_tsakalotos.jpg" data-item-syndicated="true" class="videoCube trc_spotlight_item origin-default thumbnail_top syndicatedItem inNetworkItem videoCube_1_child trc-first-recommendation trc-spotlight-first-recommendation  trc_excludable " observeid="tbl-observe-5" style="position: relative;"><a title="Το παρασκήνιο με τον γιο δικηγόρου που συνελήφθη για τη διάρρηξη στο γραφείο του Τσακαλώτου" href="https://www.news247.gr/koinonia/to-paraskinio-me-ton-gio-dikigoroy-poy-synelifthi-gia-ti-diarrixi-sto-grafeio-toy-tsakalotoy.9264856.html?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Ao0-rn4Mfptdf6AQ#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Ao0-rn4Mfptdf6AQ" rel="nofollow noopener" target="_blank" class=" item-thumbnail-href "><div class="thumbBlock_holder"><span class="thumbBlock" style="background-image: url(&quot;https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_240%2Cw_360%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//www.news247.gr/img/3982/9264866/566000/w660/660/trypa_tsakalotos.jpg&quot;);"><span class="thumbnail-overlay"></span><span class="branding">News 24/7</span><span class="static-text top-right"></span></span><div class="videoCube_aspect"></div></div></a><a title="Το παρασκήνιο με τον γιο δικηγόρου που συνελήφθη για τη διάρρηξη στο γραφείο του Τσακαλώτου" href="https://www.news247.gr/koinonia/to-paraskinio-me-ton-gio-dikigoroy-poy-synelifthi-gia-ti-diarrixi-sto-grafeio-toy-tsakalotoy.9264856.html?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Ao0-rn4Mfptdf6AQ#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Ao0-rn4Mfptdf6AQ" rel="nofollow noopener" target="_blank" class=" item-label-href "><span class="video-label-box trc-main-label "><span class="video-label video-title trc_ellipsis " style="-webkit-line-clamp: 4;">Το παρασκήνιο με τον γιο δικηγόρου που συνελήφθη για τη διάρρηξη στο γραφείο του Τσακαλώτου</span><span class="branding">News 24/7</span></span></a><div class=" trc_user_exclude_btn " title="Remove this item"></div><div class=" trc_exclude_overlay trc_fade "></div><div class=" trc_undo_btn ">Undo</div></div><div data-item-id="~~V1~~3610621416467850956~~hmG51Twpoci5-6YqgyOgKRstq_3BR0X5ZcO4JYP-kvf6nH0OabNJtzzP-ddPU2nvK8Bm7FKD2NW1M1BCiW1-kuMDMqg65-jJbi04eURsbtqeHe1S9jo_X4timp5pCZhQ1qPnz8TIp56FGMwGW1REdA-GjgQwP9JrGwJtyjA48j3biwGuh1EgiKHqy9up2TI7O99DixDEd6_XmLDmFs7DSt9-SclKaA0Frri4tfgzbgrp8apZn67aKWhcXmR3Pc6N" data-item-title="Δέκα επιπλέον χώρους ζήτησε και πήρε ο Οίκος Dior, χωρίς έγκριση του ΚΑΣ" data-item-thumb="https://www.news247.gr/img/9304/9265330/098000/w660/660/delfoi2.jpgαρχαιολογικός_χώρος_δελφών" data-item-syndicated="true" class="videoCube trc_spotlight_item origin-default thumbnail_top syndicatedItem inNetworkItem videoCube_2_child trc_excludable " observeid="tbl-observe-6" style="position: relative;"><a title="Δέκα επιπλέον χώρους ζήτησε και πήρε ο Οίκος Dior, χωρίς έγκριση του ΚΑΣ" href="https://www.news247.gr/politismos/deka-epipleon-choroys-zitise-kai-pire-o-oikos-dior-choris-egkrisi-toy-kas.9265303.html?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31AotdLE7ODzn45j#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31AotdLE7ODzn45j" rel="nofollow noopener" target="_blank" class=" item-thumbnail-href "><div class="thumbBlock_holder"><span class="thumbBlock" style="background-image: url(&quot;https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_240%2Cw_360%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//www.news247.gr/img/9304/9265330/098000/w660/660/delfoi2.jpg%CE%B1%CF%81%CF%87%CE%B1%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CE%BA%CF%8C%CF%82_%CF%87%CF%8E%CF%81%CE%BF%CF%82_%CE%B4%CE%B5%CE%BB%CF%86%CF%8E%CE%BD&quot;);"><span class="thumbnail-overlay"></span><span class="branding">News 24/7</span><span class="static-text top-right"></span></span><div class="videoCube_aspect"></div></div></a><a title="Δέκα επιπλέον χώρους ζήτησε και πήρε ο Οίκος Dior, χωρίς έγκριση του ΚΑΣ" href="https://www.news247.gr/politismos/deka-epipleon-choroys-zitise-kai-pire-o-oikos-dior-choris-egkrisi-toy-kas.9265303.html?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31AotdLE7ODzn45j#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31AotdLE7ODzn45j" rel="nofollow noopener" target="_blank" class=" item-label-href "><span class="video-label-box trc-main-label "><span class="video-label video-title trc_ellipsis " style="-webkit-line-clamp: 4;">Δέκα επιπλέον χώρους ζήτησε και πήρε ο Οίκος Dior, χωρίς έγκριση του ΚΑΣ</span><span class="branding">News 24/7</span></span></a><div class=" trc_user_exclude_btn " title="Remove this item"></div><div class=" trc_exclude_overlay trc_fade "></div><div class=" trc_undo_btn ">Undo</div></div><div data-item-id="~~V1~~2684086891415715667~~hmG51Twpoci5-6YqgyOgKRstq_3BR0X5ZcO4JYP-kvf6nH0OabNJtzzP-ddPU2nvK8Bm7FKD2NW1M1BCiW1-kuMDMqg65-jJbi04eURsbtqeHe1S9jo_X4timp5pCZhQ1qPnz8TIp56FGMwGW1REdFwbqjoSkU_G7CMS4nUeWZ7biwGuh1EgiKHqy9up2TI7O99DixDEd6_XmLDmFs7DSt9-SclKaA0Frri4tfgzbgrp8apZn67aKWhcXmR3Pc6N" data-item-title="Survivor Spoiler: Ποιος κερδίζει την ατομική ασυλία - Ο τρίτος υποψήφιος" data-item-thumb="https://www.news247.gr/img/5036/9265512/843000/w660/660/survivor_2.jpg" data-item-syndicated="true" class="videoCube trc_spotlight_item origin-default thumbnail_top syndicatedItem inNetworkItem videoCube_3_child trc_excludable " observeid="tbl-observe-7" style="position: relative;"><a title="Survivor Spoiler: Ποιος κερδίζει την ατομική ασυλία - Ο τρίτος υποψήφιος" href="https://www.news247.gr/psixagogia/tileorasi/survivor-spoiler-poios-kerdizei-tin-atomiki-asylia-o-tritos-ypopsifios.9265453.html?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Aom_-svfaaq43kAQ#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Aom_-svfaaq43kAQ" rel="nofollow noopener" target="_blank" class=" item-thumbnail-href "><div class="thumbBlock_holder"><span class="thumbBlock" style="background-image: url(&quot;https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_240%2Cw_360%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//www.news247.gr/img/5036/9265512/843000/w660/660/survivor_2.jpg&quot;);"><span class="thumbnail-overlay"></span><span class="branding">News 24/7</span><span class="static-text top-right"></span></span><div class="videoCube_aspect"></div></div></a><a title="Survivor Spoiler: Ποιος κερδίζει την ατομική ασυλία - Ο τρίτος υποψήφιος" href="https://www.news247.gr/psixagogia/tileorasi/survivor-spoiler-poios-kerdizei-tin-atomiki-asylia-o-tritos-ypopsifios.9265453.html?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Aom_-svfaaq43kAQ#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Aom_-svfaaq43kAQ" rel="nofollow noopener" target="_blank" class=" item-label-href "><span class="video-label-box trc-main-label "><span class="video-label video-title trc_ellipsis " style="-webkit-line-clamp: 4;">Survivor Spoiler: Ποιος κερδίζει την ατομική ασυλία - Ο τρίτος υποψήφιος</span><span class="branding">News 24/7</span></span></a><div class=" trc_user_exclude_btn " title="Remove this item"></div><div class=" trc_exclude_overlay trc_fade "></div><div class=" trc_undo_btn ">Undo</div></div></div></div></div><div class="trc_clearer"></div></div></div></div></div><div data-card-index="3" id="taboola-alternating-below-article-new-pl3" data-batch-num="1" tbl-feed-card="" class=" trc_related_container trc_spotlight_widget trc_elastic trc_elastic_thumbs-feed-01-b-new  tbl-feed-card " data-placement-name="Alternating Below Article New | Card 3" observeid="tbl-observe-8" style="padding: 0px;"><div class="trc_rbox_container"><div><div id="trc_wrapper_10470" class="trc_rbox thumbs-feed-01-b-new trc-content-sponsored " style="overflow: hidden; display: block;"><div id="trc_header_10470" class="trc_rbox_header trc_rbox_border_elm"><div class="trc_header_ext"></div><span class="trc_rbox_header_span"></span></div><div id="outer_10470" class="trc_rbox_outer"><div id="rbox-t2v" class="trc_rbox_div trc_rbox_border_elm"><div id="internal_trc_10470"><div data-item-id="~~V1~~5144539789273244393~~6GUKPvoeC8YwSPTUP3F_gyPmaWMO8LOJg4wh4VX8d_y2dmeGePQQWm0epWXsujOPN9UmScJ3H40Pa7KumVQWt15dKy451ull8S4D-ZB1dOdGgDzruAS55yGSy3fb4aL4nNFQR-In8mUueFepdIYIwb6iegRGxb2qEIoeC6fSV6t7L6JMq182QSn7bUJHn_5Ewu-ikfsSH9GjRhGQH774VUy9Io1ZWYepvWRcrJNcglzJpcdhqCtnqgj948zorGHfQWOM2QzIaWCNbNmR2evtb1ji6o7WII0NsZ_c8WHDzLln5P06Xl2LyYE5Xz4ATCvgcV6IysgYqYVZ39QUStVw9749FaM4LNIN6X362W8kKihobjPMl7QDJGT2q-OLUX7BXi9mIor5Tey_yQnOg7DquSRo9GAfuJheHptiViPkjYtJbDpX0fl9uvkwsMcTUoTcQ_5gJEq7BUAooLisF7m9y2xUclK1O1bKx-NWbmEbHcj8D6RqIKZ_ngQLqXMrma1_VlvBSn1uLkUwL7yxdRD2Cek5zAi3utbYCsCgGJzOfrNBIPVXdg_3iW9E3bx2loraWaZOJfoXqSRsigEiSnl98b07sPYKheL6DuJQsMtpzXfYzZwFlEQO88GuE0LbT0r5ELQgXB54uc67KRNz-mY72I0bEiC7p1fOIcGQNPR9999VoeJZMQwvm6E9-weG2RVKArJZHeyHyQQw1sGkvhAf1lmgYLRxCrZkvPP5tIC6oQxeqP9MvitEjFGbauVStmA5bRW0IXsx9lExLCdoXe3y0lZCjHt8okTwZRPPpUEbCWZuhgs-GtPUl_264DQ3L_g_jK1N4FqR_M6gfMCQnKuVwqbTuowKBT3Hw8Uq_sLWzPzyFrVee9YvmLcAHh6AUvP9Ppq9EcqDev2obDLkeJgBmixNWmHzycn-TXgOJAkMRJIfLQpQV2pAgvvpJgtudmKaQD4MmIuczwRzNntufYHz0sQGnKbvaVj1inmNdzl5Em_EJR3OgHVLQVRgoqOMcqSGV7yca7S5Pcoml-4sVFEuv0d9OCMHQSGB-5WOSWJe-IVSXuVAuxhGOtWSZt_uBBNI" data-item-title="ASICS GEL-EXCITE 8 1011B036-002 Μαύρο" data-item-thumb="https://pix.eu.criteo.net/img/img?c=3&amp;cq=256&amp;h=400&amp;m=0&amp;partner=42694&amp;q=80&amp;r=0&amp;u=https%3A%2F%2Fwww.zakcret.gr%2Feshop%2Fimage%2Fdata%2Fzakcret%2Fimages%2F110339590486-18-skroutz.jpg&amp;ups=1&amp;v=3&amp;w=400&amp;s=kzHJOOxzQ4nodf7n7UAJGiC4" data-item-syndicated="true" class="videoCube trc_spotlight_item origin-default thumbnail_top syndicatedItem textItem videoCube_1_child trc-first-recommendation trc-spotlight-first-recommendation " observeid="tbl-observe-9"><a title="ASICS GEL-EXCITE 8 1011B036-002 Μαύρο" href="https://cat.nl.eu.criteo.com/delivery/ckn.php?cppv=3&amp;cpp=GZRKU4RrRYtfZPRmXx9dl7aCaG3iQpod4-EIN6rXiibVQDrvBrxfIaS6iELpORFD3R3wi9BDR2Ezp4rOz78aL4ckCqACggivH-X25Myxbx8GJV5f1YbmcPpb2N8s15th7OIajZZ-CVDNFGSkX6YV47rBpGK65npfKp0j2dUsek-pmExTcYU2HCEpKhmwqGuBFnQit-x22oyjoSurUQgzUmQ62fqzOCA9grSsVANAJXHSpOfkN-2OMvmm2vXqWynRuWuMPti6DgZpm6d7ZooB7LG4uRKkZ4QIvOgz6LFf2CJzv5BBn4LWYnNO6sdOd48cgmIIlmFe-698fVIK_ugmDZf5HGih4K4r3GSbqa52l0U4KHSvdRnN8zWgjIos05xOWSb05nK73iFXTSU7YFns4rOkurWAR4XKM0wFBPkue27pgaQC&amp;maxdest=https%3A%2F%2Fwww.zakcret.gr%2Feshop%2Findex.php%3Froute%3Dproduct%2Fproduct%26product_id%3D126452%26utm_medium%3Ddisplay%26utm_campaign%3Dwebconsim&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSDwjE4o956-hqaH5czmAQ#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSDwjE4o956-hqaH5czmAQ" rel="nofollow noopener sponsored" target="_blank" class=" item-thumbnail-href "><div class="thumbBlock_holder"><span class="thumbBlock" style="background-image: url(&quot;https://images.taboola.com/taboola/image/fetch/$pw_360%2C$ph_240/t_tbl-cnd/https%3A//pix.eu.criteo.net/img/img%3Fc%3D3%26cq%3D256%26h%3D400%26m%3D0%26partner%3D42694%26q%3D80%26r%3D0%26u%3Dhttps%253A%252F%252Fwww.zakcret.gr%252Feshop%252Fimage%252Fdata%252Fzakcret%252Fimages%252F110339590486-18-skroutz.jpg%26ups%3D1%26v%3D3%26w%3D400%26s%3DkzHJOOxzQ4nodf7n7UAJGiC4&quot;);"><span class="thumbnail-overlay"></span><span class="branding">ZAKCRET</span><span class="static-text top-right"></span></span><div class="videoCube_aspect"></div></div></a><a title="ASICS GEL-EXCITE 8 1011B036-002 Μαύρο" href="https://cat.nl.eu.criteo.com/delivery/ckn.php?cppv=3&amp;cpp=GZRKU4RrRYtfZPRmXx9dl7aCaG3iQpod4-EIN6rXiibVQDrvBrxfIaS6iELpORFD3R3wi9BDR2Ezp4rOz78aL4ckCqACggivH-X25Myxbx8GJV5f1YbmcPpb2N8s15th7OIajZZ-CVDNFGSkX6YV47rBpGK65npfKp0j2dUsek-pmExTcYU2HCEpKhmwqGuBFnQit-x22oyjoSurUQgzUmQ62fqzOCA9grSsVANAJXHSpOfkN-2OMvmm2vXqWynRuWuMPti6DgZpm6d7ZooB7LG4uRKkZ4QIvOgz6LFf2CJzv5BBn4LWYnNO6sdOd48cgmIIlmFe-698fVIK_ugmDZf5HGih4K4r3GSbqa52l0U4KHSvdRnN8zWgjIos05xOWSb05nK73iFXTSU7YFns4rOkurWAR4XKM0wFBPkue27pgaQC&amp;maxdest=https%3A%2F%2Fwww.zakcret.gr%2Feshop%2Findex.php%3Froute%3Dproduct%2Fproduct%26product_id%3D126452%26utm_medium%3Ddisplay%26utm_campaign%3Dwebconsim&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSDwjE4o956-hqaH5czmAQ#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSDwjE4o956-hqaH5czmAQ" rel="nofollow noopener sponsored" target="_blank" class=" item-label-href "><span class="video-label-box trc-main-label "><span class="video-label video-title trc_ellipsis " style="-webkit-line-clamp: 4;">ASICS GEL-EXCITE 8 1011B036-002 Μαύρο</span><span class="branding">ZAKCRET</span></span></a><a href="https://privacy.eu.criteo.com/adchoices?cppv=3&amp;cpp=G-fOPfH_-9mzalINZp1MCu8BgbGcn9v6W7IdAQjUbijf2_wskWTR23LmYtcxEtYTGdwzhHsdkdel5illWZjJGIoj-gr_clsjBxgOV1QIiuGRu9dC3AvhiRgDw7VAy70PDcKshvumZhiGz63iMZ0VZf1IZu3dlc7C4mfObqhnne-RRh3V" target="_blank"><div class=" trc_user_adChoice_btn " title="Why do I see this item?"></div></a></div><div data-item-id="~~V1~~-2417698203404885460~~gOKGX5K1qHy4Vli1CQ7QfbYiv7N8HcDyT1rxeqHvJuDTxvAnL2wqac4MyzR7uD46gj3kUkbS3FhelBtnsiJV6MhkDZRZzzIqDobN6rWmCPA3hYz5D3PLat6nhIftiT1lwdxwdlxkeV_Mfb3eos_TQUqLXoQRjyREVhuauRSwgNCPLIEEXVu5camPIKeo8IdOTHFP7wuC-EqQMJlcNdDyyHDYuEpT8B213DHAe-GVV0vtWQ4PJW7nz3LbTbvf3t7XmNtafLKF85ZJ2Eeb6dQSeQ" data-item-title="Κορυφαίες Στοιχηματικές Προτάσεις Ημέρας Για Το Euro 2020" data-item-thumb="https://www.bet-on-arme.com/wp-content/uploads/2021/01/Ti_na_paikso_simera.jpg" data-item-syndicated="true" class="videoCube trc_spotlight_item origin-default thumbnail_top syndicatedItem textItem videoCube_2_child trc_excludable " observeid="tbl-observe-10" style="position: relative;"><a title="Κορυφαίες Στοιχηματικές Προτάσεις Ημέρας Για Το Euro 2020" href="https://www.bet-on-arme.com/stoixima-simera/?utm_source=taboola&amp;utm_medium=referral&amp;utm_sitedomain=sport24.gr&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCy9FQo-tyb5JOR05_iAQ#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCy9FQo-tyb5JOR05_iAQ" rel="nofollow noopener sponsored" target="_blank" class=" item-thumbnail-href "><div class="thumbBlock_holder"><span class="thumbBlock" style="background-image: url(&quot;https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_240%2Cw_360%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//www.bet-on-arme.com/wp-content/uploads/2021/01/Ti_na_paikso_simera.jpg&quot;);"><span class="thumbnail-overlay"></span><span class="branding">bet-on-arme.com</span><span class="static-text top-right"></span></span><div class="videoCube_aspect"></div></div></a><a title="Κορυφαίες Στοιχηματικές Προτάσεις Ημέρας Για Το Euro 2020" href="https://www.bet-on-arme.com/stoixima-simera/?utm_source=taboola&amp;utm_medium=referral&amp;utm_sitedomain=sport24.gr&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCy9FQo-tyb5JOR05_iAQ#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCy9FQo-tyb5JOR05_iAQ" rel="nofollow noopener sponsored" target="_blank" class=" item-label-href "><span class="video-label-box trc-main-label "><span class="video-label video-title trc_ellipsis " style="-webkit-line-clamp: 4;">Κορυφαίες Στοιχηματικές Προτάσεις Ημέρας Για Το Euro 2020</span><span class="branding">bet-on-arme.com</span></span></a><div class=" trc_user_exclude_btn " title="Remove this item"></div><div class=" trc_exclude_overlay trc_fade "></div><div class=" trc_undo_btn ">Undo</div></div><div data-item-id="~~V1~~7741097534161390115~~oEHKz-l099nkwpfDy9w3TINqvTQbIfFADl_aeoa2lYjTxvAnL2wqac4MyzR7uD46gj3kUkbS3FhelBtnsiJV6MhkDZRZzzIqDobN6rWmCPA3hYz5D3PLat6nhIftiT1lwdxwdlxkeV_Mfb3eos_TQdBReyg8iH8zbLUeSZIgz4yPLIEEXVu5camPIKeo8IdOlW7fPwH7NOuSy-u1FYw-4whjrYNc71K4ODsMI3BYDYkUgCH6mnWdXTbYhrP2haWAC7pcFhwOVpt8-B9yWMp4jw" data-item-title="Το Ν.1 Γκάτζετ στον Κόσμο για το Μπάνιο!" data-item-thumb="http://cdn.taboola.com/libtrc/static/thumbnails/21d12be13eea625bf54154bd78eeff0a.jpeg" data-item-syndicated="true" class="videoCube trc_spotlight_item origin-default thumbnail_top syndicatedItem textItem videoCube_3_child trc_excludable " observeid="tbl-observe-11" style="position: relative;"><a title="Το Ν.1 Γκάτζετ στον Κόσμο για το Μπάνιο!" href="http://rc.rctrck.com/6bc12804-3ca3-407f-8439-99fb89467fb2?widgettab1=sport24gr-p19510062&amp;device=Desktop&amp;creative=2999828873&amp;thumbnail=http%3A%2F%2Fcdn.taboola.com%2Flibtrc%2Fstatic%2Fthumbnails%2F21d12be13eea625bf54154bd78eeff0a.jpeg&amp;title=%CE%A4%CE%BF+%CE%9D.1+%CE%93%CE%BA%CE%AC%CF%84%CE%B6%CE%B5%CF%84+%CF%83%CF%84%CE%BF%CE%BD+%CE%9A%CF%8C%CF%83%CE%BC%CE%BF+%CE%B3%CE%B9%CE%B1+%CF%84%CE%BF+%CE%9C%CF%80%CE%AC%CE%BD%CE%B9%CE%BF%21&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSDh1U0om9imuOSSmI12#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSDh1U0om9imuOSSmI12" rel="nofollow noopener sponsored" target="_blank" class=" item-thumbnail-href "><div class="thumbBlock_holder"><span class="thumbBlock" style="background-image: url(&quot;https://images.taboola.com/taboola/image/fetch/h_240,w_360,c_fill,g_xy_center,x_907,y_950/http%3A//cdn.taboola.com/libtrc/static/thumbnails/21d12be13eea625bf54154bd78eeff0a.jpeg&quot;);"><span class="thumbnail-overlay"></span><span class="branding">OffersMania - Λύσεις για το Σπίτι</span><span class="static-text top-right"></span></span><div class="videoCube_aspect"></div></div></a><a title="Το Ν.1 Γκάτζετ στον Κόσμο για το Μπάνιο!" href="http://rc.rctrck.com/6bc12804-3ca3-407f-8439-99fb89467fb2?widgettab1=sport24gr-p19510062&amp;device=Desktop&amp;creative=2999828873&amp;thumbnail=http%3A%2F%2Fcdn.taboola.com%2Flibtrc%2Fstatic%2Fthumbnails%2F21d12be13eea625bf54154bd78eeff0a.jpeg&amp;title=%CE%A4%CE%BF+%CE%9D.1+%CE%93%CE%BA%CE%AC%CF%84%CE%B6%CE%B5%CF%84+%CF%83%CF%84%CE%BF%CE%BD+%CE%9A%CF%8C%CF%83%CE%BC%CE%BF+%CE%B3%CE%B9%CE%B1+%CF%84%CE%BF+%CE%9C%CF%80%CE%AC%CE%BD%CE%B9%CE%BF%21&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSDh1U0om9imuOSSmI12#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSDh1U0om9imuOSSmI12" rel="nofollow noopener sponsored" target="_blank" class=" item-label-href "><span class="video-label-box trc-main-label "><span class="video-label video-title trc_ellipsis " style="-webkit-line-clamp: 4;">Το Ν.1 Γκάτζετ στον Κόσμο για το Μπάνιο!</span><span class="branding">OffersMania - Λύσεις για το Σπίτι</span></span></a><div class=" trc_user_exclude_btn " title="Remove this item"></div><div class=" trc_exclude_overlay trc_fade "></div><div class=" trc_undo_btn ">Undo</div></div></div></div></div><div class="trc_clearer"></div></div></div></div></div><div data-card-index="4" id="taboola-alternating-below-article-new-pl4" data-batch-num="1" tbl-feed-card="" class=" trc_related_container trc_spotlight_widget trc_elastic trc_elastic_exchange-organic-thumbs-feed-01-c-new  tbl-feed-card " data-placement-name="Alternating Below Article New | Card 4" observeid="tbl-observe-12" style="padding: 0px;"><div class="trc_rbox_container"><div><div id="trc_wrapper_24225" class="trc_rbox exchange-organic-thumbs-feed-01-c-new trc-content-sponsored " style="overflow: hidden; display: block;"><div id="trc_header_24225" class="trc_rbox_header trc_rbox_border_elm"><div class="trc_header_ext"></div><span class="trc_rbox_header_span"></span></div><div id="outer_24225" class="trc_rbox_outer"><div id="rbox-t2v" class="trc_rbox_div trc_rbox_border_elm"><div id="internal_trc_24225"><div data-item-id="~~V1~~-6908233838847705036~~W8jfbDDFyuR0KUYwsUKOYhstq_3BR0X5ZcO4JYP-kvf6nH0OabNJtzzP-ddPU2nvK8Bm7FKD2NW1M1BCiW1-kuMDMqg65-jJbi04eURsbtqeHe1S9jo_X4timp5pCZhQ1qPnz8TIp56FGMwGW1REdHVyuGztVqX6Ju0EhE1ZF_o5Zhitu5ClJg0GXrQOHxZwO99DixDEd6_XmLDmFs7DSt9-SclKaA0Frri4tfgzbgrp8apZn67aKWhcXmR3Pc6N" data-item-title="Ένα απόγευμα στο Παλαιοβιβλιοπωλείο των αστέγων στην οδό Πειραιώς" data-item-thumb="https://media.oneman.gr/onm-images/FRA1396.jpg" data-item-syndicated="true" class="videoCube trc_spotlight_item origin-default thumbnail_top syndicatedItem inNetworkItem videoCube_1_child trc-first-recommendation trc-spotlight-first-recommendation  trc_excludable " observeid="tbl-observe-13" style="position: relative;"><a title="Ένα απόγευμα στο Παλαιοβιβλιοπωλείο των αστέγων στην οδό Πειραιώς" href="https://www.oneman.gr/life/ena-apogevma-sto-palaiovivliopoleio-ton-astegon-stin-odo-peiraios/?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31AopPueycnDlIJR#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31AopPueycnDlIJR" rel="nofollow noopener" target="_blank" class=" item-thumbnail-href "><div class="thumbBlock_holder"><span class="thumbBlock" style="background-image: url(&quot;https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_374%2Cw_560%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//media.oneman.gr/onm-images/FRA1396.jpg&quot;);"><span class="thumbnail-overlay"></span><span class="branding">Oneman</span><span class="static-text top-right"></span></span><div class="videoCube_aspect"></div></div></a><a title="Ένα απόγευμα στο Παλαιοβιβλιοπωλείο των αστέγων στην οδό Πειραιώς" href="https://www.oneman.gr/life/ena-apogevma-sto-palaiovivliopoleio-ton-astegon-stin-odo-peiraios/?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31AopPueycnDlIJR#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31AopPueycnDlIJR" rel="nofollow noopener" target="_blank" class=" item-label-href "><span class="video-label-box trc-main-label "><span class="video-label video-title trc_ellipsis " style="-webkit-line-clamp: 3;">Ένα απόγευμα στο Παλαιοβιβλιοπωλείο των αστέγων στην οδό Πειραιώς</span><span class="branding">Oneman</span></span></a><div class=" trc_user_exclude_btn " title="Remove this item"></div><div class=" trc_exclude_overlay trc_fade "></div><div class=" trc_undo_btn ">Undo</div></div><div data-item-id="~~V1~~-1330417185886600599~~W8jfbDDFyuR0KUYwsUKOYhstq_3BR0X5ZcO4JYP-kvf6nH0OabNJtzzP-ddPU2nvK8Bm7FKD2NW1M1BCiW1-kuMDMqg65-jJbi04eURsbtqeHe1S9jo_X4timp5pCZhQ1qPnz8TIp56FGMwGW1REdFcm4zCrUvdKx3Zuj3RMI805Zhitu5ClJg0GXrQOHxZwO99DixDEd6_XmLDmFs7DSt9-SclKaA0Frri4tfgzbgrp8apZn67aKWhcXmR3Pc6N" data-item-title="Μαρία Masterchef: «Μου ζήτησαν πολλοί να παριστάνουμε το ζευγάρι στο παιχνίδι»" data-item-thumb="https://media.oneman.gr/onm-images/maria_lazaridou.jpg" data-item-syndicated="true" class="videoCube trc_spotlight_item origin-default thumbnail_top syndicatedItem inNetworkItem videoCube_2_child trc_excludable " observeid="tbl-observe-14" style="position: relative;"><a title="Μαρία Masterchef: «Μου ζήτησαν πολλοί να παριστάνουμε το ζευγάρι στο παιχνίδι»" href="https://www.oneman.gr/synentefxeis/h-maria-lazaridou-den-fovithike-pote-na-einai-o-eaftos-tis/?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Ao-Oql37H3pr_oAQ#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Ao-Oql37H3pr_oAQ" rel="nofollow noopener" target="_blank" class=" item-thumbnail-href "><div class="thumbBlock_holder"><span class="thumbBlock" style="background-image: url(&quot;https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_374%2Cw_560%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//media.oneman.gr/onm-images/maria_lazaridou.jpg&quot;);"><span class="thumbnail-overlay"></span><span class="branding">Oneman</span><span class="static-text top-right"></span></span><div class="videoCube_aspect"></div></div></a><a title="Μαρία Masterchef: «Μου ζήτησαν πολλοί να παριστάνουμε το ζευγάρι στο παιχνίδι»" href="https://www.oneman.gr/synentefxeis/h-maria-lazaridou-den-fovithike-pote-na-einai-o-eaftos-tis/?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Ao-Oql37H3pr_oAQ#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Ao-Oql37H3pr_oAQ" rel="nofollow noopener" target="_blank" class=" item-label-href "><span class="video-label-box trc-main-label "><span class="video-label video-title trc_ellipsis " style="-webkit-line-clamp: 3;">Μαρία Masterchef: «Μου ζήτησαν πολλοί να παριστάνουμε το ζευγάρι στο παιχνίδι»</span><span class="branding">Oneman</span></span></a><div class=" trc_user_exclude_btn " title="Remove this item"></div><div class=" trc_exclude_overlay trc_fade "></div><div class=" trc_undo_btn ">Undo</div></div></div></div></div><div class="trc_clearer"></div></div></div></div></div><div data-card-index="5" id="taboola-alternating-below-article-new-pl5" data-batch-num="1" tbl-feed-card="" class=" trc_related_container trc_spotlight_widget trc_elastic trc_elastic_exchange-organic-thumbs-feed-01-b-24-new  tbl-feed-card " data-placement-name="Alternating Below Article New | Card 5" observeid="tbl-observe-15" style="padding: 0px;"><div class="trc_rbox_container"><div><div id="trc_wrapper_13530" class="trc_rbox exchange-organic-thumbs-feed-01-b-24-new trc-content-sponsored " style="overflow: hidden; display: block;"><div id="trc_header_13530" class="trc_rbox_header trc_rbox_border_elm"><div class="trc_header_ext"></div><span class="trc_rbox_header_span"></span></div><div id="outer_13530" class="trc_rbox_outer"><div id="rbox-t2v" class="trc_rbox_div trc_rbox_border_elm"><div id="internal_trc_13530"><div data-item-id="~~V1~~4222278334540331041~~hmG51Twpoci5-6YqgyOgKRstq_3BR0X5ZcO4JYP-kvf6nH0OabNJtzzP-ddPU2nvK8Bm7FKD2NW1M1BCiW1-kuMDMqg65-jJbi04eURsbtqeHe1S9jo_X4timp5pCZhQ1qPnz8TIp56FGMwGW1REdH8Yk9HAmDy_6bTxXYFGKOt4jr40UDS-2_DhilVLwrygO99DixDEd6_XmLDmFs7DSt9-SclKaA0Frri4tfgzbgrp8apZn67aKWhcXmR3Pc6N" data-item-title="Το παρασκήνιο με τον γιο δικηγόρου που συνελήφθη για τη διάρρηξη στο γραφείο του Τσακαλώτου" data-item-thumb="https://www.news247.gr/img/3982/9264866/566000/w660/660/trypa_tsakalotos.jpg" data-item-syndicated="true" class="videoCube trc_spotlight_item origin-default thumbnail_top syndicatedItem inNetworkItem videoCube_1_child trc-first-recommendation trc-spotlight-first-recommendation  trc_excludable " observeid="tbl-observe-16" style="position: relative;"><a title="Το παρασκήνιο με τον γιο δικηγόρου που συνελήφθη για τη διάρρηξη στο γραφείο του Τσακαλώτου" href="https://www.news247.gr/koinonia/to-paraskinio-me-ton-gio-dikigoroy-poy-synelifthi-gia-ti-diarrixi-sto-grafeio-toy-tsakalotoy.9264856.html?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31AohbnyrfSuz-Qm#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31AohbnyrfSuz-Qm" rel="nofollow noopener" target="_blank" class=" item-thumbnail-href "><div class="thumbBlock_holder"><span class="thumbBlock" style="background-image: url(&quot;https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_240%2Cw_360%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//www.news247.gr/img/3982/9264866/566000/w660/660/trypa_tsakalotos.jpg&quot;);"><span class="thumbnail-overlay"></span><span class="branding">News 24/7</span><span class="static-text top-right"></span></span><div class="videoCube_aspect"></div></div></a><a title="Το παρασκήνιο με τον γιο δικηγόρου που συνελήφθη για τη διάρρηξη στο γραφείο του Τσακαλώτου" href="https://www.news247.gr/koinonia/to-paraskinio-me-ton-gio-dikigoroy-poy-synelifthi-gia-ti-diarrixi-sto-grafeio-toy-tsakalotoy.9264856.html?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31AohbnyrfSuz-Qm#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31AohbnyrfSuz-Qm" rel="nofollow noopener" target="_blank" class=" item-label-href "><span class="video-label-box trc-main-label "><span class="video-label video-title trc_ellipsis " style="-webkit-line-clamp: 4;">Το παρασκήνιο με τον γιο δικηγόρου που συνελήφθη για τη διάρρηξη στο γραφείο του Τσακαλώτου</span><span class="branding">News 24/7</span></span></a><div class=" trc_user_exclude_btn " title="Remove this item"></div><div class=" trc_exclude_overlay trc_fade "></div><div class=" trc_undo_btn ">Undo</div></div><div data-item-id="~~V1~~2918642126232951330~~hmG51Twpoci5-6YqgyOgKRstq_3BR0X5ZcO4JYP-kvf6nH0OabNJtzzP-ddPU2nvK8Bm7FKD2NW1M1BCiW1-kuMDMqg65-jJbi04eURsbtqeHe1S9jo_X4timp5pCZhQ1qPnz8TIp56FGMwGW1REdGSj29lpu5ZW1RoQEPuiwoJ4jr40UDS-2_DhilVLwrygO99DixDEd6_XmLDmFs7DSt9-SclKaA0Frri4tfgzbgrp8apZn67aKWhcXmR3Pc6N" data-item-title="Deal: Απίστευτο - Μετά από 87 επεισόδια κέρδισε 40.000 ευρώ" data-item-thumb="https://www.news247.gr/img/9447/9265472/334000/w660/660/deal1111.jpg" data-item-syndicated="true" class="videoCube trc_spotlight_item origin-default thumbnail_top syndicatedItem inNetworkItem videoCube_2_child trc_excludable " observeid="tbl-observe-17" style="position: relative;"><a title="Deal: Απίστευτο - Μετά από 87 επεισόδια κέρδισε 40.000 ευρώ" href="https://www.news247.gr/psixagogia/tileorasi/deal-apisteyto-meta-apo-87-epeisodia-kerdise-40-000-eyro.9265456.html?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Aoq72M-bbl08mvAQ#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Aoq72M-bbl08mvAQ" rel="nofollow noopener" target="_blank" class=" item-thumbnail-href "><div class="thumbBlock_holder"><span class="thumbBlock" style="background-image: url(&quot;https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_240%2Cw_360%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//www.news247.gr/img/9447/9265472/334000/w660/660/deal1111.jpg&quot;);"><span class="thumbnail-overlay"></span><span class="branding">News 24/7</span><span class="static-text top-right"></span></span><div class="videoCube_aspect"></div></div></a><a title="Deal: Απίστευτο - Μετά από 87 επεισόδια κέρδισε 40.000 ευρώ" href="https://www.news247.gr/psixagogia/tileorasi/deal-apisteyto-meta-apo-87-epeisodia-kerdise-40-000-eyro.9265456.html?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Aoq72M-bbl08mvAQ#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31Aoq72M-bbl08mvAQ" rel="nofollow noopener" target="_blank" class=" item-label-href "><span class="video-label-box trc-main-label "><span class="video-label video-title trc_ellipsis " style="-webkit-line-clamp: 4;">Deal: Απίστευτο - Μετά από 87 επεισόδια κέρδισε 40.000 ευρώ</span><span class="branding">News 24/7</span></span></a><div class=" trc_user_exclude_btn " title="Remove this item"></div><div class=" trc_exclude_overlay trc_fade "></div><div class=" trc_undo_btn ">Undo</div></div><div data-item-id="~~V1~~-4001312860924546141~~hmG51Twpoci5-6YqgyOgKRstq_3BR0X5ZcO4JYP-kvf6nH0OabNJtzzP-ddPU2nvK8Bm7FKD2NW1M1BCiW1-kuMDMqg65-jJbi04eURsbtqeHe1S9jo_X4timp5pCZhQ1qPnz8TIp56FGMwGW1REdAuiMlOGZ55DOHo3QcGFfMV4jr40UDS-2_DhilVLwrygO99DixDEd6_XmLDmFs7DSt9-SclKaA0Frri4tfgzbgrp8apZn67aKWhcXmR3Pc6N" data-item-title="Ρεπορτάζ στον Πειραιά γύρισαν μπούμερανγκ: &amp;#34;Καλά κάνουν και απεργούν, μαζί τους είμαστε&amp;#34;" data-item-thumb="https://www.news247.gr/img/7025/9265495/119000/w660/660/peiraias.jpg" data-item-syndicated="true" class="videoCube trc_spotlight_item origin-default thumbnail_top syndicatedItem inNetworkItem videoCube_3_child trc_excludable " observeid="tbl-observe-18" style="position: relative;"><a title="Ρεπορτάζ στον Πειραιά γύρισαν μπούμερανγκ: &quot;Καλά κάνουν και απεργούν, μαζί τους είμαστε&quot;" href="https://www.news247.gr/koinonia/reportaz-ston-peiraia-pigan-mpoymerangk-kala-kanoyn-kai-apergoyn-mazi-toys-eimaste.9265485.html?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31AowpDl09nV5oHSAQ#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31AowpDl09nV5oHSAQ" rel="nofollow noopener" target="_blank" class=" item-thumbnail-href "><div class="thumbBlock_holder"><span class="thumbBlock" style="background-image: url(&quot;https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_240%2Cw_360%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//www.news247.gr/img/7025/9265495/119000/w660/660/peiraias.jpg&quot;);"><span class="thumbnail-overlay"></span><span class="branding">News 24/7</span><span class="static-text top-right"></span></span><div class="videoCube_aspect"></div></div></a><a title="Ρεπορτάζ στον Πειραιά γύρισαν μπούμερανγκ: &quot;Καλά κάνουν και απεργούν, μαζί τους είμαστε&quot;" href="https://www.news247.gr/koinonia/reportaz-ston-peiraia-pigan-mpoymerangk-kala-kanoyn-kai-apergoyn-mazi-toys-eimaste.9265485.html?utm_source=Sport24&amp;utm_medium=BestofNetwork_article&amp;utm_campaign=24MediaWidget&amp;tblci=GiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31AowpDl09nV5oHSAQ#tblciGiCgHqg-6EkiBjbdJAzl3BXqI3KZdOtwMHfmzBrdkqopZSCx31AowpDl09nV5oHSAQ" rel="nofollow noopener" target="_blank" class=" item-label-href "><span class="video-label-box trc-main-label "><span class="video-label video-title trc_ellipsis " style="-webkit-line-clamp: 4;">Ρεπορτάζ στον Πειραιά γύρισαν μπούμερανγκ: "Καλά κάνουν και απεργούν, μαζί τους είμαστε"</span><span class="branding">News 24/7</span></span></a><div class=" trc_user_exclude_btn " title="Remove this item"></div><div class=" trc_exclude_overlay trc_fade "></div><div class=" trc_undo_btn ">Undo</div></div></div></div></div><div class="trc_clearer"></div></div></div></div></div><div data-card-index="6" id="taboola-alternating-below-article-new-pl6" data-batch-num="1" tbl-feed-card=""></div><div class="tbl-batch-anchor" observeid="tbl-observe-0"></div><div class=" tbl-hidden tbl-loading-spinner tbl-loading-cards-placeholder tbl-hidden ">
+                <div class="tbl-placeholder-card">
+                    <div class="tbl-first-row-pl tbl-masker"></div>
+                    <div class="tbl-second-row-pl tbl-masker"></div>
+                    <div class="tbl-third-row-pl tbl-masker"></div>
+                    <div class="tbl-last-row-right-padding tbl-masker"></div>
+                    <div class="tbl-img-top-padding tbl-masker"></div>
+                    <div class="tbl-img-bottom-padding tbl-masker"></div>
+                    <div class="tbl-first-col-padding tbl-masker"></div>
+                    <div class="tbl-second-col-padding tbl-masker"></div>
+                </div>
+            
+                <div class="tbl-placeholder-card">
+                    <div class="tbl-first-row-pl tbl-masker"></div>
+                    <div class="tbl-second-row-pl tbl-masker"></div>
+                    <div class="tbl-third-row-pl tbl-masker"></div>
+                    <div class="tbl-last-row-right-padding tbl-masker"></div>
+                    <div class="tbl-img-top-padding tbl-masker"></div>
+                    <div class="tbl-img-bottom-padding tbl-masker"></div>
+                    <div class="tbl-first-col-padding tbl-masker"></div>
+                    <div class="tbl-second-col-padding tbl-masker"></div>
+                </div>
+            
+                <div class="tbl-placeholder-card">
+                    <div class="tbl-first-row-pl tbl-masker"></div>
+                    <div class="tbl-second-row-pl tbl-masker"></div>
+                    <div class="tbl-third-row-pl tbl-masker"></div>
+                    <div class="tbl-last-row-right-padding tbl-masker"></div>
+                    <div class="tbl-img-top-padding tbl-masker"></div>
+                    <div class="tbl-img-bottom-padding tbl-masker"></div>
+                    <div class="tbl-first-col-padding tbl-masker"></div>
+                    <div class="tbl-second-col-padding tbl-masker"></div>
+                </div>
+            </div><div id="_cm-css-reset" style="width: 700px; height: 0px; position: absolute; top: 674px; left: 0px; z-index: 999 !important;" class="_cm-ad-feed-manager vpaid-player-container multi-vpaids"><div class="_cm-ad-feed-manager vpaid-player-container multi-vpaids vpaid-handler" id="0__cm-css-reset" style="width: 700px; height: 0px; z-index: 999 !important; position: absolute; top: 0px; left: 0px; border: 0px none;"></div></div><div id="1623864626580" style="width: 700px; height: 0px; position: absolute; top: 674px; left: 0px; z-index: 999 !important;" class="_cm-ad-feed-manager"></div></div><script>window._taboola = window._taboola || [];_taboola.push({   mode: 'sc-sport24',   container: 'taboola-alternating-below-article-new',   placement: 'Alternating Below Article New',   target_type: 'mix'});</script></article></div>
+</body>
+
+</html>

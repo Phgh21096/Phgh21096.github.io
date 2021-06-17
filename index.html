@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html dir="ltr" data-device="desktop" lang="el">
+<head>
+	<title> Στέφανος Τσιτσιπάς </title>
+	
+	<meta charset="UTF-8">
+	<meta name="description" content="Στέφανος Τσιτσιπάς">
+	<meta name="keywords" content="Categories">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="css/simplephpform_default.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<link rel="icon" href="../images/tennis.png" type="icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--<link rel="manifest" href="js13kpwa.webmanifest">-->
+  <link rel="manifest" href="tennispwa.webmanifest">
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+
+body {
+  font-family: sans;
+}
+
+#menu {
+  width: 20%;
+}
+
+#menu > div {
+  background-color: #cbeef5;
+}
+
+.category_title {
+  font-weight: bold;
+  text-align: center;
+  background-color: #7297e0;
+
+  cursor: pointer;
+
+  
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.category_title:hover {
+  background-color: #72cee0;
+}	
+
+@media screen and (min-width: 701px) and (max-width: 10000px) {
+        table, th, td {
+          border-collapse: collapse;
+          border-spacing: 15px;
+          border: 1px solid black;
+        }
+		
+        th, td {
+          padding: 5px;
+          text-align: center; 
+          font-style: italic;   
+        }
+        table.centerer {
+          margin-left: auto; 
+          margin-right: auto;
+        }
+        table.dilwsi{
+          font-style: italic;  
+        }
+
+        }
+        @media screen and (min-width: 350px) and (max-width: 700px) {
+          table, th, td {
+          border-collapse: collapse;
+          border-spacing: 15px;
+          
+        }
+        th, td {
+          padding: 5px;
+          text-align: center; 
+          font-style: italic;   
+        }
+        table.centerer {
+          margin-left: auto; 
+          margin-right: auto;
+        }
+        .column {
+          width: 100%;
+		}
+        .hscroll{
+          overflow-x: auto;
+        }  
+        }
+
+@media screen and (min-width: 701px) and (max-width: 10000px){
+  
+.flexcontainer {
+  display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+   flex-flow: row wrap;
+   align-content: flex-end;
+   
+}
+.wrapper {
+	padding: 5px;
+	max-width: 960px;
+	width: 95%;
+	margin: 20px auto;
+  }
+ 
+.dropcap {
+float: left;
+font-size: 400%;
+color: #14c3cf;
+margin: -13px 7px -13px 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333; 
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+}
+
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 28px;
+  font-size: 32px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+::selection {
+background-color: #52c1c5;
+color: #f1f1f1;
+}
+
+p { text-align: center; }
+
+.figure {
+    border: 1px #cccccc solid;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+.figcaption {
+    color: black;
+    font-style: italic;
+    padding: 2px;
+    text-align: left;
+  } 
+  H1 { text-align: center } 
+  H3 { text-align: center }
+  H4 { text-align: center }
+  H5 { text-align: center }
+  
+div.parent {
+	text-align: center;
+	}
+div.toc {text-align: center;}
+ul { 
+	display: inline-block; 
+	text-align: left; 
+	}
+
+/*.image{
+  display: block;  
+  margin-left: auto;
+  margin-right: auto;
+  }*/
+  .image {
+width: 100%;
+overflow: hidden;
+}
+.image-colorize img {
+transition: transform .5s, filter 0.5s ease-in-out;
+filter: grayscale(100%);
+}
+.image-colorize:hover img {
+filter: grayscale(0);
+transform: scale(1.1);
+}
+.row {
+  display: flex;
+}
+
+#outputName, #outputValue #outputValue1 #outputValue2 #outputValue3 #outputValue4 #outputValue5 #outputValue6 #outputValue7 #outputValue8 {
+  color: blue;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+}
+table, th, td {
+              border: 1px  black;
+              border-collapse: collapse;
+              border-spacing: 15px;
+              border: 1px solid black;
+            }
+            th, td {
+              padding: 5px;
+              text-align: center; 
+              font-style: italic;   
+            }
+}
+
+@media screen and (min-width: 350px) and (max-width: 700px) {
+
+.flexcontainer {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+   flex-flow: row wrap;
+   align-content: flex-end;
+   
+}
+.wrapper {
+	padding: 5px;
+	max-width: 960px;
+	width: 100%;
+	margin: 20px auto;
+}
+.figure {
+  text-align: center;
+  font-size: 0.75em;
+  }
+ 
+p { text-align: center; }
+
+div.parent {
+	text-align: center;
+	}
+
+ul { 
+	display: inline-block; 
+	text-align: left; 
+	}
+
+.collection-filter__toolbar-controls__button {
+    border: 1px solid grey;
+    border-radius: 3px;
+    color: grey;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 12px;
+    text-transform: uppercase;
+    float: left;
+}
+
+.figcaption {
+    background-color: white;
+    color: black;
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+    font-size: 0.85em;
+  }
+H1 { text-align: center } 
+H2 { text-align: center } 
+H3 { text-align: center }
+H4 { text-align: center }
+H5 { text-align: center }
+
+H1 { font-size: x-large} 
+H2 { font-size: large  } 
+H3 { font-size: large  }
+H4 { font-size: medium }
+H5 { font-size: small  }
+  
+.image{
+  display: block;  
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  }
+  
+ .page { background-repeat: no-repeat; background-size: cover; background-position: center center; position: relative; min-width: 970px; }
+    
+.page > .content { width: 970px; height: 100%; margin: 0 auto; position: relative; }
+	
+	
+
+#page5 > div { text-align: center; }
+#page5 h2 { font-size: 42px; font-weight: 600; max-width: none; }
+#page5 a.top { position: absolute; bottom: 30px; }
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+} 
+  
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('../images/searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show1 {display: block;}
+  
+  
+.toc{
+    font-size: 0.85em;
+  }
+.row {
+  display: flex;
+ }
+ 
+ .select2-input {
+    width: 141px !important;
+}
+ 
+.column {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 5px 0;
+ }
+ table, th, td {
+              border-collapse: collapse;
+              border-spacing: 15px;
+              border: 1px solid black;
+            }
+            th, td {
+              padding: 5px;
+              text-align: center; 
+              font-style: italic;   
+            }
+	
+}
+
+#showops {
+    height: 200px;
+}
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"> </script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+
+<script>
+	var submit = document.getElementById("submit");
+
+	submit.onclick = function(){
+	var name = document.getElementById("dataName").value;
+	var val = document.getElementById("dataValue").value;
+  
+	document.getElementById("outputName").innerText = name;
+	document.getElementById("outputValue").innerText = val;
+}
+</script>
+
+<script>
+	var submit = document.getElementById("submit");
+
+	submit.onclick = function(){
+	var name = document.getElementById("dataName").value;
+	var ageval = document.getElementById("ageValue").value;
+	var crval = document.getElementById("crValue").value;
+	var wval = document.getElementById("weightValue").value;
+	var hval = document.getElementById("heightValue").value;
+	var pbval = document.getElementById("pbirthValue").value;
+	var prval = document.getElementById("presValue").value;
+	var sval = document.getElementById("styleValue").value;
+	var cval = document.getElementById("coachValue").value;
+	
+	document.getElementById("outputName").innerText = name;
+	document.getElementById("outputValue").innerText = ageval;
+	document.getElementById("outputValue1").innerText = crval;
+	document.getElementById("outputValue2").innerText = wval;
+	document.getElementById("outputValue3").innerText = hval;
+	document.getElementById("outputValue4").innerText = hval;
+	document.getElementById("outputValue5").innerText = pbval;
+	document.getElementById("outputValue6").innerText = prval;
+	document.getElementById("outputValue7").innerText = sval;
+	document.getElementById("outputValue8").innerText = cval;
+}
+</script>
+
+<script>
+function updateFunction() {
+  var x = document.getElementById("submit-btn").form.id;
+  document.getElementById("showTable").innerHTML = x;
+}
+</script>	
+
+<script>
+function addRowToTable() {
+  var tbl = document.getElementById('athletesStatsTable');
+  var lastRow = tbl.rows.length;
+  
+  var iteration = lastRow;
+  var row = tbl.insertRow(lastRow);
+
+  var cellLeft = row.insertCell(0);
+  var textNode = document.createTextNode(iteration);
+  cellLeft.appendChild(textNode);
+
+  var cellRight = row.insertCell(1);
+  var el = document.createElement('vname');
+  el.type = 'text';
+  el.name = 'txtRow' + iteration;
+  el.id = 'txtRow' + iteration;
+  el.size = 40;
+  cellRight.appendChild(el);  
+ }
+</script>
+
+
+<script type="text/javascript">
+	var TennisAthletes = [
+    {
+        name: 'Στέφανος Τσιτσιπάς',
+		age: 22,
+		turnedPro: 2016,
+		weight: '89 κιλά',
+		height: 1.93,
+		birthplace: 'Athens, Greece',
+		residence: 'Monte Carlo, Monaco',
+		plays: 'Δεξιόχειρο, ένα χέρι ανάποδα',
+		coach: 'Απόστολος Τσιτσιπάς'
+    }
+];
+
+	$(function() {
+    $('#headings th').on('click', function() {
+        var attr = $(this).attr('data-attr');
+        var asc = (!$(this).attr('data-asc')); // αλλάξτε τη σειρά, αληθής εάν δεν έχει οριστεί
+        
+        // διαγραφή τυχόν προηγούμενων δεικτών παραγγελίας ταξινόμησης
+        $('#headings th').each(function() {
+            $(this).removeAttr('data-asc');
+        });
+        // Ορισμός δείκτη ταξινόμησης ταξινόμησης
+        if (asc) {
+            $(this).attr('data-asc', 'asc');
+        }
+
+        sortResults(attr, asc);
+    });
+        
+    renderResults();
+});
+
+function sortResults(prop, asc) {
+    TennisAthletes.sort(function(a, b) {
+        if (asc) {
+            return (a[prop] > b[prop]) ? 1 : ((a[prop] < b[prop]) ? -1 : 0);
+        } else {
+            return (b[prop] > a[prop]) ? 1 : ((b[prop] < a[prop]) ? -1 : 0);
+        }
+    });
+    renderResults();
+}
+
+function renderResults () {
+    var html = '';
+    for (var e in TennisAthletes) {
+        html += '<tr>'
+            +'<td>'+TennisAthletes[e].name+'</td>'
+            +'<td>'+TennisAthletes[e].age+'</td>'
+            +'<td>'+TennisAthletes[e].turnedPro+'</td>'
+			+'<td>'+TennisAthletes[e].weight+'</td>'
+			+'<td>'+TennisAthletes[e].height+'</td>'
+			+'<td>'+TennisAthletes[e].birthplace+'</td>'
+			+'<td>'+TennisAthletes[e].residence+'</td>'
+			+'<td>'+TennisAthletes[e].plays+'</td>'
+			+'<td>'+TennisAthletes[e].coach+'</td>'
+        +'</tr>';
+    }
+    $('#results').html(html);
+}
+
+function sortTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("athletesStatsTable");
+  switching = true;
+  /*Κάντε έναν βρόχο που θα συνεχιστεί μέχρι
+   δεν έχει γίνει αλλαγή:*/
+  while (switching) {
+    //ξεκινήστε λέγοντας: δεν γίνεται εναλλαγή:
+    switching = false;
+    rows = table.rows;
+    /*Περάστε όλες τις σειρές του πίνακα (εκτός από το
+     πρώτο, το οποίο περιέχει κεφαλίδες πίνακα):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //ξεκινήστε λέγοντας ότι δεν πρέπει να υπάρχει εναλλαγή:
+      shouldSwitch = false;
+      /*Αποκτήστε τα δύο στοιχεία που θέλετε να συγκρίνετε,
+       μία από την τρέχουσα σειρά και μία από την επόμενη:*/
+      x = rows[i].getElementsByTagName("TD")[0];
+      y = rows[i + 1].getElementsByTagName("TD")[0];
+      //ελέγξτε αν οι δύο σειρές πρέπει να αλλάξουν θέση:
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        //Εάν ναι, σημειώστε ως διακόπτη και σπάστε το βρόχο:
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /*Εάν έχει επισημανθεί ένας διακόπτης, κάντε τον διακόπτη
+       και σημειώστε ότι έχει γίνει ένας διακόπτης:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+
+<script>
+$(document).ready(function(){
+  $("#show").click(function(){
+    var x = $("#updateForm").serializeArray();
+    $.each(x, function(i, field){
+      $("#results").append(field.name + ":" + field.value + " ");
+    });
+  });
+});
+</script>
+
+
+<!-- ΦΙΛΤΡΟ ΑΝΑΖΗΤΗΣΗΣ ΠΙΝΑΚΩΝ -->
+<script>
+/* Όταν ο χρήστης κάνει κλικ στο κουμπί,
+εναλλαγή μεταξύ απόκρυψης και εμφάνισης του αναπτυσσόμενου περιεχομένου */
+function myFunction1() {
+  document.getElementById("myDropdown").classList.toggle("show1");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+<script type="text/javascript">
+            var old_onload = window.onload;
+            window.onload = function() {
+              if (old_onload) {
+                old_onload()
+              }
+              create_dropdown('menu', 'category_title')
+            }
+</script>
+
+<!-- Εισαγωγή απλών φίλτρων εμφάνισης μεμονωμένων δεδομένων πινάκων. -->
+<script>
+	$('.remember-selection').each(function(r) {
+	var thisSelection = $(this);
+    var thisId = thisSelection.attr('id');
+    var storageId = 'remember-selection-' + thisId;
+    var storedInfo = localStorage.getItem(storageId);
+    if( storedInfo ) {
+    	var rememberedOptions = storedInfo.split(',');
+        thisSelection.val( rememberedOptions );
+    };
+	thisSelection.on('change', function(e) {
+        var selectedOptions = [];
+        thisSelection.find(':selected').each(function(i) {
+            var thisOption = $(this);
+            selectedOptions.push(thisOption.val());
+        });
+        localStorage.setItem(storageId, selectedOptions.join(','));
+    });
+});
+</script>
+
+<script>
+	$(document).ready(function() {
+		$('.js-example-basic-multiple').select2();
+	});
+</script>
+
+<script>
+	function formatState (state) {
+		if (!state.id) {
+			return state.text;
+		}
+		var baseUrl = "/user/pages/images/flags";
+		var $state = $(
+			'<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + state.text + '</span>'
+		);
+		return $state;
+	};
+
+	$(".js-example-templating").select2({
+		templateResult: formatState
+	});
+</script>
+
+<script>
+	$("#elements").select2({
+		placeholder: "Αναζήτηση...",
+		allowClear: true,
+		closeOnSelect: false
+	});
+</script>
+			
+<script>
+$(document).ready(function () {
+
+var athletes_response = '["Νόβακ Τζόκοβιτς","Ραφαέλ Ναδάλ", "Μεντβέντεφ Ντανίλ", "Ντομινίκ Τιέμ", "Στέφανος Τσιτσιπάς"]';
+var complex_employee_response = '[{"id":"1", "name": "Νόβακ Τζόκοβιτς", "role":"Αθλητής Tennis" , "country":"Σερβία" , "points":"12.113", "tourneys":"20"},	{"id":"2", "name": "Μεντβέντεφ Ντανίλ", "role":"Αθλητής Tennis", "country":"Ρωσία", "points":"10.143", "tourneys":"24"}, {"id":"3", "name": "Ραφαέλ Ναδάλ", "role":"Αθλητής Tennis" , "country":"Ισπανία", "points":"8.630", "tourneys":"17"}, {"id":"4", "name": "Στέφανος Τσιτσιπάς", "role":"Business" , "country":"Ελλάδα", "points":"7.980", "tourneys":"30"}, {"id":"5", "name": "Ντομινίκ Τιέμ", "role":"Business" , "country":"Αυστρία", "points":"7.425", "tourneys":"24"} ]';
+
+	$('#select2_ajax_simple_id').select2({ minimumInputLength: 1,
+		 	placeholder: "Αναζήτηση...",
+			
+			id: function(i){				
+				return i;
+			},
+			initSelection: function(element, callback) {				
+				
+			},
+			ajax: {
+				type: 'post',
+				url: "/echo/json/",				
+				allowClear: true,
+				dataType: 'json',				
+				delay: 250,
+				params: {contentType: "application/json"},
+				data: function(term, page){				
+					return {
+						json: athletes_response,
+						delay: 0
+        	};
+				},		
+			results: function (data, page) {				
+					return { results: data};					
+				},
+				cache: false
+			},
+			formatResult: function (i) {return '<div>'+i+'</div>'; }, 
+			formatSelection: function (i) {return '<div>'+i+'</div>'; }, 
+			dropdownCssClass: "bigdrop", 
+			escapeMarkup: function (m) { return m; } 	
+		});
+		
+		$('#select2_ajax_complex_id').select2({ minimumInputLength: 1,
+		 	placeholder: "Αναζήτηση Αθλητή",
+			id: function(i){				
+				return i;
+			},
+			initSelection: function(element, callback) {				
+				
+			},
+			ajax: {
+				type: 'post',
+				url: "/echo/json/",				
+				allowClear: true,
+				dataType: 'json',				
+				delay: 250,
+				params: {contentType: "application/json"},
+				data: function(term, page){	
+				
+					return {
+						json: complex_employee_response,
+						delay: 0
+        	};
+				},		
+			results: function (data, page) {				
+					return { results: data};					
+				},
+				cache: false
+			},
+			formatResult: function (i) {return '<div>'+i.name+'('+i.role+&emsp;+i.country+&emsp;+i.points+&emsp;+i.tourneys+')'+'</div>'},
+			formatSelection: function (i) {return '<div>'+i.name+'('+i.role+&emsp;+i.country+&emsp;+i.points+&emsp;+i.tourneys+')'+'</div>'; }, 
+			dropdownCssClass: "bigdrop", 
+			escapeMarkup: function (m) { return m; } 		
+		})
+		
+	
+	$('#preselectSimpleDataButton').on('click', function() {
+     
+      $('#select2_ajax_simple_id').select2('data', 'Srinivas Chekuri');
+    });
+		
+		$('#preselectObjectDataButton').on('click', function() {
+    
+		 var o = new Object;
+		 o.id="1";
+		 o.name="Srinivas Chekuri";
+		 o.role="Architect";
+      $('#select2_ajax_complex_id').select2('data', o);
+    });
+});
+</script>
+
+</head>
+
+<body>
+    <div class="flexcontainer">
+    <div class="wrapper">
+     
+
+    <header>
+		
+			
+	<div class="navbar">
+		<div class="a"> 
+			<center> 
+				<h1 style="background-color:white;"> ΑΘΛΗΤΕΣ ΤΕΝΝΙΣ </h1> 
+			</center>	
+		</div>
+		<br> <br>
+		<a class="active" href="tennis.totalh.net">Αρχική σελίδα</a>
+		<div class="subnav">
+			<button class="subnavbtn">Άθλημα Tennis <i class="fa fa-caret-down"></i></button>
+			<div class="subnav-content">
+				<a href="../tennisHistory.html">Ιστορία</a>
+			</div>
+		</div> 
+		<div class="subnav">
+			<button class="subnavbtn">Αθλητές Tennis <i class="fa fa-caret-down"></i></button>
+			<div class="subnav-content">
+				<a href="../greekathletes.html">Έλληνες Αθλητές</a>
+				<a href="../foreignathletes.html">Ξένοι Αθλητές</a>
+			</div>
+		</div>
+	<div class="subnav">
+		 <button class="subnavbtn"><a href="../form.html">Εγγραφή</a> <i class="fa fa-caret-down"></i></button>
+	</div>
+	<a href="../contact.html">Επικοινωνία</a>
+</div>
+
+		<h1 style="background-color:white;">Στέφανος Τσιτσιπάς: "Το παιδί θαύμα"</h1>
+		
+		<br> <br>
+				<p> 
+					<center> 
+						<h2 style="background-color:white;">Στον παρακάτω 
+						πίνακα εμφανίζονται τα σταθερά στοιχεία
+						των Αθλητών TENNIS
+						</h2>
+					</center> 
+				</p>
+		
+		
+				<table id="athletesStatsTable" border="1">
+					<legend>ΣΤΑΘΕΡΑ ΣΤΟΙΧΕΙΑ ΑΘΛΗΤΩΝ TENNIS</legend>
+					<thead id="headings">
+						<tr>
+							<th data-attr="name">Όνομα Αθλητή</th>
+							<th data-attr="age">Ηλικία Αθλητή</th>
+							<th data-attr="turnedPro">Αρχή καριέρας</th>
+							<th data-attr="weight">Βάρος Αθλητή</th>
+							<th data-attr="height">Ύψος Αθλητή</th>
+							<th data-attr="birthplace">Τόπος γέννησης</th>
+							<th data-attr="residence">Τόπος διαμονής</th>
+							<th data-attr="plays">Στύλ τέννις</th>
+							<th data-attr="coach">Προπονητής</th>
+						</tr>
+					</thead>
+				
+				
+					<tbody id="results">
+						<!-- αυτό θα συμπληρωθεί αυτόματα -->
+					</tbody>
+				
+				</table>
+		
+		<p id="sort">
+			<center> <button type="button" class="collection-filter__toolbar-controls__button" onClick="sortTable()">Ταξινόμηση πίνακα</button> </center>
+		</p>
+		
+		<br> <br> <br>
+		
+		<p> 
+			<br> <br>
+		</p>
+		
+		
+<section class="page" id="page5">
+    <div class="content">
+
+            <h2 style="background-color:white;">Πατήστε στο παρακάτω κουμπί
+				για να δείτε τον πίνακα 
+				των στατιστικών των Αθλητών του TENNIS
+			</h2>
+			<br> <br>
+			<button class="block" onclick="formFunction()"> Πίνακας στατιστικών Αθλητών </button>
+
+		<script>
+			function formFunction() {
+				location.replace("http://tennis.totalh.net/table2.html")
+			}
+		</script>
+	
+		</div>
+	</div>
+</section>
+		
+		
+<br> <br> <br>
+<p> 
+	<br> <br>
+</p>
+		
+		
+<section class="page" id="page5">
+    <div class="content">
+
+            <h2 style="background-color:white;"> Πατήστε στο παρακάτω κουμπί
+				για να δείτε τον πίνακα 
+				με τα στοιχεία των Διοργανώσεων TENNIS
+			</h2>
+			<br> <br>
+			
+			<button class="block" onclick="formFunction()"> Πίνακας Διοργανώσεων TENNIS </button>
+
+		<script>
+			function formFunction() {
+				location.replace("http://tennis.totalh.net/table3.html")
+			}
+		</script>
+	
+	</div>
+</div>
+</section>
+		
+<form method="POST" action="" id="updateForm">
+			<fieldset>
+			<legend>Εισάγετε τα στοιχεία του Αθλητή της επιλογής σας</legend> <br>
+			<label for="dataName">Όνομα Αθλητή</label>
+			<input type="text" id="dataName" name="Όνομα" value="">
+			<br>
+			<label for="ageValue">Ηλικία Αθλητή</label>
+			<input type="text" id="ageValue" name="Ηλικία" value="">
+			<br>
+			<label for="crValue">Αρχή καριέρας</label>
+			<input type="text" id="crValue" name="Αρχή καριέρας" value="">
+			<br>
+			<label for="weightValue">Βάρος Αθλητή</label>
+			<input type="text" id="weightValue" name="Βάρος" value="">
+			<br>
+			<label for="heightValue">Ύψος Αθλητή</label>
+			<input type="text" id="heightValue" name="Ύψος" value="">
+			<br>
+			<label for="pbirthValue">Τόπος γέννησης</label>
+			<input type="text" id="pbirthValue" name="Τόπος γέννησης" value="">
+			<br>
+			<label for="presValue">Τόπος διαμονής</label>
+			<input type="text" id="presValue" name="Τόπος διαμονής" value="">
+			<br>
+			<label for="styleValue">Στύλ τέννις</label>
+			<input type="text" id="styleValue" name="Στύλ τέννις" value="">
+			<br>
+			<label for="coachValue">Προπονητής</label>
+			<input type="text" id="coachValue" name="Προπονητής" value="">
+
+			<button id="submit-btn" type="button" onclick="updateFunction()">Υποβολή στοιχείων</button>
+			</fieldset>
+</form>
+		
+		
+		
+<br> <br> <br>	
+<form name="myForm" action="action_page_get.php" method="get">
+			<label for="fname">Όνομα : </label>
+			<input type="text" id="fname" name="fname"><br><br>
+			<label for="lname">Επίθετο : </label>
+			<input type="text" id="lname" name="lname"><br><br>
+			<input type="button" onclick="formSubmit()" value="Υποβολή">
+</form>
+
+<br> <br> <br>
+<p>
+	<center>
+		<h1 style="">ΑΝΑΖΗΤΗΣΗ ΣΤΟΙΧΕΙΩΝ ΑΘΛΗΤΩΝ TENNIS </h1>
+	</center>
+</p>
+<br> <br>
+		
+
+	<div>
+	
+	
+	
+    <select style="width:500px" id="elements" multiple>
+               <optgroup label="ΑΘΛΗΤΕΣ">
+                   <option value="AK">Αθλητής</option>
+                   <option value="HI">Τουρνουά</option>
+               </optgroup>
+               <optgroup label="ΣΤΑΤΙΣΤΙΚΑ ΣΤΟΙΧΕΙΑ">
+                   <option value="CA">Τραυματισμοί</option>
+                   <option value="NV">Πόλη διεξαγωγής</option>
+                   <option value="OR">Κοινωνική προσφορά</option>
+               </optgroup>
+               <optgroup label="ΘΕΣΗ ΤΟΥΡΝΟΥΑ">
+                   <option value="AZ">Καταληφθείσα θέση</option>
+                   <option value="CO">Αντίπαλοι</option>
+               </optgroup>
+    </select>    
+</div>
+
+  </div>
+</div>	
+
+<body>
+<h4 id="title">ΕΠΙΛΟΓΗ ΣΤΟΙΧΕΙΩΝ ΑΘΛΗΤΩΝ</h4>
+<h5>ΠΑΤΗΣΤΕ ΓΙΑ ΑΡΧΙΚΑ ΔΕΔΟΜΕΝΑ ΑΘΛΗΤΩΝ</h5>
+  <div id="maincontainer" class="clearfix">
+    
+    <div id="contentwrapper">
+      <div class="main_content">
+        <div class="row-fluid">
+          <div class="span6" id="employeeColumn">
+            <div class="control-group">
+              <label class="control-label">ΟΝΟΜΑ ΑΘΛΗΤΗ: </label>
+              <div class="controls">
+                <input type="text" id="select2_ajax_simple_id" />                
+              </div>
+            </div>
+           
+          </div>
+          					
+					<button id="preselectSimpleDataButton" class="btn" type="submit"><i class="icon-plus" alt="OK"></i> ΠΡΟΕΠΙΛΟΓΗ ΣΤΟΙΧΕΙΩΝ </button>
+					 <label>ΕΠΙΛΟΓΗ ΑΘΛΗΤΗ ΝΟΒΑΚ ΤΖΟΚΟΒΙΤΣ </label>					
+        </div>
+        
+				
+				
+				 <div class="row-fluid">
+          <div class="span6" id="employeeComplexColumn">
+            <div class="control-group">
+              <label class="control-label">ΟΝΟΜΑ ΑΘΛΗΤΗ: </label>
+              <div class="controls">
+                <input type="text" id="select2_ajax_complex_id" />                
+              </div>
+            </div>
+            
+          </div>
+          					
+					<button id="preselectObjectDataButton" class="btn" type="submit"><i class="icon-plus" alt="OK"></i>ΠΡΟΕΠΙΛΟΓΗ ΣΤΟΙΧΕΙΩΝ</button>
+					 <label>ΕΠΙΛΕΞΕ ΣΤΟΙΧΕΙΑ ΑΘΛΗΤΗ ΜΕ ΡΟΛΟ </label>					
+        </div>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  
+</body>
+
+<br> <br> <br>
+
+	
+	  
+	<h5>Ποιός είναι στα αλήθεια ο μεγαλύτερος Έλληνας τενίστας;</h5>
+     
+    </header>   
+    
+    <div class="figure">  
+      <p><span class="dropcap">O</span> <a href="https://el.wikipedia.org/wiki/%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82" title="Stefanos Tsitsipas" target="_blank"><b> Στέφανος Τσιτσιπάς </b></a>(Αθήνα, 12 Αυγούστου 1998) είναι Έλληνας επαγγελματίας τενίστας, 5ος στην παγκόσμια κατάταξη σήμερα. Είναι ο πρώτος Έλληνας που έχει μπει στους 100 καλύτερους τενίστες και ο πρώτος (και μέχρι σήμερα ο μοναδικός) που κατέκτησε τίτλο <a href="https://el.wikipedia.org/wiki/Grand_Slam" title="Grand Slam">Γκράν Σλαμ</a> της περιόδου Open στην κατηγορία εφήβων (Junior), όταν κατέκτησε το διπλό του <a href="https://el.wikipedia.org/wiki/%CE%93%CE%BF%CF%85%CE%AF%CE%BC%CF%80%CE%BB%CE%B5%CE%BD%CF%84%CE%BF%CE%BD_(%CF%84%CE%BF%CF%85%CF%81%CE%BD%CE%BF%CF%85%CE%AC)" title="Wimbledon" target="_blank">Γουίμπλεντον</a> αγοριών το 2016 με συμπαίκτη τον Eσθονό Κένεθ Ράισμα. Έχει κερδίσει συνολικά πέντε τίτλους ATP singles Futures καθώς και έξι ATP τίτλους Futures στο διπλό.
+
+                   Τον Αύγουστο του 2018 ο Στέφανος Τσιτσιπάς κατάφερε να νικήσει τον <a href="https://el.wikipedia.org/wiki/%CE%9D%CF%8C%CE%B2%CE%B1%CE%BA_%CE%A4%CE%B6%CF%8C%CE%BA%CE%BF%CE%B2%CE%B9%CF%84%CF%82" title="Novak Djokovic" target="_blank">Νόβακ Τζόκοβιτς</a> και τον <a href="https://en.wikipedia.org/wiki/Kevin_Anderson_(tennis)" title="Kevin Anderson" target="_blank" >Κέβιν Άντερσον</a> και προκρίθηκε για πρώτη φορά στην καριέρα του στον τελικό του <a href="https://en.wikipedia.org/wiki/Canadian_Open_(tennis)" title="Rogers Cup" target="_blank">Rogers Cup</a>, που διεξήχθη στο Τορόντο.</p>
+        <div class="image"><div class="image-colorize img"><div class="image-colorize:hover img">
+      <img  src="images/trophy.jpg" alt="tsitsipas" style="width:100%"></div></div></div>
+    
+      <div class="figcaption" style="text-align: center"><Fig class="1">Ο Στέφανος Τσιτσιπάς μετά την μεγάλη του διάκριση ενάντια στο Ναδάλ</Fig></div>
+      </class>
+     
+        <br>    
+    <!--<table id="t01" class="centerer" style="width:35%">
+     <tr><th scope="row" style="text-align:left">Χώρα:</th><td>Ελλάδα <img alt="Flag_of_Greece.svg" src="C:\Users\pigi\Desktop\1η εργασία Εφαρμογές/flag.png" style="width:10%"></td> </tr>
+     <tr><th scope="row" style="text-align:left">Γέννηση:</th><td>12 Αυγούστου 1998 (22 ετών) Αθήνα</td></tr>
+     <tr><th scope="row" style="text-align:left">Ύψος:</th><td>1,93μ.</td></tr>
+     <tr><th scope="row" style="text-align:left">Επαγγελματίας από:</th><td>2016-σήμερα</td></tr>
+     <tr><th scope="row" style="text-align:left">Σύνολο κερδών καριέρας:</th><td>7.000.000$</td></tr>
+	</table>-->
+
+		
+
+<script type="text/javascript">
+        var aSpan = document.getElementById('Age').innerHTML;
+        var dob = new Date(12/08/1998);
+        var month_diff = Date.now() - dob.getTime();
+        var age_dt = new Date(month_diff); 
+        var year = age_dt.getUTCFullYear();
+        var age = Math.abs(year - 1998);
+        aSpan += age;
+        document.getElementById('Age').innerHTML = aSpan;
+</script>
+    
+
+
+  <div class="column">
+    <table id="info_table" style="width:89%">
+      <br><br>
+       
+        <tr><td scope="row" style="text-align:left"><i>«Πείσμωσα πολύ την πρώτη φορά που έχασα στον πρώτο μου αγώνα ενάντια στον Ναδάλ. Είπα στον εαυτό μου ότι έχω την ευκαιρία να τα πάω καλύτερα την επόμενη φορά. Επίσης είπα ότι μπορώ να τον κερδίσω γιατί τώρα ξέρω πώς παίζει. Δεν ήθελα να το πω αυτό, αλλά νιώθω ότι μπορώ να το κάνω. Ξέρω πολύ καλύτερα τις τακτικές που χρησιμοποιεί και θα είναι μεγάλη χαρά να βγω έξω στο γήπεδο, να παίξω καλό τένις και να φύγω με τη νίκη. Το θέλω πάρα πολύ», ήταν η δήλωση του αθλητή πριν την έναρξη του αγώνα.</i></td></tr>
+      
+      </table>
+  </div>
+
+  <br>
+<article>
+  <p> <span class="dropcap">Μ</span>ετά τη σπουδαία νίκη του επί του Τζόκοβιτς πήγε στην κάμερα που κάλυπτε τον αγώνα και έγραψε στον φακό της "pray for Greece" θέλοντας να δείξει ότι δεν ξεχνά την καταστροφή που βίωσε η χώρα και να αποτελέσει ένα φόρο τιμής στα θύματα της.
+      Στις 20 Ιανουαρίου 2019 ο Τσιτσιπάς νίκησε τον <a href="https://el.wikipedia.org/wiki/%CE%A1%CF%8C%CF%84%CE%B6%CE%B5%CF%81_%CE%A6%CE%AD%CE%BD%CF%84%CE%B5%CF%81%CE%B5%CF%81" title="Roger Federer" target="_blank">Ρότζερ Φέντερερ</a> στο <a href="https://el.wikipedia.org/wiki/%CE%91%CF%85%CF%83%CF%84%CF%81%CE%B1%CE%BB%CE%B9%CE%B1%CE%BD%CF%8C_%CE%8C%CF%80%CE%B5%CE%BD" title="Australian Open" target="_blank">Αυστραλιανό Όπεν</a>, προχωρώντας στη φάση των 8 του πρωταθλήματος. Την επόμενη ημέρα κέρδισε τον Ισπανό <a href="https://el.wikipedia.org/wiki/%CE%A1%CE%BF%CE%BC%CF%80%CE%AD%CF%81%CF%84%CE%BF_%CE%9C%CF%80%CE%B1%CE%BF%CF%85%CF%84%CE%AF%CF%83%CF%84%CE%B1_%CE%91%CE%B3%CE%BF%CF%8D%CF%84" title="Roberto Bautista Agut" target="_blank">Μπαουτίστα Αγκούτ </a>και πέρασε στους ημιτελικούς του Australian Open.
+      Στις 23 Φεβρουαρίου 2019 ο Στέφανος Τσιτσιπάς νίκησε τον <a href="https://en.wikipedia.org/wiki/David_Goffin" title="David Goffin" target="_blank">Νταβίντ Γκοφέν</a> στον ημιτελικό του τουρνουά της Μασσαλίας και προκρίθηκε στον τελικό.Στον τελικό έπαιξε με τον <a href="https://en.wikipedia.org/wiki/Mikhail_Kukushkin" title="Mikhail Kukushkin" target="_blank">Μίκαϊλ Κουκούσκιν</a> και τον νίκησε με 2 - 0.
+      Στις 5 Μαΐου 2019 ο Στέφανος Τσιτσιπάς επικράτησε του Ουρουγουανού <a href="https://en.wikipedia.org/wiki/Pablo_Cuevas" title="Pablo Cuevas" target="_blank">Πάμπλο Κουέβας</a> (νούμερο 67 του κόσμου) με 2-0 σετ (6-3,7-6) στον τελικό του <a href="https://en.wikipedia.org/wiki/Estoril_Open_(tennis)" title="Millennium Estoril Open" target="_blank">Millennium Estoril Open</a>, που πραγματοποιήθηκε στο Εστορίλ της Πορτογαλίας. Αυτός ήταν ο τρίτος τίτλος για τον Έλληνα πρωταθλητή και πρώτος στην χωμάτινη επιφάνεια.
+      Στον σημαντικότερο τίτλο της σταδιοδρομίας του, στις 17 Νοεμβρίου 2019 κατέκτησε τους τελικούς του ATP και αναρριχήθηκε στην 5η θέση στην παγκόσμια κατάταξη.</p>
+   
+  
+</article>
+</div>
+<br><br><br><br>
+<div class="parent"> 
+  <div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" 
+
+    id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" 
+    
+    lang="el" dir="ltr"><h2 id="mw-toc-heading">Πίνακας περιεχομένων</h2><span class="toctogglespan">
+    <label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+    <ul>
+    <li class="toclevel-1 tocsection-1">
+    <a href="#First_years"><span class="tocnumber">1.</span> <span class="toctext">Πρώτα χρόνια</span></a></li>
+    <li class="toclevel-1 tocsection-2"><a href="#Participation_and_results"><span class="tocnumber">2.</span> <span class="toctext">Συμμετοχές και αποτελέσματα</span></a></li>
+    <li class="toclevel-1 tocsection-3"><a href="#Injuries"><span class="tocnumber">3.</span> <span class="toctext">Τραυματισμοί και αποθεραπεία</span></a></li>
+    <li class="toclevel-1 tocsection-4"><a href="#Social_offer"><span class="tocnumber">4.</span> <span class="toctext">Κοινωνική προσφορά</span></a></li>
+    <li class="toclevel-1 tocsection-5"><a href="#Social_media"><span class="tocnumber">5.</span> <span class="toctext">Social media</span></a></li>
+    <li class="toclevel-1 tocsection-6"><a href="#Registration"><span class="tocnumber">6.</span> <span class="toctext">Εγγραφή</span></a></li>
+    </ul>
+    </div>
+    <br>
+    </div></div>
+
+
+    <div class="wrapper">
+      <div class="figure">
+  <article>
+    <h3><span id="First_years"></span><span class="First_years" id="Πρώτα_χρόνια">Πρώτα χρόνια</span><span class="First_years"><span ></span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;veaction=edit&amp;section=1" class="First_years" title="First_years"></a><span class="First_years">  </span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;action=edit&amp;section=1" title="First_years"></a><span class="First_years"></span></span></h3>
+  
+    <p><span class="dropcap">Ο</span> Τσιτσιπάς γεννήθηκε στις 12 Αυγούστου 1998, γιος του <a href ="https://www.tennisnews.gr/tennis-world/atp-tennis/item/44293-apostolos-tsitsipas" title="Αποστόλης Τσιτσιπάς" target="_blank">Αποστόλη Τσιτσιπά</a> και της <a href="https://el.wikipedia.org/wiki/%CE%A4%CE%B6%CE%BF%CF%8D%CE%BB%CE%B9%CE%B1_%CE%91%CF%80%CE%BF%CF%83%CF%84%CF%8C%CE%BB%CE%B7" title="Τζούλια Αποστόλη" target="_blank">Τζούλιας Αποστόλη</a> (το γένος Σαλνίκοβα) στην Καρδίτσα. 
+      Ο πατέρας του είναι Έλληνας και η μητέρα του Ρωσίδα. Οι γονείς του είναι επαγγελματίες τενίστες, ενώ η μητέρα του ήταν νούμερο 1 στην κατηγορία νέων, ήταν εντός των κορυφαίων 200 παγκοσμίως και εκπροσώπησε την <a href="https://el.wikipedia.org/wiki/%CE%88%CE%BD%CF%89%CF%83%CE%B7_%CE%A3%CE%BF%CE%B2%CE%B9%CE%B5%CF%84%CE%B9%CE%BA%CF%8E%CE%BD_%CE%A3%CE%BF%CF%83%CE%B9%CE%B1%CE%BB%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CF%8E%CE%BD_%CE%94%CE%B7%CE%BC%CE%BF%CE%BA%CF%81%CE%B1%CF%84%CE%B9%CF%8E%CE%BD" title="Ένωση Σοβιετικών Σοσιαλιστικών Δημοκρατιών" target="_blank">Σοβιετική Ένωση</a> στο <a href="https://el.wikipedia.org/wiki/%CE%A6%CE%B5%CE%BD%CF%84_%CE%9A%CE%B1%CF%80" title="Φεντ Καπ" target="_blank">Φεντ Καπ</a>.<sup id="cite_ref-nyt-background_8-0" class="reference"><a href="#cite_note-nyt-background-8"></a></sup>
+
+    <p>"Στην ηλικία των έξι άρχισα να κάνω τα πρώτα μου μαθήματα τένις στο <a href="http://oag.gr/" title="Tennis Club" target="_blank">Tennis Club Glifada</a> σε μια ομάδα με άλλα παιδιά στην ηλικία μου. Ο πρώτος προπονητής μου ήταν ο Γιώργος Σπηλιόπουλος που με δίδαξε για τη σημασία του αθλήματος, της πειθαρχίας, της εργασιακής ηθικής και της σωστής τεχνικής στο γήπεδο. Ήταν ένα πολύ σημαντικό βήμα για μένα να έχω έναν ταπεινό προπονητή σαν αυτόν να μου δίνει τα σωστά βήματα και να με κατευθύνει με τις γνώσεις του από την αρχή του χρόνου.
+        Στην ηλικία των οκτώ μετακόμισα στον Γιώργο Φουντούκο, το άτομο που ανέπτυξε το παιχνίδι, την τεχνική, το footwork μου ως κατώτερος παίκτης. Ήταν μια μεγάλη αλλαγή στο τένις μου από τότε, είναι ένας πολύ έμπειρος προπονητής τένις με πολλές γνώσεις στο γήπεδο, έναν πολύ συμβατικό τρόπο ανάπτυξης τεχνικών και ένα μοναδικό μυαλό στο γήπεδο τένις. Είναι ο προπονητής του τένις μου στο σπίτι μέχρι σήμερα."</p>
+  </article>
+      
+      <br><br>
+  <div class="row">
+    <div class="column">
+      <img src="images/Tsitsipas3.jpg" alt="tsitsipas4" style="width:100%" height="98%">
+    </div>
+    <div class="column">
+      <img src="images/Tsitsipas5.jpg" alt="tsitsipas5" style="width:100%">
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+       <div class="figcaption" style="text-align: center">
+            <Fig class="2">Ο Στέφανος Τσιτσιπάς εν δράσει σε ένα U-18 τουρνουά στην Γερμανία</Fig></div>
+    </div>
+    <div class="column">
+       <div class="figcaption" style="text-align: center">
+            <Fig class="2">Ο Στέφανος Τσιτσιπάς στην πρώτη του νίκη σε τουρνουά O-18 στην Αγγλία</Fig></div>
+        </div>
+      </div>
+  
+  <br><br><br>
+ 
+ 
+  <article>
+    <h4><span id="Realization"></span><span class="Realization" id="Realization">"Κατανόησα τη ζωή μου μέσα από το τέννις"</span></h4>
+   
+    <p><span class="dropcap">"Α</span>φού ξεκίνησα με το παιχνίδι του τένις, υπήρξε μια κρίσιμη απόφαση που έπρεπε να κάνω, μια απόφαση που πλησίαζε όσο περνούσαν τα χρόνια. Αυτή η απόφαση ήταν το μέλλον μου. Θέλω να κάνω το τένις το επάγγελμά μου; Είμαι έτοιμος να θυσιάσω τη ζωή μου στην Ελλάδα για να ξεκινήσω να ταξιδεύω για τένις; Η απάντηση από τον 12χρονο εαυτό μου ήταν «Ναι, θέλω να το κάνω».
+      Ήμουν έτοιμος για αυτό το μακρύ ταξίδι, αυτή τη μάχη που έπρεπε να αντιμετωπίσω, το άγχος, τις αϋπνίες νύχτες, την ένταση, την απογοήτευση, τα νεύρα, το άγχος ... Έπρεπε να αντιμετωπίσω έναν αντίπαλο, αλλά η μεγαλύτερη πρόκληση ήταν να ξεπεράσω το προσδοκίες. Επρόκειτο να εκμεταλλευτώ τις πιθανότητές μου, να αποτύχω τις περισσότερες φορές, αλλά αυτό ήταν και εξακολουθεί να είναι το κλειδί για την επιτυχή ανάπτυξη και κυνηγώντας ένα όνειρο που ήταν και είναι εκεί. Τίτλους που θέλουν πολλοί άνθρωποι, αλλά μόνο λίγοι.
+      Το τένις με δίδαξε πολλά πράγματα στη ζωή μου. Έχω βιώσει πράγματα που διαφορετικά δεν θα είχα βιώσει αν δεν έπαιζα το άθλημα που αγαπώ. Το τένις μου επέτρεψε να δω νέα μέρη, να γνωρίσω νέους ανθρώπους, να ανακαλύψω πολιτισμούς… Κατάφερα να μετατρέψω το παιδικό μου χόμπι στο επάγγελμά μου. Ήταν ήδη απίστευτο!
+      Το τένις μου έχει διδάξει πειθαρχία, αυτογνωσία, συμπεριφορά, ηθική, σεβασμό, αθλητισμό και λήψη αποφάσεων. Έχω τα πάντα σε αυτό το παιχνίδι, ένα παιχνίδι με το οποίο μεγάλωσα, έμαθα και απέτυχα τις περισσότερες φορές. Το τένις με αντιπροσωπεύει και όλα όσα έχω. Το τένις θα είναι πάντα η δουλειά μου και το πάθος μου. Το τένις είναι η ζωή μου!"</p>
+    </article>
+</div>
+
+</div></div></div>
+<br><br><br><br>
+</div>
+
+
+<div class="wrapper">
+   <div class="figure">
+
+<article>
+  <h3><span id="Participation_and_results"></span><span class="Participation_and_results" id="Συμμετοχές_και_αποτελέσματα">Συμμετοχές και αποτελέσματα</span><span class="Participation_and_results"><span ></span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;veaction=edit&amp;section=2" class="Participation_and_results" title="Participation_and_results"></a><span class="Participation_and_results">  </span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;action=edit&amp;section=2" title="Participation_and_results"></a><span class="Participation_and_results"></span></span></h3>
+  
+ <p><span class="dropcap">Ο</span> 22χρονος πρωταθλητής είναι ένας από τους καλύτερους του κόσμου, έχει παγιωθεί εδώ και 38 σερί εβδομάδες στο top-10 της παγκόσμιας κατάταξης και είναι ο νεαρότερος από το 2001 και τον Λέιτον Χιούιτ που κατακτά ATP World Finals. Πρόκειται αναμφίβολα για έναν από τους καλύτερους εκεί έξω και γι' αυτό αμείβεται ως τέτοιος στα τουρνουά όπου συμμετέχει. Η αρχική επένδυση της οικογένειας και του περιβάλλοντος προς τον μικρό Στέφανο, που κόστισε εκατοντάδες χιλιάδες ευρώ όπως αποκάλυψε το αφιέρωμα της Μαρίας Καούκη, έφερε αποτέλεσμα. Οι νίκες οδηγούν σε μεγάλα χρηματικά έπαθλα και η πορεία του μέσα στο 2019 τον έκανε πλουσιότερο κατά 6.000.000 ευρώ. Μόνο η νίκη του στο Λονδίνο τού προσέφερε 2.400.000 ευρώ σε χρηματικά έπαθλα, ενώ οι πορείες του στα υπόλοιπα 26 τουρνουά που συμμετείχε μέσα στο έτος ήταν κι αυτές προσοδοφόρες.
+  Με τα 6.065.762 ευρώ της φετινής χρονιάς στο μονό, ο Τσιτσιπάς δεν είναι μόνο 6ος στο ATP ranking, μειώνοντας την 'ψαλίδα' από τον Ντανιίλ Μεντβέντεφ, είναι 6ος και στα συνολικά έσοδα. Μπροστά του βρίσκονται το Big-3, οι Ράφα Ναδάλ (1ος), Τζόκοβιτς (2ος), Ρότζερ Φέντερερ (4ος), ο Μεντβέντεφ που βρίσκεται στην 3η θέση και ο Ντόμινικ Τιμ στην 5η. Ναδάλ και Τζόκοβιτς έχουν τα διπλάσια έσοδα από τον Τσιτσιπά, ο οποίος βρίσκεται πολύ κοντά όμως στους άλλους 3 πρωταθλητές.<br><br><br>
+  </p>
+</article>  
+  <br>
+  
+  <link rel="stylesheet" type="text/css" href="table.css">
+  <script type="text/javascript">
+    function hide_show_table(col_name)
+    {
+     var checkbox_val=document.getElementById(col_name).value;
+     if(checkbox_val=="hide")
+     {
+      var all_col=document.getElementsByClassName(col_name);
+      for(var i=0;i<all_col.length;i++)
+      {
+       all_col[i].style.display="none";
+      }
+      document.getElementById(col_name+"_head").style.display="none";
+      document.getElementById(col_name).value="show";
+     }
+        
+     else
+     {
+      var all_col=document.getElementsByClassName(col_name);
+      for(var i=0;i<all_col.length;i++)
+      {
+       all_col[i].style.display="table-cell";
+      }
+      document.getElementById(col_name+"_head").style.display="table-cell";
+      document.getElementById(col_name).value="hide";
+     }
+    }
+  </script>  
+    
+  
+    
+    
+    
+    
+    <div id="checkbox_div" allign="center">
+     <p>Εμφάνιση/Απόκρυψη στήλης</p>
+     <li><input type="checkbox" value="hide" id="tournament_col" onchange="hide_show_table(this.id);">Τίτλος τουρνουά</li>
+     <li><input type="checkbox" value="hide" id="city_col" onchange="hide_show_table(this.id);">Πόλη διεξαγωγής</li>
+     <li><input type="checkbox" value="hide" id="year_col" onchange="hide_show_table(this.id);">Έτος διεξαγωγής</li>
+     <li><input type="checkbox" value="hide" id="place_col" onchange="hide_show_table(this.id);">Καταληφθείσα θέση</li>
+     <li><input type="checkbox" value="hide" id="opponent_col" onchange="hide_show_table(this.id);">Αντίπαλος</li>
+    </div>
+    
+    <div class="hscroll">
+    <table id="tournament_table" allign="center" cellpadding=10>
+    <tr>
+     <th id="tournament_col_head" onclick="sortTable(0)">Τίτλος τουρνουά</th>
+     <th id="city_col_head" onclick="sortTable(1)">Πόλη διεξαγωγής</th>
+     <th id="year_col_head" onclick="sortTable(2)">Έτος διεξαγωγής</th>
+     <th id="place_col_head" onclick="sortTable(3)">Καταληφθείσα θέση</th>
+     <th id="opponent_col_head" onclick="sortTable(4)">Αντίπαλος</th>
+    </tr>
+
+    
+    <tr>
+    
+     <td width=20% class="tournament_col">Αυστραλιανό Όπεν <img alt="Flag_of_Australia.svg" src="images/Australia.png" style="width:12%"></td>
+     <td width=20% class="city_col">Μελβούρνη</td>
+     <td width=20% class="year_col">2018</td>
+     <td width=20% class="place_col">3η</td>
+     <td width=20% class="opponent_col"><a href="https://en.wikipedia.org/wiki/Daniil_Medvedev" title="Daniil_Medvedev" target="_blank">Δανιήλ Μεντβέντεφ</a></td>
+    
+    </tr>
+    
+    <tr>
+     
+     <td width=20% class="tournament_col">Γαλλικό Όπεν <img alt="Flag_of_France.svg" src="images/France.png" style="width:10%"></td>
+     <td width=20% class="city_col">Παρίσι</td>
+     <td width=20% class="year_col">2018</td>
+     <td width=20% class="place_col">5η</td>
+     <td width=20% class="opponent_col"><a href="https://el.wikipedia.org/wiki/%CE%A1%CE%B1%CF%86%CE%B1%CE%AD%CE%BB_%CE%9D%CE%B1%CE%B4%CE%AC%CE%BB" title="Rafael_Nadal_Parera" target="_blank">Ραφαέλ Ναδάλ</a></td>
+    </tr>
+    
+    <tr>
+     
+     <td width=20% class="tournament_col">Γουίμπλετον <img alt="Flag_of_United_Kingdom.png" src="images/Flag_of_United_Kingdom.png" style="width:11%"></td>
+     <td width=20% class="city_col">Λονδίνο</td>
+     <td width=20% class="year_col">2019</td>
+     <td width=20% class="place_col">2η</td>
+     <td width=20% class="opponent_col"><a href="https://en.wikipedia.org/wiki/Kei_Nishikori" title="Kei_Nishikori" target="_blank">Κέι Νισικόρι</a></td>
+    </tr>
+    
+    <tr>
+     
+        <td width=20% class="tournament_col">Αμερικανικό Όπεν <img alt="Flag_of_United_States.svg" src="images/United_States.png" style="width:11%"></td>
+        <td width=20% class="city_col">Νέα Υόρκη</td>
+        <td width=20% class="year_col">2019</td>
+        <td width=20% class="place_col">1η</td>
+        <td width=20% class="opponent_col"><a href="https://el.wikipedia.org/wiki/%CE%9D%CF%8C%CE%B2%CE%B1%CE%BA_%CE%A4%CE%B6%CF%8C%CE%BA%CE%BF%CE%B2%CE%B9%CF%84%CF%82" title="Novak_Djokovic" target="_blank">Νόβακ Τζόκοβιτς</a></td>
+    </tr>
+    
+    
+    </table>
+  </div> 
+  <br><br><br>      
+<p><span class="dropcap">Σ</span>ε επίπεδο καριέρας, ο Τσιτσιπάς πραγματοποίησε άλμα 41 θέσεων και από την 116η με συνολικά έσοδα σε μονό και διπλό που έφταναν τα 7.209.605 δολάρια πριν από το τουρνουά στο Λονδίν, πλέον βρίσκεται στην 75η θέση, προσπερνώντας τον Ίβο Κάρλοβιτς. Ο Κροάτης γίγαντας των 211 εκατοστών έβγαλε 9.832.645 δολάρια από τα χρηματικά έπαθλα των τουρνουά που συμμετείχε, όμως ο Τσιτσιπάς έφτασε τα 9.835.605 δολάρια. Μάλιστα, προσπέρασε μεταξύ άλλων και τον Μάρκο Παγδατή που κέρδισε συνολικά έπαθλα 8.918.917 δολάρια στην καριέρα του, τον Νικ Κύργιο με 8.001.478 δολάρια μέχρι στιγμής και τον Μαρκ Φιλιππούση με 6.987.402 δολάρια.
+  Με 32 νίκες σε 64 αγώνες κόντρα σε αντίπαλο που έχει βρεθεί κάποια στιγμή στο top-10 και 16 νίκες σε 36 αγώνες με αντίπαλο εν ενεργεία μέλος του top-10, με 4 τίτλους στην καριέρα του και κορυφαία θέση την 5η στην κατάταξη της ATP, με παρουσία σε ημιτελικά grand slam και νίκες επί όλων των μεγάλων του παγκοσμίου τένις, με ρεκόρ 2-2 κόντρα σε Τζόκοβιτς και Φέντερερ και 3-1 κόντρα σε Αλεξάντερ Ζβέρεφ, ο Τσιτσιπάς δικαιούται και με το παραπάνω αυτά τα χρηματικά έπαθλα. Από τα 692 δολάρια που κέρδισε το 2013 ως junior μέχρι τα σχεδόν 10.000.000 του 2019, ο κορυφαίος Έλληνας τενίστας στην ιστορία εισπράττει αυτό που δικαιούται και που στο μέλλον αναμένεται να γίνει ακόμα πιο μεγάλο.
+  Μπορείτε να δέιτε αναλυτικά τα στατιστικά του αθλητή <a href="https://www.contra.gr/sports/ta-esoda-toy-tsitsipa-mesa-sto-2019-den-echoyn-proigoymeno.7534631.html" title="statistics" target="_blank">εδώ</a>.</p>
+<br><br>
+
+
+<!--Πίνακας με Arraylist-->
+
+<style>
+table {
+  border-spacing: 15%;
+  width: 100%;
+  border: 1px solid #ddd;
+  
+}
+
+th {
+  cursor: pointer;
+  text-align: center;
+  width:20%;
+}
+
+th, td {
+  text-align: center;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #cbeeee
+}
+tr:nth-child(odd) {
+  background-color: #88dada
+}
+</style>
+
+<div class="hscroll">
+<table id="katataxi" class="t05" width=100% allign="center">
+  
+  <h5><b>Το top 5 των καλύτερων αθλητών στο τέννις παγκοσμίως για το 2021</b></h5>
+  
+  <tr>
+    
+    <th onclick="sortTable5(0)">Θέση</th>
+    <th onclick="sortTable5(1)">Όνομα</th>
+    <th onclick="sortTable5(2)">Εθνικότητα</th>
+    <th onclick="sortTable5(3)">Πόντοι</th>
+    <th onclick="sortTable5(4)">Τουρνουά</th>
+   
+  </tr>
+  
+</table>
+</div>
+<caption allign="center"><button onclick="toggleTable1()">Εμφάνιση/Απόκρυψη Πίνακα</button></caption>
+
+<script>
+var  players = [["1","Νόβακ Τζόκοβιτς","Σερβία","12.113","20"],
+        ["2","Μεντβέντεφ Ντανίλ","Ρωσία","10.143","24"],
+        ["3","Ραφαέλ Ναδάλ","Ισπανία","8.630","17"],
+        ["4","Στέφανος Τσιτσιπάς","Ελλάδα","7.980","30"],
+        ["5","Ντομινίκ Τιέμ","Αυστρία","7.425","24"]]
+
+
+
+    table5 = document.getElementById("katataxi");
+    for(var i = 0; i < players.length; i++)
+   {
+       var newRow = table5.insertRow(table5.length);
+       for(var j = 0; j < players[i].length; j++)
+       {
+           var cell = newRow.insertCell(j);
+           cell.innerHTML = players[i][j];
+       }
+   }
+
+   function sortTable5(n) {
+             var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            table = document.getElementById("katataxi");
+            switching = true;
+            dir = "asc"; 
+            while (switching) {
+                 switching = false;
+                 rows = table.rows;
+                 for (i = 1; i < (rows.length - 1); i++) {
+                   shouldSwitch = false;
+                  x = rows[i].getElementsByTagName("td")[n];
+                  y = rows[i + 1].getElementsByTagName("td")[n];
+      
+                  if (dir == "asc") {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        shouldSwitch= true;
+                        break;
+                   }
+                  } else if (dir == "desc") {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                     }
+                     
+                 }
+              }
+              if (shouldSwitch) {
+                       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                       switching = true;
+                       switchcount ++;      
+                  } else {
+                       if (switchcount == 0 && dir == "asc") {
+                           dir = "desc";
+                          switching = true;
+                     }
+                    
+             
+                    }
+                    
+  }
+}
+
+function toggleTable1() {
+  var x = document.getElementById("katataxi");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else { 
+    x.style.display = "none";
+  }
+}
+
+</script>
+ 
+<br><br><br><br>
+  </div>
+  
+  <div class="wrapper"> 
+  <div class="figure">
+    <article>
+      <h3><span id="Injuries"></span><span class="Injuries" id="Τραυματισμοί_και_αποθεραπεία">Τραυματισμοί και αποθεραπεία</span><span class="Injuries"><span ></span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;veaction=edit&amp;section=3" class="Injuries" title="Injuries"></a><span class="Injuries">  </span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;action=edit&amp;section=3" title="Injuries"></a><span class="Injuries"></span></span></h3>
+  <p><span class="dropcap">Τ</span>α δύο τρίτα των τραυματισμών του τένις οφείλονται σε υπέρχρηση και το άλλο ένα τρίτο οφείλεται σε τραυματικό τραυματισμό ή σε οξύ συμβάν. Οι  τραυματισμοί υπέρχρησης επηρεάζουν συχνότερα τους ώμους τους καρπούς και τους αγκώνες.
+    Ο ποιό συχνός τραυματισμός είναι η επικονδυλίτιδα και  είναι λόγω υπερβολική χρήση των μυών που εκτείνονται στον καρπό . Είναι επίσης ο μυς που χρησιμοποιείται περισσότερο όταν η μπάλα του τένις προσκρούει στη ρακέτα. Η σωστή ενδυνάμωση αυτού του μυός και άλλων μυών γύρω του, μαζί με μια σωστή προθέρμανση, θα βοηθήσει στη μείωση της πιθανότητας εμφάνισης επικονδυλίτιδας. Δίνοντας προσοχή σε τεχνικά στοιχεία, όπως το μέγεθος της λαβής και με τη σωστή τεχνική, μπορεί επίσης να αποφευχθεί. 
+  Ο Στέφανος Τσιτσιπάς, παρ' όλη την τεράστια αθλητική του υπόσταση δεν είναι ξένος σε αυτούς τους τραυματισμούς.Στο Αμερικανικό Όπεν τραυματίστηκε σοβαρά στον καρπό του, έπειτα από αγώνα του με
+  τον Άλεξ Ντε Μινόρ, τραυματισμός που τον ανάγκασε να χάσει τον προγραμματισμένο του αγώνα και να τον κρατήσει εκτός 5 ολόκληρους μήνες. Άλλος σοβαρός τραυματισμός επήλθε τον επόμενο χρόνο,
+  το 2017, όταν απέναντι στον Πάμπλο Καρένιο Μπούστα, στο Εστορίλ, τραυμάτισε σοβαρά το πόδι του. Η διάρκεια αποθεραπείας ήταν σχεδόν δύο μήνες, ενώ όταν ο Τσιτσιπάς επέστρεψε στην ενεργό δράση
+ μετά από αυτόν τον τραυματισμό, επέστρεψε πιο δυνατός από ποτέ. Στον παρακάτω πίνακα αναφέρονται συνοπτικά τα είδη των τραυματισμών και η διάρκεια αποθεραπείας του αθλητή.</p>
+ <br>
+ <link rel="stylesheet" type="text/css" href="table.css">
+ <style>
+  table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    cursor: pointer;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 16px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #cbeeee
+  }
+  tr:nth-child(odd) {
+    background-color: #88dada
+  }
+  </style>
+ 
+ <div class="hscroll">
+<table id="injuries_table">
+  <tr>
+    <th onclick="sortTable(0)">Τίτλος τουρνουά</th>
+    <th onclick="sortTable(1)">Έτος τραυματισμού</th>
+    <th onclick="sortTable(2)">Αντίπαλος</th>
+    <th onclick="sortTable(3)">Είδος τραυματισμού</th>
+    <th onclick="sortTable(4)">Διάρκεια αποθεραπείας</th>
+  </tr>
+
+  <tr>
+     
+    <td width="20%" height="30px" class="tournament_col">Αμερικανικό Όπεν <img alt="Flag_of_United_States.svg" src="images/United_States.png" style="width:12%"></td>
+    <td  width="20%" class="year_col">2016</td>
+    <td width="20%" class="opponent_col"><a href="https://en.wikipedia.org/wiki/Alex_de_Minaur" title="Alex_de_Minaur" target="_blank">Άλεξ Ντε Μινόρ</a></td>
+    <td width="20%" class="injury_col">Επικονδυλίτιδα</td>
+    <td width="20%" class="recovery_col">5 μήνες</td>
+   
+   </tr>
+
+   
+   <tr>
+     
+    <td width="20%" height="30px" class="tournament_col">Millennium Estoril Open <img alt="Flag_of_Portugal.svg" src="images/portugal.jpg" style="width:10%"></td>
+    <td width="20%" class="year_col">2017</td>
+    <td width="20%" class="opponent_col"><a href="https://en.wikipedia.org/wiki/Pablo_Carre%C3%B1o_Busta" title="Pablo_Carreno_Busta" target="_blank">Πάμπλο Καρένιο Μπούστα</a></td>
+    <td width="20%" class="injury_col">Διάστρεμμα ποδοκνημικής άρθρωσης</td>
+    <td width="20%" class="recovery_col">3 μήνες</td>
+   </tr>
+   
+   <tr>
+     
+    <td width="20%" height="30px" class="tournament_col">Γουίμπλετον <img alt="Flag_of_United_Kingdom.png" src="images/Flag_of_United_Kingdom.png" style="width:11%"></td>
+    <td width="20%" class="year_col">2018</td>
+    <td width="20%" class="opponent_col"><a href="https://en.wikipedia.org/wiki/Kei_Nishikori" title="Nishikori" target="_blank">Κέι Νισικόρι</a></td>
+    <td width="20%" class="injury_col">Κακώσεις στο γόνατο</td>
+    <td width="20%" class="recovery_col">2 μήνες</td>
+   </tr>
+
+</table>
+</div>
+
+
+<caption allign="center"><button onclick="toggleTable()">Εμφάνιση/Απόκρυψη Πίνακα</button></caption>
+<!--Πίνακας με σορτάρισμα-->
+<script type="text/javascript">
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("injuries_table");
+  switching = true;
+  dir = "asc"; 
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;      
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+
+
+function toggleTable() {
+  var x = document.getElementById("injuries_table");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else { 
+    x.style.display = "none";
+  }
+}
+</script>
+
+    
+    </article>
+  </article>
+  </div>
+ 
+  <br><br><br><br>
+</div>
+  
+<div class="wrapper"> 
+  <div class="figure">
+  <article>
+    <h3><span id="Social_offer"></span><span class="Social_offer" id="#Κοινωνική_προσφορά">Κοινωνική προσφορά</span><span class="Social_offer"><span ></span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;veaction=edit&amp;section=4" class="Social_offer" title="Social_offer"></a><span class="Social_offer">  </span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;action=edit&amp;section=4" title="Social_offer"></a><span class="Social_offer"></span></span></h3>
+    <p><span class="dropcap">Τ</span>ο μεγαλείο ενός αθλητή φαίνεται –πρωτίστως– έξω από το γήπεδο. Ο Στέφανος Τσιτσιπάς διαθέτει μέρος του ελάχιστου χρόνου που του απομένει από τις αγωνιστικές και προπονητικές υποχρεώσεις του, όχι για τον εαυτό του, αλλά για φιλανθρωπικούς σκοπούς.
+      Γνωστή είναι η συμβολή του στον οργανισμό 
+      "<a href="https://mazigiatopaidi.gr/" title="Mazi_gia_to_paidi" target="_blank">Μαζί για το Παιδί</a>". Όπως είπε ο αθλητής χαρακτηριστικά: «Είναι καθήκον μου να συμβάλω στις προσπάθειες του “Μαζί για το Παιδί”. 
+      Γνώρισα τους ανθρώπους του και με ενέπνευσε το έργο που προσφέρουν σε χιλιάδες παιδιά που βρίσκονται σε ανάγκη στην Ελλάδα.
+      Υπάρχουν χιλιάδες παιδιά που αντιμετωπίζουν δυσκολίες στην καθημερινότητά τους. Πιστεύω ότι είναι καθήκον μου να συμβάλω στις προσπάθειες που γίνονται για αυτά τα παιδιά».
+      Σημαντική ήταν η κινητοποίησή του για τους πυρόπληκτους της φονικής πυρκαγιάς στο <a href="https://el.wikipedia.org/wiki/%CE%A0%CF%85%CF%81%CE%BA%CE%B1%CE%B3%CE%B9%CE%AD%CF%82_%CF%83%CF%84%CE%B7%CE%BD_%CE%91%CF%84%CF%84%CE%B9%CE%BA%CE%AE_%CF%84%CE%BF_2018" title="Mati_Attikis" target="_blank">Μάτι Αττικής</a>. 
+      Κάλεσε στον προσωπικό λογαριασμό του στα social media τους ακόλουθους του να συνδράμουν στην ενίσχυση και ο ίδιος έδωσε πρώτος το παράδειγμα προσφέροντας 5000 ευρώ. 
+      Σε όλη του την πορεία δεν ξεχνάει τους ανθρώπους που τον στήριξαν. Δεν ξεχνάει τον πρώτο του προπονητή Γιώργο Φουντούκο. Τον πρώτο του ATP τίτλο(2018) αφιέρωσε στον 
+      <a href="https://el.wikipedia.org/wiki/Avicii" title="Avicii" target="_blank">DJ Avicii</a> ο οποίος απεβίωσε τη χρονιά αυτή.
+      Πρότυπό του ο <a href="https://el.wikipedia.org/wiki/%CE%A1%CF%8C%CF%84%CE%B6%CE%B5%CF%81_%CE%A6%CE%AD%CE%BD%CF%84%CE%B5%CF%81%CE%B5%CF%81" title="Roger Federer" target="_blank">Ρότζερ Φέντερερ</a> 
+      και ο Ελβετός <a href="https://el.wikipedia.org/wiki/%CE%A3%CF%84%CE%B1%CE%BD_%CE%92%CE%B1%CE%B2%CF%81%CE%AF%CE%BD%CE%BA%CE%B1" title="Vanvrika" target="_blank">Στάνισλας "Σταν" Βαβρίνκα</a>, 
+      όπως και ο Αργεντινός <a href="https://en.wikipedia.org/wiki/Juan_Mart%C3%ADn_del_Potro" title="Juan_Martín_del_Potro" target="_blank">Χουάν Μάρτιν ντελ Πότρο</a>. 
+      Τα συνολικά κέρδη του 22χρονου τενίστα φτάνουν πλέον στα 7.000.000 δολάρια.</p>
+  </article>
+  </div>
+ 
+ <br><br><br><br>
+</div>
+
+<div class="wrapper"> 
+ <div class="figure">
+  <article>
+    <h3><span id="Social_media"></span><span class="Social_media" id="#Social_media">Social media
+      <class="image3">
+        <img alt="logos" src="images/logos.jpg"  style="width:20%"></span>
+        <span class="Social_media"><span ></span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;veaction=edit&amp;section=5" class="Social_media" title="Social_media"></a><span class="Social_media">  </span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;action=edit&amp;section=5" title="Social_media"></a><span class="Social_media"></span></span></h3>
+        <span class="dropcap">Η</span> σχέση του πρωταθλητή με τα social media μπορεί να χαρακτηριστεί ως... θυελλώδης. Πέρυσι αποφάσισε  να βάλει στον… πάγο όλους τους λογαριασμούς που διατηρεί στα social media. Μια κίνηση, που όπως πίστευε θα τον βοηθήσει να… απεμπλακεί από τον πλασματικό κόσμο των social media και θα τον βοηθούσε να «καθαρίσει» το μυαλό του και να επιστρέψει σύντομα σε υψηλές πτήσεις και σπουδαίες επιτυχίες.
+    Λίγες ώρες μετά τα βίντεο που κυκλόφορησαν στο διαδίκτυο και τον έδειχναν να σβήνει τις εφαρμογές του σε Facebook, Twitter, Instagram και Messenger, ο Στέφανος Τσιτσιπάς μίλησε για την απόφασή του, αποκαλύπτοντας τους λόγους που τον οδήγησαν σε αυτή την πράξη.
+    «Ο λόγος που αποφάσισα να το κάνω αυτό είναι για να ανανεωθώ, να έρθω πιο κοντά με ανθρώπους που μετράνε για μένα και όχι να είμαι συγκεντρωμένος σε ανθρώπους που δε γνωρίζω, σε ανθρώπους που δεν έχουμε κάποια σχέση.
+    Κάνοντάς το αυτό θα έχω περισσότερο χρόνο για τους αγαπημένους μου ανθρώπους, τους ανθρώπους για τους οποίους νοιάζομαι περισσότερο. Δε νομίζω να το μετανιώσω, γιατί είναι σαν απεξάρτηση… είναι απεξάρτηση. Είμαι σίγουρος πως θα με κάνει να αισθανθώ καλύτερα, θα μείνω έκπληκτος αν δεν συμβεί αυτό. Δε ζούμε τις στιγμές και αυτό είναι που με τρομάζει – θέλω να είμαι παρών».
+    Ωστόσο πλέον οι λογαριασμοί του είναι και πάλι ανοιχτοί. Μπορείτε να τον ακολουθήστε στα social media στους παρακάτω συνδέσμους.
+
+    <div class="parent">
+    <div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" 
+
+      id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" 
+      
+      lang="el" dir="ltr"><h3 id="mw-toc-heading"></h3><span class="toctogglespan">
+      <label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+      <ul>
+      <li class="toclevel-1 tocsection-1">
+      <a href="https://www.facebook.com/StefTsitsipas" target="_blank"><span class="tocnumber"></span> <span class="toctext">Facebook</span></a></li>
+      <li class="toclevel-1 tocsection-2"><a href="https://www.instagram.com/stefanostsitsipas98/" target="_blank" ><span class="tocnumber"></span> <span class="toctext">Instagram</span></a></li>
+      <li class="toclevel-1 tocsection-3"><a href="https://twitter.com/steftsitsipas?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><span class="tocnumber"></span> <span class="toctext">Twitter</span></a></li>
+      </ul>
+      </div>
+    </div>
+    
+    </article>
+ 
+ </div>
+</div>
+<br><br><br>
+<div class="wrapper"> 
+  <div class="figure">
+  <article>
+    <h3><span id="Registration"></span><span class="Registration" id="#Εγγραφή">Εγγραφή</span><span class="Registration"><span ></span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;veaction=edit&amp;section=6" class="Registration" title="Registration"></a><span class="Registration">  </span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;action=edit&amp;section=6" title="Registration"></a><span class="Registration"></span></span></h3>
+    <class="image4">
+      <img alt="sign_up" src="images/sign_up.png" style="width:20%"></span>
+    <br>   
+<div class="container">
+  <p>Αν θέλετε να μένετε ενημερωμένοι για τις εξελίξεις όσον αφορά τους παγκόσμιους πρωταθλητές στο τέννις εγγραφείτε στην ιστοσελίδα μας. </p>
+  <p>Παρακαλώ συμπληρώστε τα παρακάτω στοιχεία:</p>
+  
+  <form method="post" action="" id="myfrm">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input id="password" type="password" class="form-control" name="password" placeholder="Κωδικός">
+    </div>
+    <br>
+    <p>Μπορείτε να έρθετε σε επαφή μαζί μας μέσω μηνύματος. Θα χαρούμε να ακούσουμε τα σχόλιά σας.</p>
+    <div class="input-group">
+   
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+     <input id="msg" type="text" class="form-control" name="msg" placeholder="Μήνυμα">
+     
+    </div>
+  </form>
+<br><br>
+  <button onclick="myFunction()">Εγγραφή</button>
+
+	<script type="text/javascript">
+    function myFunction() {
+
+		 alert("Η εγγραφή σας πραγματοποιήθηκε με επιτυχία. Σας ευχαριστούμε!");
+     
+    }
+    window.addEventListener("beforeunload", function (e) {
+     var confirmationMessage = 'Είστε σίγουροι ότι θέλετε να αποχωρίσετε από τη σελίδα;' + 'Όποιες αλλαγές κάνατε θα χαθούν.';
+     (e || window.event).returnValue = confirmationMessage; 
+
+     });
+         
+
+    </script>
+
+  </div>
+  
+</body>
+</html>
