@@ -1689,4 +1689,28 @@ function toggleTable() {
   </div>
   
 </body>
+
+<script>
+  function passvalues()
+  {
+      var name=document.getElementById("txt").value;
+      localStorage.setItem("textvalue",name);
+      return false;
+  }
+  if
+("serviceWorker" in navigator)
+{
+  navigator.serviceWorker.register("sw.js").then(register=>
+  {
+  console.log("SW Registerd!");
+  console.log(registration);
+
+}).catch(error => {
+  console.log("SW Registerd Faild!");
+  console.log(error);
+});
+}
+
+  
+</script>
 </html>
